@@ -356,6 +356,7 @@ def fetch_all_domains_metadata_robust(
     ignore_seen: bool = False,
     chunk_days: int = 7,
     disable_supabase_read: bool = False,
+    include_embedding_fields: bool = False,
 ) -> None:
     config = load_config()
 
@@ -393,6 +394,7 @@ def fetch_all_domains_metadata_robust(
                     start_dt=sb_start_dt,
                     end_dt=sb_end_dt,
                     schema=str(sb.get("schema") or "public"),
+                    include_embedding=include_embedding_fields,
                 )
             else:
                 papers, msg = fetch_recent_papers(
@@ -401,6 +403,7 @@ def fetch_all_domains_metadata_robust(
                     papers_table=str(sb.get("papers_table")),
                     days_window=int(days or 1),
                     schema=str(sb.get("schema") or "public"),
+                    include_embedding=include_embedding_fields,
                 )
             log(f"[Supabase] {msg}")
             if papers:
@@ -545,6 +548,11 @@ if __name__ == "__main__":
         action="store_true",
         help="关闭 Supabase 优先读取，强制执行本地 arXiv 抓取。",
     )
+    parser.add_argument(
+        "--include-embedding-fields",
+        action="store_true",
+        help="从 Supabase 拉取论文时额外包含 embedding 字段（默认不带）。",
+    )
     args = parser.parse_args()
 
     # 建议先用 --days 1 测试一下，没问题再跑更长时间窗口
@@ -554,4 +562,5 @@ if __name__ == "__main__":
         ignore_seen=bool(args.ignore_seen),
         chunk_days=int(args.chunk_days or 7),
         disable_supabase_read=bool(args.disable_supabase_read),
+        include_embedding_fields=bool(args.include_embedding_fields),
     )

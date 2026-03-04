@@ -172,6 +172,7 @@ def fetch_recent_papers(
     schema: str = "public",
     timeout: int = DEFAULT_TIMEOUT,
     max_rows: int = 20000,
+    include_embedding: bool = False,
 ) -> Tuple[List[Dict[str, Any]], str]:
     """
     从 Supabase 拉取窗口内论文元数据。
@@ -190,6 +191,7 @@ def fetch_recent_papers(
         schema=schema,
         timeout=timeout,
         max_rows=max_rows,
+        include_embedding=include_embedding,
     )
 
 
@@ -204,6 +206,7 @@ def fetch_papers_by_date_range(
     timeout: int = DEFAULT_TIMEOUT,
     max_rows: int = 20000,
     time_fields: tuple[str, ...] = ("published",),
+    include_embedding: bool = False,
 ) -> Tuple[List[Dict[str, Any]], str]:
     """
     按明确时间区间拉取论文：
@@ -231,10 +234,14 @@ def fetch_papers_by_date_range(
     try:
         while fetched < int(max_rows):
             page_limit = min(per_page, int(max_rows) - fetched)
+            select_fields = (
+                "id,title,abstract,authors,primary_category,categories,published,link,source"
+            )
+            if include_embedding:
+                select_fields += ",embedding,embedding_model,embedding_dim,embedding_updated_at"
             endpoint = (
                 f"{rest}/{papers_table}"
-                f"?select=id,title,abstract,authors,primary_category,categories,published,link,source,"
-                f"embedding,embedding_model,embedding_dim,embedding_updated_at"
+                f"?select={select_fields}"
                 f"&published=gte.{start_iso_q}"
                 f"&published=lt.{end_iso_q}"
                 f"&order=published.desc"
@@ -280,10 +287,10 @@ def fetch_papers_by_date_range(
                     "categories": r.get("categories") if isinstance(r.get("categories"), list) else [],
                     "published": _norm(r.get("published")),
                     "link": _norm(r.get("link")),
-                    "embedding": _parse_embedding(r.get("embedding")),
-                    "embedding_model": _norm(r.get("embedding_model")),
-                    "embedding_dim": emb_dim,
-                    "embedding_updated_at": _norm(r.get("embedding_updated_at")),
+                    "embedding": _parse_embedding(r.get("embedding")) if include_embedding else None,
+                    "embedding_model": _norm(r.get("embedding_model")) if include_embedding else "",
+                    "embedding_dim": emb_dim if include_embedding else 0,
+                    "embedding_updated_at": _norm(r.get("embedding_updated_at")) if include_embedding else "",
                 }
             )
         return (
