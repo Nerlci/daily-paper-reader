@@ -25,3 +25,108 @@ subscriptions:
     stage: A
     diff_threshold_pct: 15
   keyword_recall_mode: or
+  intent_profiles:
+    - tag: TSF
+      description: 时间序列预测/时空
+      enabled: true
+      paper_sources:
+        - arxiv
+      keywords:
+        - keyword: time series forecasting
+          keyword_cn: 时间序列预测
+          query: deep learning models for time series forecasting
+        - keyword: multivariate time series
+          keyword_cn: 多元时间序列
+          query: multivariate time series forecasting methods
+        - keyword: long-term forecasting
+          keyword_cn: 长期预测
+          query: long-term time series forecasting techniques
+        - keyword: temporal fusion transformer
+          keyword_cn: 时间融合Transformer
+          query: temporal fusion transformer for forecasting
+        - keyword: spatio-temporal forecasting
+          keyword_cn: 时空预测
+          query: deep learning models for spatio-temporal forecasting
+        - keyword: spatial-temporal graph
+          keyword_cn: 时空图
+          query: spatial-temporal graph convolutional networks
+      intent_queries:
+        - query: latest research papers on time series forecasting
+          query_cn: 时间序列预测的最新研究论文
+          enabled: true
+          source: manual
+          note: ''
+        - query: state of the art deep learning models for time series
+          query_cn: 时间序列的最先进深度学习模型
+          enabled: true
+          source: manual
+          note: ''
+        - query: state of the art deep learning models for spatio temporal forecasting
+          query_cn: 最先进的时空预测深度学习模型
+          enabled: true
+          source: manual
+          note: ''
+        - query: recent advances in spatial temporal graph neural networks
+          query_cn: 时空图神经网络的最新进展
+          enabled: true
+          source: manual
+          note: ''
+      updated_at: '2026-04-20T10:10:13.261Z'
+    - tag: LLM数据
+      description: 大语言模型数据筛选（data curation）
+      enabled: true
+      paper_sources:
+        - arxiv
+      keywords:
+        - keyword: data curation
+          keyword_cn: 数据策应
+          query: data curation techniques for large language models
+        - keyword: data filtering
+          keyword_cn: 数据过滤
+          query: methods for filtering training data for LLMs
+        - keyword: data quality
+          keyword_cn: 数据质量
+          query: assessing data quality for language model pre-training
+        - keyword: synthetic data
+          keyword_cn: 合成数据
+          query: using synthetic data for LLM training and curation
+        - keyword: data mixture
+          keyword_cn: 数据配比
+          query: optimizing data mixture and proportions for LLMs
+      intent_queries:
+        - query: survey of data curation methods for large language models
+          query_cn: 大语言模型数据筛选方法综述
+          enabled: true
+          source: manual
+          note: ''
+        - query: state of the art techniques for LLM data selection and filtering
+          query_cn: 大语言模型数据选择与过滤的前沿技术
+          enabled: true
+          source: manual
+          note: ''
+        - query: how to improve LLM performance through data curation
+          query_cn: 如何通过数据筛选提升大语言模型性能
+          enabled: true
+          source: manual
+          note: ''
+        - query: automated data quality assessment for training large language models
+          query_cn: 大语言模型训练中的自动化数据质量评估
+          enabled: true
+          source: manual
+          note: ''
+      updated_at: '2026-04-20T10:11:29.372Z'
+source_backends:
+  arxiv:
+    papers_table: arxiv_papers
+    use_vector_rpc: true
+    vector_rpc: match_arxiv_papers
+    vector_rpc_exact: match_arxiv_papers_exact
+    use_bm25_rpc: true
+    bm25_rpc: match_arxiv_papers_bm25
+    sync_table: arxiv_sync_status
+    sync_success_value: success
+    schema: public
+    kind: supabase
+    enabled: true
+    url: https://lyucdwgefyfbmaiopjbk.supabase.co
+    anon_key: sb_publishable_lX-oi64Uxyd7SIVv3_w2Uw_MTOojeKq
