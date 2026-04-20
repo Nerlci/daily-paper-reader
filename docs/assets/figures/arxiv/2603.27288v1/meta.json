@@ -1,0 +1,94 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.27288v1/fig-001.webp",
+      "caption": "Figure 5: Forecast of 850 hPa specific humidity (Q850) for a representative case from the SCS_Base one-step model. Panels (a-e) show the ground truth (GT) at +6 h, +24 h, +48 h, +96 h, and +120 h; panels (f-j) show the prediction (Pred) at the same lead times; and panels (k-o) show the absolute error (Abs. Err.) at the same lead times. The first two rows share the same field color scale, the third row uses an absolute-error color scale, and the text in the lower-left corner reports the experiment name and sample index. If highlighted boxes are present, they indicate two additionally annotated local weather-process regions during this period: the high-moisture region over the Pearl River Basin and the atmospheric river (AR) event extending from the eastern Pacific to North America.",
+      "page": 11,
+      "index": 1,
+      "width": 979,
+      "height": 408
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27288v1/fig-002.webp",
+      "caption": "Figure 9: Ground-truth and predicted 10 m wind-speed fields (WS10m) for Typhoon Muifa from the SCS_FCST4 model. The 16 panels are arranged in chronological order, with each adjacent pair showing the ground truth (GT) and prediction (Pred) for the same valid time from 2022-09-09 00:00 UTC to 2022-09-10 18:00 UTC at 6 h intervals. All panels share the same wind-speed color scale; thin black lines indicate the accumulated track, black dots mark the storm center at the current time, and black polygons show the outline of the center-refined face.",
+      "page": 15,
+      "index": 2,
+      "width": 979,
+      "height": 873
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27288v1/fig-003.webp",
+      "caption": "Figure 3: Architecture of StretchCast. (a) Pipeline of the SCS_Base one-step model. Initial Fields @ T (SCS Mesh) are processed by an Encoder, a Face Mixer, a Global Mixer, and a Decoder to produce Forecast Fields @ T+1 (SCS Mesh). Pink modules denote the Core-Halo Interaction System, and blue modules denote 3D Spherical Position FiLM. (b) Pipeline of the SCS_FCST4 multistep model. Initial Fields @ T-1 and Initial Fields @ T are encoded by a shared Encoder, processed by a Temporal Mixer and the same spatial backbone, and then passed to Split to 4 steps and multiple Decoders to output Forecast Fields @ T+1, T+2, T+3, and T+4.",
+      "page": 7,
+      "index": 3,
+      "width": 929,
+      "height": 431
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27288v1/fig-004.webp",
+      "caption": "Figure 8: Forecast of Q850 for a representative case from the SCS_FCST4 model. Panels (a-e) show the ground truth (GT) at +6 h, +24 h, +48 h, +96 h, and +120 h; panels (f-j) show the prediction (Pred) at the same lead times; and panels (k-o) show the absolute error (Abs. Err.) at the same lead times. The first two rows share the same field color scale, the third row uses an absolute-error color scale. If highlighted boxes are present, they indicate additionally annotated local weather-process regions.",
+      "page": 14,
+      "index": 4,
+      "width": 979,
+      "height": 411
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27288v1/fig-005.webp",
+      "caption": "Figure 7: Multi-model ACC time series over the center-refined face. Panels (a-e) show Z200, Q200, T200, U200, and V200; panels (f-j) show Z500, Q500, T500, U500, and V500; panels (k-o) show Z850, Q850, T850, U850, and V850; panel (p) shows SLP; panel (q) shows T2m; panel (r) shows U10m; and panel (s) shows V10m. The x-axis is time in days and the y-axis is ACC over the center-refined face. Blue, orange, green, red, and purple curves denote SCS_Base, SCS_FCST4, Pangu, FengWu, and FuXi, respectively, and the legend is placed in the blank panel on the bottom row.",
+      "page": 13,
+      "index": 5,
+      "width": 979,
+      "height": 783
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27288v1/fig-006.webp",
+      "caption": "Figure 4: Denormalized spatial RMSE distribution of the SCS_Base one-step model over the test set at +6 h. Panels (a-e) show Z200, Q200, T200, U200, and V200; panels (f-j) show Z500, Q500, T500, U500, and V500; panels (k-o) show Z850, Q850, T850, U850, and V850; panel (p) shows SLP; panel (q) shows T2m; panel (r) shows U10m; and panel (s) shows V10m. The color bar below each panel gives the RMSE magnitude in the corresponding physical unit.",
+      "page": 8,
+      "index": 6,
+      "width": 979,
+      "height": 491
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27288v1/fig-007.webp",
+      "caption": "Table 1: Comparison of training compute resources, number of parameters, and training time across different atmospheric models.",
+      "page": 8,
+      "index": 7,
+      "width": 974,
+      "height": 300
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27288v1/fig-008.webp",
+      "caption": "Figure 1: Schematic of the stretched cubed-sphere (SCS) configuration used in this study and its core-halo interaction mechanism, with the center-refined face placed over eastern China. (a) Global view of the SCS grid and the center-refined region; (b) threedimensional view of the sphere partitioned into six faces; (c) cross-shaped flattened arrangement of the six faces; and (d) core-halo structure of a single face, where the blue block denotes the face core, the surrounding colored bands denote halos, and N and N+2h indicate the corresponding numbers of grid points along the edges. Black arrows indicate the mapping from the spherical grid to the faceted representation and then to the flattened tensor representation.",
+      "page": 4,
+      "index": 8,
+      "width": 902,
+      "height": 591
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27288v1/fig-009.webp",
+      "caption": "Figure 6: Denormalized spatial RMSE distribution of the SCS_FCST4 model at +36 h. Panels (a-e) show Z200, Q200, T200, U200, and V200; panels (f-j) show Z500, Q500, T500, U500, and V500; panels (k-o) show Z850, Q850, T850, U850, and V850; panel (p) shows SLP; panel (q) shows T2m; panel (r) shows U10m; and panel (s) shows V10m. The color bar below each panel gives the RMSE magnitude in the corresponding physical unit.",
+      "page": 12,
+      "index": 9,
+      "width": 979,
+      "height": 492
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27288v1/fig-010.webp",
+      "caption": "Table 3: Ablation results for key variables on the center-refined face at 6 h and 36 h. Consistent with the global key-variable results reported in Supplementary Table S1, the full SCS_Base model remains the best-performing variant over the center region.",
+      "page": 9,
+      "index": 10,
+      "width": 980,
+      "height": 268
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27288v1/fig-011.webp",
+      "caption": "Figure 10: Power spectral density (PSD) comparison on the center-refined face for the SCS_FCST4 model at +36 h. Columns correspond to Z, Q, T, U, and V, and rows correspond to 200 hPa, 500 hPa, and 850 hPa. In each panel, the black curve denotes the ground truth (GT) and the red curve denotes the prediction (Pred); the x-axis is wavelength in grid points and the y-axis is log spectral energy.",
+      "page": 16,
+      "index": 11,
+      "width": 979,
+      "height": 590
+    }
+  ]
+}

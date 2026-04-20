@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.14232v1/fig-001.webp",
+      "caption": "Table 1. Comparative Model Performance -- Test Set 2023Q1-2024Q2 (mean +/- std over 5 seeds; 43 distress cases, n=1,200)",
+      "page": 7,
+      "index": 1,
+      "width": 929,
+      "height": 245
+    },
+    {
+      "url": "assets/figures/arxiv/2604.14232v1/fig-002.webp",
+      "caption": "Table 2. Ablation Analysis -- ST-GAT Component Contributions (mean +/- std over 5 seeds)",
+      "page": 8,
+      "index": 2,
+      "width": 982,
+      "height": 305
+    },
+    {
+      "url": "assets/figures/arxiv/2604.14232v1/fig-003.webp",
+      "caption": "Table 3. Highest-Risk Institution Case Study: cert=57833 Risk Trajectory, Test Period 2023Q1-2024Q2",
+      "page": 9,
+      "index": 3,
+      "width": 1002,
+      "height": 765
+    },
+    {
+      "url": "assets/figures/arxiv/2604.14232v1/fig-004.webp",
+      "caption": "Table 4. Feature Importance: Permutation Importance on ST-GAT Node Features",
+      "page": 10,
+      "index": 4,
+      "width": 980,
+      "height": 652
+    }
+  ]
+}

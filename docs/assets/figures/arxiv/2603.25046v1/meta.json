@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.25046v1/fig-001.webp",
+      "caption": "Fig. 2: Comparative visualization of forecast trajectories. The proposed MP-MoE (λ = 0.6, solid red line) effectively captures high-intensity peaks and rapid onsets compared to the ground truth (black dashed line), whereas traditional baselines exhibit significant peak-shaving effects in the Ban Nhung and Song Chay basins.",
+      "page": 5,
+      "index": 1,
+      "width": 1076,
+      "height": 348
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25046v1/fig-002.webp",
+      "caption": "Fig. 3: Sensitivity analysis (at Ban Nhung) of the hyperparameter λ which regulates the trade-off between the intensitybased MSE loss and the Modified MP loss. The dual-axis chart shows MAE and CSI-M on the left axis, and DTW distance on the right axis.",
+      "page": 5,
+      "index": 2,
+      "width": 529,
+      "height": 319
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25046v1/fig-003.webp",
+      "caption": "TABLE I: Quantitative performance comparison on the Ban Nhung and Song Chay basins. Evaluation metrics include MAE for 1-hour intensity and accumulated rainfall (12h, 24h, 48h), DTW distance for structural similarity, and CSI-M for event detection. Note: For learning-based models, results are reported as Mean ± STD over five independent runs; physics-based experts are deterministic and report a single values. MP-MoE (λ = 0.6) denotes our proposed method, showing consistent improvements over both raw WRF experts and learning-based methods. Bold values indicate the best performance for each metric, while underlined values denote the second best.",
+      "page": 4,
+      "index": 3,
+      "width": 1070,
+      "height": 829
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25046v1/fig-004.webp",
+      "caption": "Fig. 1: Schematic overview of the proposed MP-MoE framework. Panel A (left) illustrates the inference workflow where the learnable gating network processes large-scale physical features to assign importance weights to fixed NWP experts dynamically. Panel B (right) details the training strategy using a hybrid loss function. Unlike standard MSE, which imposes severe penalties for temporal shifts, the proposed matrix profile-guided objective scans a symmetric search window to minimize structural distance, thereby prioritizing shape fidelity over rigid alignment.",
+      "page": 3,
+      "index": 4,
+      "width": 1006,
+      "height": 241
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.08398v1/fig-001.webp",
+      "caption": "Table 3. Overall classification accuracy of ADAPT compared to other state-of-the-art pretrained models for time-series classification. Baseline implementations are from [14] and are pretrained on the SleepEEG dataset. We pre-train two models, ADAPT(EEG) which is only pre-trained on the SleepEEG datasets, and ADAPT which is trained on all of the pretraining datasets in Section 5.2. The subscripts are standard deviations.",
+      "page": 8,
+      "index": 1,
+      "width": 826,
+      "height": 501
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08398v1/fig-002.webp",
+      "caption": "Figure 1. An overview of the adapt process and time-frequency masking algorithm. Each time-series is adaptive-pooled (in the [A] boxes) to a universal representation space and enable mixed-batch training among different modality types. At training time we add noise to the joint representation space in both the time and frequency space.",
+      "page": 4,
+      "index": 2,
+      "width": 812,
+      "height": 286
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08398v1/fig-003.webp",
+      "caption": "Figure 2. Model accuracy on UCR and UEA datasets compared to basic dataset properties. The “Length” and “Channel Dimension” corresponds to the dimensionality of the data or the total length of the input and number of channels at each time period. “Number of Classes” corresponds to the number of classes for classification in the downstream dataset, and “Total Dimensional Size” refers to length of the input multiplied by the number of channel dimensions. Overall, we can see that the performance is not strongly linked to the physical properties of the datasets. The number of classes of a dataset could represent an increase in dataset complexity and the model has a weak negative correlation as expected.",
+      "page": 9,
+      "index": 3,
+      "width": 327,
+      "height": 408
+    }
+  ]
+}

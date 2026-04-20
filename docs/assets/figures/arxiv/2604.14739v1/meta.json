@@ -1,0 +1,86 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.14739v1/fig-001.webp",
+      "caption": "Table 14: Energy and CO2e summary of E1 by model, size, and phase.",
+      "page": 15,
+      "index": 1,
+      "width": 656,
+      "height": 871
+    },
+    {
+      "url": "assets/figures/arxiv/2604.14739v1/fig-002.webp",
+      "caption": "Table 1: Zero-shot vs. fine-tuned CRPS results for the German–Luxembourg bidding zone. Normalizing Flow and NHITS+QRA were evaluated using fixed default settings.",
+      "page": 7,
+      "index": 2,
+      "width": 382,
+      "height": 431
+    },
+    {
+      "url": "assets/figures/arxiv/2604.14739v1/fig-003.webp",
+      "caption": "Figure 3: NHITS + QRA, cross-border, few-shot on certain days.",
+      "page": 10,
+      "index": 3,
+      "width": 506,
+      "height": 990
+    },
+    {
+      "url": "assets/figures/arxiv/2604.14739v1/fig-004.webp",
+      "caption": "Table 13: E2 NHITS+QRA tuned configuration",
+      "page": 14,
+      "index": 4,
+      "width": 1057,
+      "height": 730
+    },
+    {
+      "url": "assets/figures/arxiv/2604.14739v1/fig-005.webp",
+      "caption": "Table 12: E2 Normalizing Flow tuned configuration",
+      "page": 14,
+      "index": 5,
+      "width": 1056,
+      "height": 315
+    },
+    {
+      "url": "assets/figures/arxiv/2604.14739v1/fig-006.webp",
+      "caption": "Figure 1: Overview of this work. The left column lists the evaluated models: a simple baseline (M0), a conditioned normalizing flow (M1), NHITS with a QRA head (M2), and two foundation models—Moirai (M3) and ChronosX (M4). The right column summarizes the datasets. We use either only the DE-LU bidding zone (B1) or DE-LU plus 14 neighboring bidding zones (B2). For B1, three feature groups are available: electricity prices (F1), calendar features (F2), and past-only fundamentals such as load and renewable share (F3). The F3 feature group is not available for the additional bidding zones in B2. The dataset splits are also shown: DE-LU is divided into training (T1), validation (T2), and test (T3) sets; to study varying exposure to DE-LU data, we further define one-shot (T4) and few-shot (T5) settings. Data from the other bidding zones are denoted by T6. The middle column depicts four experiment blocks. E1 establishes a baseline by training or fine-tuning each model on DE-LU with calendar features only, evaluating three model sizes per family (tiny/small/base for the proposed models; small/base/large for the foundation models). In E2, we tune the hyperparameters of the proposed models and select the best configuration per size. Using these fixed configurations, E3 examins how different feature groups affect forecasting performance, and E4 how pretraining on neighboring bidding zones and varying DE-LU exposure (zero-shot/one-shot/few-shot) influence results.",
+      "page": 3,
+      "index": 6,
+      "width": 1056,
+      "height": 429
+    },
+    {
+      "url": "assets/figures/arxiv/2604.14739v1/fig-007.webp",
+      "caption": "Table 7: E1 Full fine-tuning results for the German– Luxembourg bidding zone.",
+      "page": 12,
+      "index": 7,
+      "width": 470,
+      "height": 401
+    },
+    {
+      "url": "assets/figures/arxiv/2604.14739v1/fig-008.webp",
+      "caption": "Table 9: Results of the models trained or fine-tuned on the different European bidding zones with a varying number of samples from the German-Luxembourg bidding zone.",
+      "page": 12,
+      "index": 8,
+      "width": 456,
+      "height": 325
+    },
+    {
+      "url": "assets/figures/arxiv/2604.14739v1/fig-009.webp",
+      "caption": "Table 16: E4 Energy and CO2e summary by model/size, learning strategy, and phase.",
+      "page": 16,
+      "index": 9,
+      "width": 786,
+      "height": 536
+    },
+    {
+      "url": "assets/figures/arxiv/2604.14739v1/fig-010.webp",
+      "caption": "Table 15: E3 Energy and CO2e summary for feature evaluation (training) and selected feature groups (test)",
+      "page": 16,
+      "index": 10,
+      "width": 806,
+      "height": 392
+    }
+  ]
+}

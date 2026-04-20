@@ -1,0 +1,78 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.24428v1/fig-001.webp",
+      "caption": "Table 3: Comparison to LaDCast. We report RMSE metrics at 30-day forecast horizons. The evaluated variables include atmospheric fields – UW500 (u-component of wind at 500 hPa), T500 (temperature at 500 hPa), G500 (geopotential at 500 hPa), and SH500 (specific humidity at 500 hPa) – as well as surface fields – SLP (sea level pressure), 10m-UW and 10m-VW (u- and v-components of wind at 10 meters), and T2M (temperature at 2 meters).",
+      "page": 6,
+      "index": 1,
+      "width": 906,
+      "height": 199
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24428v1/fig-002.webp",
+      "caption": "Figure 1: Marchuk operates in the latent space learned by the DC-AE model introduced in LaDCast. Within this latent space, we train a flow-matching Diffusion Transformer (DiT) to model the conditional distribution of future weather fields given the current state, enabling efficient and accurate probabilistic forecasting.",
+      "page": 2,
+      "index": 2,
+      "width": 976,
+      "height": 275
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24428v1/fig-003.webp",
+      "caption": "Figure 4: RMSE comparison. We evaluate LaDCast and Marchuk on the WeatherBench-2 benchmark over a 30-day prediction horizon. The atmospheric variables include the u-component of wind, temperature, geopotential, and specific humidity at 500, 750, and 850 hPa levels. Surface variables include mean sea level pressure, 10-meter wind u- and v-components, and temperature at 2 meters. Marchuk outperforms the small LaDCast model and achieves comparable performance to the large LaDCast model. Beyond approximately 30 days, both models’ forecasts converge toward climatology, indicating that extending the prediction horizon further provides limited practical value.",
+      "page": 7,
+      "index": 3,
+      "width": 972,
+      "height": 972
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24428v1/fig-004.webp",
+      "caption": "Figure 8: The CRPS Skill score evaluates how closely ensemble predictions align with the observed outcomes on average. Our model outperforms both the small and large LaDCast variants, demonstrating improved probabilistic forecasting accuracy.",
+      "page": 14,
+      "index": 4,
+      "width": 972,
+      "height": 485
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24428v1/fig-005.webp",
+      "caption": "Figure 9: CRPS Spread. The CRPS spread reflects the diversity among ensemble members by measuring pairwise differences within the ensemble. Our model exhibits lower spread compared to LaDCast, indicating reduced ensemble diversity. This effect can be attributed to stronger conditioning: while LaDCast conditions on a single weather map, Marchuk conditions on the four most recent maps, leading to more constrained and less diverse predictions.",
+      "page": 14,
+      "index": 5,
+      "width": 972,
+      "height": 485
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24428v1/fig-006.webp",
+      "caption": "Figure 7: ACC score. We evaluate model performance using ACC across several weather variables. The results, illustrated in the figure, show that our model exhibits the smallest decline in ACC over time compared to both LaDCast models.",
+      "page": 13,
+      "index": 6,
+      "width": 972,
+      "height": 972
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24428v1/fig-007.webp",
+      "caption": "Figure 5: CRPS Ensemble Metrics Comparison. Figure illustrates the evolution of CRPS over a 30-day forecast horizon. The first row presents results for atmospheric variables at the 500 hPa level, including the u-component of wind, temperature, geopotential, and specific humidity. The second row shows CRPS for surface variables, namely mean sea level pressure, the 10-meter u-component of wind, 2-meter temperature, and total accumulated precipitation over 6 hours.",
+      "page": 8,
+      "index": 7,
+      "width": 681,
+      "height": 339
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24428v1/fig-008.webp",
+      "caption": "Figure 2: Marchuk is conditioned on weather maps from the previous K days and is provided with noised weather maps for the subsequent N days as input. The model generates refined forecasts for the next N days, effectively denoising and predicting future weather states.",
+      "page": 4,
+      "index": 8,
+      "width": 786,
+      "height": 396
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24428v1/fig-009.webp",
+      "caption": "Figure 3: Marchuk is flow matching DiT model with additional architecture optimizations.",
+      "page": 4,
+      "index": 9,
+      "width": 976,
+      "height": 346
+    }
+  ]
+}

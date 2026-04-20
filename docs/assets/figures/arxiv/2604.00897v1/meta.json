@@ -1,0 +1,150 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.00897v1/fig-001.webp",
+      "caption": "Figure 2: Comparison of re-coarsened super-resolved forecasts with the original ArchesWeatherGen coarse-resolution trajectories at 1-day lead time. Shown are (a) spatial correlation, (b) activity ratio, and (c) normalized RMSE, for surface variables and selected pressure levels. Color intensity encodes the deviation from the ideal reference: values approaching white indicate near-perfect agreement (unity for correlation and activity ratio, zero for NRMSE), while darker shades correspond to larger departures from the original coarse-resolution trajectories.",
+      "page": 6,
+      "index": 1,
+      "width": 963,
+      "height": 319
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00897v1/fig-002.webp",
+      "caption": "Figure 14: Super-resolution of specific humidity at 700 hPa over the western Mediterranean and Alps (Extratropical Cyclone Alex, 2020-09-30 12:00 UTC, +24 h lead time). ERA5 regridded to 1.5° (a) and at native 0.25° (e) serve as low- and high-resolution ground truth respectively. AWG ensemble forecasts at 1.5° are shown for the best, median, and worst members by RMSE (b–d). Each column of the high-resolution block (f,i,l), (g,j,m), (h,k,n) shows three independent stochastic SR draws at 0.25° for the corresponding LR member. RMSE and bias (g kg−1) against the appropriate ERA5 reference are reported in the top-left corner of each panel.",
+      "page": 25,
+      "index": 2,
+      "width": 961,
+      "height": 744
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00897v1/fig-003.webp",
+      "caption": "Figure 15: Super-resolution of 2m temperature over the western Mediterranean and Alps (Extratropical Cyclone Alex, 2020-09-30 12:00 UTC, +24 h lead time). ERA5 regridded to 1.5° (a) and at native 0.25° (e) serve as low- and high-resolution ground truth respectively. AWG ensemble forecasts at 1.5° are shown for the best, median, and worst members by RMSE (b– d). Each column of the high-resolution block (f,i,l), (g,j,m), (h,k,n) shows three independent stochastic SR draws at 0.25° for the corresponding LR member. RMSE and bias (°C) against the appropriate ERA5 reference are reported in the top-left corner of each panel.",
+      "page": 26,
+      "index": 3,
+      "width": 961,
+      "height": 732
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00897v1/fig-004.webp",
+      "caption": "Table 1: ECMWF data variables used in our datasets. Atmospheric represents time-varying atmospheric properties and Surface represents time-varying surface-level properties. Static and time variables are used as additional conditioning for the model.",
+      "page": 15,
+      "index": 4,
+      "width": 807,
+      "height": 590
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00897v1/fig-005.webp",
+      "caption": "Figure 9: Per-variable fair CRPS skill scores relative to IFS ENS at the corresponding resolution. Results are shown for ArchesWeatherGen and GenCast as a function of lead time at both 1.5◦ and 0.25◦ resolutions. ArchesWeatherGen forecasts are produced natively at 1.5◦ and super-resolved to 0.25◦, while GenCast forecasts are produced natively at 0.25◦ and conservatively regridded to 1.5◦.",
+      "page": 21,
+      "index": 5,
+      "width": 961,
+      "height": 364
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00897v1/fig-006.webp",
+      "caption": "Figure 10: Zoomed power spectra at unresolved scales. At scales finer than 1.5◦, super-resolved ArchesWeatherGen (AWG) exhibits closer agreement with ERA5 compared to GenCast, indicating a more consistent representation of small-scale energy.",
+      "page": 21,
+      "index": 6,
+      "width": 967,
+      "height": 401
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00897v1/fig-007.webp",
+      "caption": "Figure 4: Per-variable fair CRPS skill scores relative to IFS ENS at 0.25°. Results are shown for GenCast, and ArchesWeatherGen (AWG) after bicubic interpolation and learned super-resolution, as a function of lead time.",
+      "page": 7,
+      "index": 7,
+      "width": 963,
+      "height": 363
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00897v1/fig-008.webp",
+      "caption": "Figure 3: Global ensemble forecast skill at 0.25°. Relative improvement over IFS ENS for fair ( 𝑓 ) ensemble skill-score (𝑠𝑠) metrics (Ensemble Mean RMSE, CRPS, Energy Score, Brier Score, spread-skill ratio), averaged over WeatherBench headline variables.",
+      "page": 7,
+      "index": 8,
+      "width": 761,
+      "height": 366
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00897v1/fig-009.webp",
+      "caption": "Figure 11: Power spectrum ratios relative to ERA5. Ratio of power spectra at 0.25◦ resolution relative to ERA5 for selected variables, shown as a function of wavelength, at (a) 1-day and (b) 10-day lead times. The vertical dashed line indicates the coarse-resolution cutoff at 1.5◦. A ratio close to unity indicates good agreement with ERA5 at the corresponding scale.",
+      "page": 22,
+      "index": 9,
+      "width": 964,
+      "height": 734
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00897v1/fig-010.webp",
+      "caption": "Figure 12: Super-resolution of specific humidity at 700 hPa over the North Atlantic (Hurricane Teddy, 21 September 2020 12:00 UTC, +7 day lead time). ERA5 regridded to 1.5° (a) and at native 0.25° (e) serve as low- and high-resolution ground truth respectively. AWG ensemble forecasts at 1.5° are shown for the best, median, and worst members by RMSE (b–d). Each column of the high-resolution block (f,i,l), (g,j,m), (h,k,n) shows three independent stochastic SR draws at 0.25° for the corresponding LR member. RMSE and bias (g kg−1) against the appropriate ERA5 reference are reported in the top-left corner of each panel.",
+      "page": 23,
+      "index": 10,
+      "width": 961,
+      "height": 755
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00897v1/fig-011.webp",
+      "caption": "Figure 17: Power spectra of IFS HRES at native and super-resolved resolutions at 1-day lead time. Shown are spatial power spectra averaged over the test period for selected upper-air and surface variables. Spectra are displayed for ERA5, native IFS HRES forecasts, and IFS HRES fields obtained by applying the super-resolution model in a zero-shot setting. The vertical dashed line indicates the coarse-resolution cutoff at 1.5◦. The vertical dotted line indicates the change in effective resolution between native HRES and super-resolved HRES.",
+      "page": 28,
+      "index": 11,
+      "width": 962,
+      "height": 357
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00897v1/fig-012.webp",
+      "caption": "Figure 5: Comparison of power spectra across models and lead times. Power spectra of Z500, T850, Q700, U850, and V850 at 1-day (top) and 10-day (bottom) lead times. For each model and wavelength, the energy at that wavelength is averaged across samples. The dashed vertical line marks the transition between low- and high-resolution scales (1.5° to 0.25°).",
+      "page": 8,
+      "index": 12,
+      "width": 965,
+      "height": 401
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00897v1/fig-013.webp",
+      "caption": "Figure 1: Overview of the super-resolution procedure. (a) Super-resolution is applied independently to each coarse-resolution forecast state produced by the base forecasting model. (b) Sampling procedure: starting from Gaussian noise, a flow matching model generates a high-resolution residual conditioned on the interpolated coarse-resolution forecast, which is added to obtain the final high-resolution prediction.",
+      "page": 4,
+      "index": 13,
+      "width": 972,
+      "height": 339
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00897v1/fig-014.webp",
+      "caption": "Figure 16: Pipeline-integrated super-resolution. Super-resolved fields are regridded and reinjected into the forecasting model, yielding an autoregressive coupling between super-resolution and forecasting.",
+      "page": 27,
+      "index": 14,
+      "width": 492,
+      "height": 364
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00897v1/fig-015.webp",
+      "caption": "Figure 13: Super-resolution of 10m wind speed over the western Mediterranean and Alps (Extratropical Cyclone Alex, 2020-09-30 12:00 UTC, +24 h lead time). ERA5 regridded to 1.5° (a) and at 0.25° (e) serve as low- and high-resolution ground truth respectively. AWG ensemble forecasts at 1.5° are shown for the best, median, and worst members by RMSE (b–d). Each column of the high-resolution block (f,i,l), (g,j,m), (h,k,n) shows three independent stochastic SR draws at 0.25° for the corresponding LR member. Wind speed is derived as ∥u∥ = √ 𝑢2 + 𝑣2 from the zonal and meridional wind components; arrows indicate the local wind direction. RMSE and bias (m s−1) against the appropriate ERA5 reference are reported in the top-left corner of each panel.",
+      "page": 24,
+      "index": 15,
+      "width": 961,
+      "height": 744
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00897v1/fig-016.webp",
+      "caption": "Figure 6: Super-resolution of specific humidity at 700 hPa over the North Atlantic (Hurricane Teddy, 21 September 2020 12:00 UTC, +24 h lead time). ERA5 regridded to 1.5° (a) and at native 0.25° (e) serve as low- and high-resolution ground truth respectively. AWG ensemble forecasts at 1.5° are shown for the best, median, and worst members by RMSE (b–d). Each column of the high-resolution block (f,i,l), (g,j,m), (h,k,n) shows three independent stochastic SR draws at 0.25° for the corresponding LR member. RMSE and bias (g kg−1) against the appropriate ERA5 reference are reported in the top-left corner of each panel.",
+      "page": 9,
+      "index": 16,
+      "width": 961,
+      "height": 755
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00897v1/fig-017.webp",
+      "caption": "Figure 8: Super-resolution error at 1-day lead time averaged over the 2020 test period. Maps of RMSE computed between re-coarsened super-resolved forecasts and the original ArchesWeatherGen trajectories for selected upper-air and surface variables.",
+      "page": 20,
+      "index": 17,
+      "width": 968,
+      "height": 482
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00897v1/fig-018.webp",
+      "caption": "Figure 7: Architecture of the 3D Swin U-Net. The interpolated coarse-resolution state ↑xLR and the noisy residual r𝜏 are concatenated and passed through the network, predicting the velocity field 𝑢𝜃 ( r𝜏 | ↑xLR) .",
+      "page": 16,
+      "index": 18,
+      "width": 670,
+      "height": 269
+    }
+  ]
+}

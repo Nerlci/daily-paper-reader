@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.10114v1/fig-001.webp",
+      "caption": "Figure 1: The CircuitSynth Framework for Reliable Synthetic Data Generation. The architecture decouples semantic reasoning from surface realization1. (Left) The Project-and-Distill protocol uses a Teacher LLM to generate silverstandard semantic plans, which are distilled into a Probabilistic Sentential Decision Diagram (PSDD). (Center) The PSDD serves as the Semantic Prior (PΘ); it structurally guarantees adherence to hard logical constraints (Φ) via logical compilation and satisfies soft distributional constraints via Convex Optimization (PGD). (Right) During generation, the optimized prior samples guaranteed-valid plans (z), which drive a Student LLM (Neural Realizer) via Grammar-Constrained Decoding to produce high-fidelity, logically consistent text (x)",
+      "page": 4,
+      "index": 1,
+      "width": 950,
+      "height": 515
+    },
+    {
+      "url": "assets/figures/arxiv/2604.10114v1/fig-002.webp",
+      "caption": "Table 1: Detailed Performance Comparison across WebNLG, DART, and ZebraLogic. SV: Schema Validity, Prec: Factuality, CE: Coverage Error (RMSE), JS: Jensen-Shannon, RCC: Rare-Combination Coverage, BPT: Bits-Per-Token. Best results are bolded.",
+      "page": 6,
+      "index": 2,
+      "width": 898,
+      "height": 750
+    },
+    {
+      "url": "assets/figures/arxiv/2604.10114v1/fig-003.webp",
+      "caption": "Table 2: Granular Performance Breakdown (Comparison with Strongest Baseline). Comparing TreeSynth (Baseline) vs. CircuitSynth (Ours).",
+      "page": 7,
+      "index": 3,
+      "width": 943,
+      "height": 623
+    },
+    {
+      "url": "assets/figures/arxiv/2604.10114v1/fig-004.webp",
+      "caption": "Table 3: Ablation of Neuro-Symbolic Components. CVR: Constraint Violation Rate (Hard), DD: Distributional Drift (Soft), Latency: ms/sample.",
+      "page": 8,
+      "index": 4,
+      "width": 472,
+      "height": 263
+    }
+  ]
+}

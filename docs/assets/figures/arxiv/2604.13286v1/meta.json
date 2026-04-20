@@ -1,0 +1,110 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.13286v1/fig-001.webp",
+      "caption": "Figure 3: Median accuracy (%) change from bilingual versus English-only post-training across evaluation settings for API calling and math reasoning. Error bars show 95% bootstrap confidence intervals. Bilingual training yields consistent gains across evaluation settings, with the largest improvements under direct exposure and smaller but reliable gains under cross-lingual transfer.",
+      "page": 6,
+      "index": 1,
+      "width": 396,
+      "height": 339
+    },
+    {
+      "url": "assets/figures/arxiv/2604.13286v1/fig-002.webp",
+      "caption": "Figure 8: Per-language multilingual scaling trends for (a) Qwen-3 models, and (b) Gemma-3 models. Each cell shows mean accuracy as a function of the number of training languages for API calling (top rows) and math reasoning (bottom rows), with scatter points indicating individual results.",
+      "page": 15,
+      "index": 2,
+      "width": 826,
+      "height": 590
+    },
+    {
+      "url": "assets/figures/arxiv/2604.13286v1/fig-003.webp",
+      "caption": "Figure 1: Overview of the experimental design. We start from a task-specific multilingual parallel data pool consisting of five core languages, which are used to construct exhaustive data mixture combinations, and five additional languages that enable scaling the experiments to up to ten languages. We generate 22 data mixtures with increasing language counts and varying combinations; within the multilingual data mixtures, languages shown in blue indicate one possible combination, while languages shown in grey are fixed for the corresponding number of languages. We train five models from two model families on each mixture for two tasks, resulting in 22 × 2 × 5 = 220 total training runs.",
+      "page": 2,
+      "index": 3,
+      "width": 816,
+      "height": 280
+    },
+    {
+      "url": "assets/figures/arxiv/2604.13286v1/fig-004.webp",
+      "caption": "Figure 4: Comparison of zero-shot cross-lingual transfer versus direct bilingual exposure at varying levels of language diversity for Qwen-3 8B (top) and Gemma-3 4B (bottom), with 4 (left), 6 (middle), and 9 (right) training languages. High-resource languages (red) tend to cluster near the diagonal, indicating strong zero-shot generalization that can compensate for the absence of direct inclusion. Low-resource languages (blue) more often fall below the diagonal, suggesting greater benefit of direct inclusion.",
+      "page": 7,
+      "index": 4,
+      "width": 801,
+      "height": 354
+    },
+    {
+      "url": "assets/figures/arxiv/2604.13286v1/fig-005.webp",
+      "caption": "Table 2: Win rates of bilingual post-training over English-only post-training across evaluation settings, aggregated across tasks and models. A win is defined as a configuration where bilingual training achieves higher accuracy than English-only training.",
+      "page": 7,
+      "index": 5,
+      "width": 826,
+      "height": 211
+    },
+    {
+      "url": "assets/figures/arxiv/2604.13286v1/fig-006.webp",
+      "caption": "Figure 7: Change in accuracy relative to the pre-trained baseline for bilingual versus Englishonly post-training. Heatmaps show performance differences across evaluation languages when English is paired with a single additional language (top: API calling; bottom: math reasoning). Subfigures (a) and (b) correspond to Qwen-3 and Gemma-3.",
+      "page": 14,
+      "index": 6,
+      "width": 829,
+      "height": 1118
+    },
+    {
+      "url": "assets/figures/arxiv/2604.13286v1/fig-007.webp",
+      "caption": "Table 4: Statistics of the mAPICall-Bank dataset, including the number of user queries, unique APIs, and examples of API names in each split.",
+      "page": 13,
+      "index": 7,
+      "width": 826,
+      "height": 205
+    },
+    {
+      "url": "assets/figures/arxiv/2604.13286v1/fig-008.webp",
+      "caption": "Table 1: Languages used in our study, grouped by their role in training and evaluation.",
+      "page": 4,
+      "index": 8,
+      "width": 826,
+      "height": 413
+    },
+    {
+      "url": "assets/figures/arxiv/2604.13286v1/fig-009.webp",
+      "caption": "Figure 5: Example showing the final turns of a parallel multi-turn API calling interaction from mAPICall-Bank in three languages: (a) English, (b) Spanish, and (c) Bengali.",
+      "page": 12,
+      "index": 9,
+      "width": 826,
+      "height": 236
+    },
+    {
+      "url": "assets/figures/arxiv/2604.13286v1/fig-010.webp",
+      "caption": "Figure 6: Prompt used to create mAPICall-Bank",
+      "page": 12,
+      "index": 10,
+      "width": 826,
+      "height": 436
+    },
+    {
+      "url": "assets/figures/arxiv/2604.13286v1/fig-011.webp",
+      "caption": "Table 3: Pooled regression over evaluation instances, where each instance corresponds to evaluating a trained model on a task-language pair. The model is trained on a random 70% split of instances and evaluated on the remaining 30%, achieving an out-of-sample R2 of 80.5%. Coefficients are reported with bootstrap 95% confidence intervals. Here, L denotes the number of training languages and Lmax the maximum number of training languages in our experiments.",
+      "page": 9,
+      "index": 11,
+      "width": 826,
+      "height": 267
+    },
+    {
+      "url": "assets/figures/arxiv/2604.13286v1/fig-012.webp",
+      "caption": "Figure 2: Effect of increasing training language coverage on model performance for Qwen3 and Gemma-3 models. Plots show average accuracy (%) with 95% Wilson confidence intervals as a function of the number of training languages, grouped by high-resource and low-resource evaluation languages, for API calling (top) and math reasoning (bottom).",
+      "page": 5,
+      "index": 12,
+      "width": 821,
+      "height": 359
+    },
+    {
+      "url": "assets/figures/arxiv/2604.13286v1/fig-013.webp",
+      "caption": "Figure 9: Comparison of zero-shot cross-lingual transfer and direct bilingual exposure for smaller models. Rows correspond to Qwen-3 1.7B (top), Qwen-3 0.6B (middle), and Gemma-3 1B (bottom), with columns showing 4 (left), 6 (middle), and 9 (right) training languages.",
+      "page": 16,
+      "index": 13,
+      "width": 808,
+      "height": 519
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.12223v1/fig-001.webp",
+      "caption": "Table 2: Performance of the proposed LLM-Guided TM on selected classification datasets. The bold entries indicate the highest performance, while bold and underlined indicate the second highest. A dash (–) indicates missing values not reported in literature. LLM-Guided TM results are averaged over 5 runs, and the includes standard deviation. Baseline results are drawn from literature and do not report variances, so significance testing could not be applied.",
+      "page": 7,
+      "index": 1,
+      "width": 929,
+      "height": 276
+    }
+  ]
+}

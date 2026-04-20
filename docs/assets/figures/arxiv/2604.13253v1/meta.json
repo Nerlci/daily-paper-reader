@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.13253v1/fig-001.webp",
+      "caption": "Figure 3: Top: Online bias estimate b̂t (solid red) tracking the true running mean (dashed blue) on mean-shift data (Ridge, h = 1). The grey band shows the dead-zone |b̂t| ≤ k ·MAD. Pre-shift, b̂t stays inside the dead-zone; post-shift (t > 1000), it rapidly converges to b ≈ 3.99. Bottom: Raw residuals showing the shift in location.",
+      "page": 10,
+      "index": 1,
+      "width": 963,
+      "height": 528
+    },
+    {
+      "url": "assets/figures/arxiv/2604.13253v1/fig-002.webp",
+      "caption": "Figure 2: Winkler score ratios (BC-ACI / ACI) across all datasets. Values below 1 (red bars, left) indicate BC-ACI improvement. Grey bars (right) are real datasets with no known distribution shift in the evaluation window.",
+      "page": 9,
+      "index": 2,
+      "width": 951,
+      "height": 415
+    },
+    {
+      "url": "assets/figures/arxiv/2604.13253v1/fig-003.webp",
+      "caption": "Table 1: Main results: BC-ACI vs. ACI (688 runs). Winkler ratio < 1 means BC-ACI is better. p-values from paired one-sided Wilcoxon signed-rank tests. Bold = statistically significant improvement (p < 0.001). The adaptive dead-zone threshold k = 0.5 is used throughout.",
+      "page": 8,
+      "index": 3,
+      "width": 818,
+      "height": 386
+    },
+    {
+      "url": "assets/figures/arxiv/2604.13253v1/fig-004.webp",
+      "caption": "Figure 1: Prediction intervals around a mean shift at t = 1000 (Ridge model, h = 1). Top: Standard ACI widens symmetrically to maintain coverage. Bottom: BC-ACI detects the bias, shifts the interval centre, and achieves tighter intervals post-shift while preserving coverage.",
+      "page": 2,
+      "index": 4,
+      "width": 963,
+      "height": 600
+    }
+  ]
+}

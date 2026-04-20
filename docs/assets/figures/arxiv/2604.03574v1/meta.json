@@ -1,0 +1,78 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.03574v1/fig-001.webp",
+      "caption": "Figure 4: The average prediction error for m-step-ahead predictions calculated via the average angle (radian) between the simulated true observations and the predictions. The observations are located within S6. The number of steps ahead m ranges from 1 to 12, the sample size being 120, and the simulated final residual process is generated via a spherical AR model with (a) order being 1, (b) order being 2, and (c) order being 3. Three models are evaluated: the spherical AR (SAR) model, the differencing-based spherical AR model (DSAR), and the proposed TPSAR model.",
+      "page": 26,
+      "index": 1,
+      "width": 1065,
+      "height": 425
+    },
+    {
+      "url": "assets/figures/arxiv/2604.03574v1/fig-002.webp",
+      "caption": "Figure 7: The plots of the penalised RSS with the selected tuning parameter for (a) the de-trended distributional time series and (b) the de-trended and de-seasonalised distributional time series.",
+      "page": 30,
+      "index": 2,
+      "width": 1065,
+      "height": 296
+    },
+    {
+      "url": "assets/figures/arxiv/2604.03574v1/fig-003.webp",
+      "caption": "Figure 6: The timeline of (a) U.S. electricity generation compositions, (b) the de-trended compositions, (c) the de-trended and de-seasonalised compositions, from January 2011 to December 2023. Each line represents the percentage of the corresponding energy resource categories covering Coal, Petroleum, Gas, Nuclear, Conventional hydroelectric, Renewables, and Solar.",
+      "page": 29,
+      "index": 3,
+      "width": 1065,
+      "height": 666
+    },
+    {
+      "url": "assets/figures/arxiv/2604.03574v1/fig-004.webp",
+      "caption": "Figure 3: The timeline of (a) the generated periodic component g(t), (b) the generated trend component f(u), (c) the simulated stationary spherical residuals R (2) t using a AR coefficient vector (0.3,−0.1, 0.4)⊤, (d) the simulated spherical residuals R (1) t by integrating the generated periodic component g(t) to R (2) t , and (e) the simulated spherical time series yt by integrating the generated trend component f(u) to R (1) t , where t = 1, 2, . . . , 200 and u = t/200. Each line represents a coordinate of the simulated spherical vector.",
+      "page": 22,
+      "index": 4,
+      "width": 1065,
+      "height": 360
+    },
+    {
+      "url": "assets/figures/arxiv/2604.03574v1/fig-005.webp",
+      "caption": "Figure 2: Illustration of the removal operation designed to subtract the contribution of b from a. This is achieved via: (a) applying the Euclidean optimal transport map Eb→a(c) with c = (0, 0)⊤ being a reference origin to obtain d = a − b + c ∈ R2; and (b) applying the spherical optimal transport map Mb→a(c) with c being a reference point to obtain the corresponding point d ∈ S2. Solid red lines denote the geodesics of b → a and c → d, while dashed blue lines indicate the transport of the geodesics between points.",
+      "page": 8,
+      "index": 5,
+      "width": 887,
+      "height": 498
+    },
+    {
+      "url": "assets/figures/arxiv/2604.03574v1/fig-006.webp",
+      "caption": "Figure 1: The timeline of (a) the simulated spherical time series with unknown trend and periodic components, (b) the de-trended spherical time series, and (c) the de-trended and de-seasonalised residual time series. Individual lines denote the temporal evolution of the spherical vector components, which are constrained to the surface of the sphere.",
+      "page": 4,
+      "index": 6,
+      "width": 1050,
+      "height": 748
+    },
+    {
+      "url": "assets/figures/arxiv/2604.03574v1/fig-007.webp",
+      "caption": "Figure 5: (a) The timeline of the estimated trend component of the monthly electricity generation compositional time series in U.S. from January 2011 to December 2023, (b) the plot of the penalised RSS with the selected tuning parameter for the de-trended compositional time series, (c) the timeline of the estimated periodic component of the compositions, and (d) the plot of the penalised RSS with the selected tuning parameter for the de-trended and de-seasonalised compositional time series. Each line in (a) and (c) represents the percentage of the corresponding energy resource categories covering Coal, Petroleum, Gas, Nuclear, Conventional hydroelectric, Renewables, and Solar.",
+      "page": 27,
+      "index": 7,
+      "width": 1065,
+      "height": 445
+    },
+    {
+      "url": "assets/figures/arxiv/2604.03574v1/fig-008.webp",
+      "caption": "Table 1: Integrated mean squared error (IMSE) of the estimated trend component f̂ , the estimated periodic component ĝ, and the estimated final residuals R̂ (2) t after removing both the trend and periodic components, bias and mean squared errors (MSE) of the estimated AR coefficients for the final residuals { R (2) t }T t=1 generated via a spherical AR(1) model with sample size T varying in {120, 300, 600}. The observations are located within S6. All measurement values are scaled by 102.",
+      "page": 24,
+      "index": 8,
+      "width": 1031,
+      "height": 188
+    },
+    {
+      "url": "assets/figures/arxiv/2604.03574v1/fig-009.webp",
+      "caption": "Figure 8: The top row displays data for weekdays, while the bottom row represents weekends in New York City City Bike sharing system from March 2019 to October 2019. The first column shows the original distributional time series, the second column presents the de-trended time series, and the last column illustrates the final de-trended and de-seasonalised time series.",
+      "page": 31,
+      "index": 9,
+      "width": 1065,
+      "height": 471
+    }
+  ]
+}

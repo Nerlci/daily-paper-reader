@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.11928v1/fig-001.webp",
+      "caption": "TABLE I: Attack Performance Comparison on the Household Electric Power Consumption Dataset [29]",
+      "page": 5,
+      "index": 1,
+      "width": 529,
+      "height": 234
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11928v1/fig-002.webp",
+      "caption": "TABLE II: Attack Performance Comparison on the Pecan Street Database [30]",
+      "page": 5,
+      "index": 2,
+      "width": 529,
+      "height": 233
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11928v1/fig-003.webp",
+      "caption": "Fig. 3: Our Selective Adversarial Attack Method with Adaptive Threshold",
+      "page": 5,
+      "index": 3,
+      "width": 1052,
+      "height": 258
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11928v1/fig-004.webp",
+      "caption": "Fig. 2: INTARG components: 1) (Top) Training and Calibration and 2) (Bottom) Attack Generation",
+      "page": 3,
+      "index": 4,
+      "width": 1076,
+      "height": 443
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11928v1/fig-005.webp",
+      "caption": "Fig. 1: Power time-series (6-hour window) with informed (top) and non-selective (bottom) attacks",
+      "page": 1,
+      "index": 5,
+      "width": 529,
+      "height": 337
+    }
+  ]
+}

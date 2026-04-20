@@ -1,0 +1,342 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-001.webp",
+      "caption": "Figure 1: Power spectra of U500 (kinetic energy, top) and Z500 (geopotential height, bottom) for ten AI weather models vs. ERA5 analysis, at lead times of 1, 5, 8, 10, and 15 days. All seven MSE-trained models exhibit progressive spectral energy loss at high wavenumbers, confirming the architecture-independent deficit predicted by Theorem 4.1: ∆E(ℓ, τ) = Varℓ(τ). The day 8 panel captures the transition regime where the deficit is actively deepening. Atlas (score-matching, red), FCN3 (CRPS), and AIFS-ENS (afCRPS) retain high-wavenumber energy, consistent with non-MSE losses preserving spectral variance. The dual power law ℓ−3/ℓ−5/3 is clearly visible in ERA5 (black) at short lead times.",
+      "page": 11,
+      "index": 1,
+      "width": 1014,
+      "height": 420
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-002.webp",
+      "caption": "Figure 2: Spectral energy ratio Efcst(k)/EERA5(k) for Z500 at lead times of 1, 5, 8, 10, and 15 days. Ratio < 1 at high k confirms MSE-induced spectral bias; the day 8 panel shows the advancing predictability frontier. See Supplementary Fig. 14 for U500.",
+      "page": 11,
+      "index": 2,
+      "width": 1013,
+      "height": 212
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-003.webp",
+      "caption": "Figure 31: [Supplementary] HMAS radar chart at day 15 (extended-range).",
+      "page": 57,
+      "index": 3,
+      "width": 751,
+      "height": 586
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-004.webp",
+      "caption": "Figure 32: [Supplementary] Regional RMSE decomposition for T2M by latitude band.",
+      "page": 57,
+      "index": 4,
+      "width": 1010,
+      "height": 300
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-005.webp",
+      "caption": "Figure 25: [Supplementary] Tail fidelity for Winter Storm Elliott (December 2022). Similar cold-extreme attenuation pattern to the Texas freeze, with α ≈ 0.34–0.56 at day 5.",
+      "page": 53,
+      "index": 5,
+      "width": 1013,
+      "height": 243
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-006.webp",
+      "caption": "Figure 26: [Supplementary] Tail attenuation coefficients α for the February 2021 Texas freeze.",
+      "page": 53,
+      "index": 6,
+      "width": 1002,
+      "height": 452
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-007.webp",
+      "caption": "Figure 3: Global area-weighted RMSE vs. lead time for Z500, T850, and T2M, averaged over 30 initialization dates spanning all four seasons, with inter-initialization-date 90% confidence intervals (shaded bands). The tight clustering of architecturally diverse models confirms εarch ≪ εest (Proposition 5.1). See Supplementary Fig. 36 for all six verification variables.",
+      "page": 15,
+      "index": 7,
+      "width": 1008,
+      "height": 359
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-008.webp",
+      "caption": "Figure 7: Left: Z500 RMSE on log scale vs. lead time. The approximately linear growth in logRMSE confirms exponential error growth consistent with Proposition 6.3. Right: Global kinetic energy stability EKE(τ)/EKE(0). Deviation from unity indicates energy drift. FCN3 (CRPS-trained) shows energy inflation; most MSE-trained models show dissipation, consistent with MSE-induced smoothing.",
+      "page": 21,
+      "index": 8,
+      "width": 1008,
+      "height": 392
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-009.webp",
+      "caption": "Figure 16: [Supplementary] Error Consensus Analysis for T850.",
+      "page": 47,
+      "index": 9,
+      "width": 1008,
+      "height": 290
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-010.webp",
+      "caption": "Figure 33: [Supplementary] Regional RMSE decomposition for T850 by latitude band.",
+      "page": 58,
+      "index": 10,
+      "width": 1010,
+      "height": 297
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-011.webp",
+      "caption": "Figure 34: [Supplementary] HMAS weight sensitivity analysis. Grouped bar chart showing HMAS values under five weighting schemes (default, equal, accuracy-focused, extremes-focused, stability-focused) for all ten models. Kendall’s W = 0.97 confirms strong rank concordance, with the top and bottom rankings stable across all schemes.",
+      "page": 58,
+      "index": 11,
+      "width": 1005,
+      "height": 345
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-012.webp",
+      "caption": "Figure 12: Tail fidelity for the February 2021 Texas freeze (cold extreme). Attenuation coefficients α ≈ 0.34–0.56 at day 5 are substantially larger than for heat events (α ≲ 0.28), revealing a systematic cold–warm asymmetry in OOD bias. Notably, AIFS, which achieves near-zero α for heat events, shows α ≈ 0.44 here, demonstrating that warm-extreme mitigation does not transfer to cold extremes. See Supplementary Figs. 25–29 for Winter Storm Elliott.",
+      "page": 30,
+      "index": 12,
+      "width": 1013,
+      "height": 243
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-013.webp",
+      "caption": "Figure 11: Tail fidelity for the 2021 PNW heatwave. Mean forecast bias (K) vs. standardized exceedance δ (σ) at lead times 1–5 days. All models show increasingly negative bias at higher exceedances, confirming Proposition 10.1. See Supplementary Figs. 19–25 for the 2023 European heatwave, 2021 Texas freeze, and Winter Storm Elliott, and Figs. 22–29 for α evolution curves across all four events.",
+      "page": 30,
+      "index": 13,
+      "width": 1008,
+      "height": 244
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-014.webp",
+      "caption": "Figure 28: [Supplementary] α coefficient evolution with lead time for the February 2021 Texas freeze.",
+      "page": 54,
+      "index": 14,
+      "width": 1002,
+      "height": 515
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-015.webp",
+      "caption": "Figure 27: [Supplementary] Tail attenuation coefficients α for Winter Storm Elliott (December 2022).",
+      "page": 54,
+      "index": 15,
+      "width": 990,
+      "height": 453
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-016.webp",
+      "caption": "Figure 13: HMAS parallel coordinates at day 5 (medium-range). Each line represents one model; each vertical axis represents one of the six HMAS metrics. Line crossings between adjacent axes reveal tradeoffs: for example, models with high SFI (spectral fidelity) tend to show lower PCS (physical consistency), and vice versa. No single model achieves the highest score on all six dimensions simultaneously. Models are ordered in the legend by composite HMAS (highest first). See Supplementary Figs. 30–31 for radar chart representations at day 3 and day 15.",
+      "page": 33,
+      "index": 16,
+      "width": 1009,
+      "height": 437
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-017.webp",
+      "caption": "Figure 15: [Supplementary] Error Consensus Analysis for T2M. ECR starts at ≈ 0.63 at short range and remains above 0.53 through day 15.",
+      "page": 46,
+      "index": 17,
+      "width": 1008,
+      "height": 290
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-018.webp",
+      "caption": "Table 7: [Supplementary] Training datasets and time periods for the ten AI weather models evaluated in this study. All models use ERA5 reanalysis as the primary training dataset; several incorporate additional data sources for pretraining or fine-tuning. The “Test cutoff” column indicates the earliest year that can be used for out-of-sample evaluation. Our 30 initialization dates (2021–2024) postdate all training cutoffs.",
+      "page": 46,
+      "index": 18,
+      "width": 1022,
+      "height": 214
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-019.webp",
+      "caption": "Figure 14: [Supplementary] Spectral energy ratio for U500 at day 1 through day 15. Same qualitative pattern as Z500: universal deficit at high k for MSE-trained models.",
+      "page": 46,
+      "index": 19,
+      "width": 1008,
+      "height": 275
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-020.webp",
+      "caption": "Figure 6: Regional RMSE decomposition for Z500 by latitude band: Tropics (|ϕ| < 20◦), Extratropics (20◦ ≤ |ϕ| < 60◦), Polar (|ϕ| ≥ 60◦). Note that y-axis ranges differ across panels to resolve intra-band model spread; cross-panel comparison of absolute RMSE values requires reading the axis labels. Polar errors amplify fastest (reaching ∼100–140 m by day 10 vs. ∼70–100m in the extratropics); extratropical and polar bands show comparable relative inter-model spread. See Supplementary Figs. 32–33 for T2M and T850.",
+      "page": 18,
+      "index": 20,
+      "width": 1010,
+      "height": 298
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-021.webp",
+      "caption": "Figure 36: [Supplementary] Global area-weighted RMSE vs. lead time for all six verification variables (Z500, T2M, U500, V500, T850, Q700), averaged over 30 initialization dates with inter-initializationdate 90% CIs.",
+      "page": 60,
+      "index": 21,
+      "width": 1014,
+      "height": 221
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-022.webp",
+      "caption": "Figure 37: [Supplementary] Balance sub-scores at day 15 (extended range) for all ten models. Compared with day 5 (Fig. 8, right panel), Atlas shows marked degradation in geostrophic balance and nondivergence, while Pangu maintains high sub-scores across all four balance components.",
+      "page": 60,
+      "index": 22,
+      "width": 1002,
+      "height": 478
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-023.webp",
+      "caption": "Figure 29: [Supplementary] α coefficient evolution with lead time for Winter Storm Elliott (December 2022).",
+      "page": 55,
+      "index": 23,
+      "width": 1002,
+      "height": 515
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-024.webp",
+      "caption": "Figure 19: [Supplementary] Tail fidelity for the 2023 European heatwave.",
+      "page": 50,
+      "index": 24,
+      "width": 1013,
+      "height": 243
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-025.webp",
+      "caption": "Figure 20: [Supplementary] Tail attenuation coefficients α for the PNW heatwave.",
+      "page": 50,
+      "index": 25,
+      "width": 1002,
+      "height": 452
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-026.webp",
+      "caption": "Figure 18: [Supplementary] Model scorecard for T850.",
+      "page": 49,
+      "index": 26,
+      "width": 999,
+      "height": 832
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-027.webp",
+      "caption": "Figure 22: [Supplementary] α coefficient evolution with lead time for the PNW heatwave, with R2 values quantifying the goodness of fit of the linear bias–exceedance relationship.",
+      "page": 51,
+      "index": 27,
+      "width": 1002,
+      "height": 516
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-028.webp",
+      "caption": "Figure 21: [Supplementary] Tail attenuation coefficients α for the 2023 European heatwave.",
+      "page": 51,
+      "index": 28,
+      "width": 990,
+      "height": 452
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-029.webp",
+      "caption": "Figure 5: Model scorecard for Z500: RMSE (top) and rank (bottom, 1=best) by lead time. Rank changes confirm that no single architecture dominates all horizons. See Supplementary Figs. 17–18 for T2M and T850.",
+      "page": 17,
+      "index": 29,
+      "width": 1002,
+      "height": 824
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-030.webp",
+      "caption": "Figure 9: Error Consensus Analysis for Z500. Left: ECR vs. lead time; ECR rises from ∼0.50 at day 1 to ∼0.62 at day 8, then gently declines to ∼0.59 at day 15. Right: Mean pairwise error correlation. See Supplementary Figs. 15–16 for T2M and T850.",
+      "page": 27,
+      "index": 30,
+      "width": 1008,
+      "height": 290
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-031.webp",
+      "caption": "Figure 10: Scale-dependent Model Error Divergence (MED) for Z500, decomposed by architecture family. Solid colored lines show within-family MED for GNN pairs (blue), spectral pairs (green), and ViT pairs (orange); red dashed line shows cross-family MED. The purple shaded region between mean withinfamily and cross-family MED highlights the “architecture fingerprint” at fine scales (ℓ > 50), where models from the same family produce more similar error structures than models from different families. At large scales (ℓ < 20), all curves converge, confirming universal planetary-wave handling.",
+      "page": 27,
+      "index": 31,
+      "width": 1014,
+      "height": 216
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-032.webp",
+      "caption": "Figure 30: [Supplementary] HMAS radar chart at day 3 (short-range).",
+      "page": 56,
+      "index": 32,
+      "width": 751,
+      "height": 586
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-033.webp",
+      "caption": "Figure 8: Four-component Physical Consistency Score. Left: Composite PCS (mean of four sub-scores) vs. lead time. ERA5 analysis (black) maintains PCS ≈ 0.55. Right: Sub-score breakdown at day 5 for all ten models, showing geostrophic balance (geo.), non-divergence (n-div.), thermal wind (t.w.), and hydrostatic (hyd.) components. Hydrostatic consistency is uniformly high; non-divergence shows the greatest inter-model spread. See Supplementary Fig. 37 for the day 15 sub-score breakdown.",
+      "page": 24,
+      "index": 33,
+      "width": 1010,
+      "height": 343
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-034.webp",
+      "caption": "Table 1: The ten AI weather models evaluated in this study with their complete pipeline components: architecture family, approximate parameter count, loss function, training strategy, primary data source, and theoretical convergence rate. See Supplementary Table 7 for detailed training periods and additional data sources.",
+      "page": 9,
+      "index": 34,
+      "width": 918,
+      "height": 256
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-035.webp",
+      "caption": "Figure 35: [Supplementary] HMAS dimension cross-correlation matrix at day 5. SFI and PCS are strongly anti-correlated (ρ = −0.86), confirming the spectral fidelity–physical consistency trade-off. ASI is largely independent of accuracy and balance metrics. Mean absolute off-diagonal correlation ¯|ρ| = 0.38.",
+      "page": 59,
+      "index": 35,
+      "width": 989,
+      "height": 796
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-036.webp",
+      "caption": "Table 4: Holistic Model Assessment Scores (HMAS) at Day 5 (medium-range). Models ranked by HMAS.",
+      "page": 31,
+      "index": 36,
+      "width": 618,
+      "height": 246
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-037.webp",
+      "caption": "Table 5: Holistic Model Assessment Scores (HMAS) at Day 15 (extended-range). Models ranked by HMAS. Note: FengWu’s ℓeff = 1.0 is a metric artifact caused by spectral energy inflation exceeding the half-power threshold at all wavenumbers despite very low SFI (= 0.078); see text following Definition 6.2.",
+      "page": 31,
+      "index": 37,
+      "width": 618,
+      "height": 244
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-038.webp",
+      "caption": "Table 3: Holistic Model Assessment Scores (HMAS) at Day 3 (short-range). Models ranked by HMAS.",
+      "page": 31,
+      "index": 38,
+      "width": 618,
+      "height": 246
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-039.webp",
+      "caption": "Figure 24: [Supplementary] Tail fidelity for the February 2021 Texas freeze. Cold extreme attenuation coefficients α ≈ 0.34–0.56 at day 5 are substantially larger than for heat events, indicating stronger OOD bias for cold extremes.",
+      "page": 52,
+      "index": 39,
+      "width": 1013,
+      "height": 243
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-040.webp",
+      "caption": "Figure 23: [Supplementary] α coefficient evolution for the 2023 European heatwave.",
+      "page": 52,
+      "index": 40,
+      "width": 1002,
+      "height": 516
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-041.webp",
+      "caption": "Figure 17: [Supplementary] Model scorecard for T2M.",
+      "page": 48,
+      "index": 41,
+      "width": 999,
+      "height": 832
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01215v1/fig-042.webp",
+      "caption": "Figure 4: Anomaly Correlation Coefficient vs. lead time for Z500, T850, and T2M, with interinitialization-date 90% CIs. Most models sustain useful skill (ACC > 0.6) for Z500 through ∼7 days; the best models extend to ∼10 days.",
+      "page": 16,
+      "index": 42,
+      "width": 1009,
+      "height": 295
+    }
+  ]
+}

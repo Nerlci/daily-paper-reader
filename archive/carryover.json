@@ -1,6 +1,17 @@
 {
-  "generated_at": "2026-03-06T19:11:18.471356+00:00",
-  "updated_date": "20260306",
+  "generated_at": "2026-04-20T10:26:01.587007+00:00",
+  "updated_date": "20260322-20260420",
   "carryover_days": 9,
-  "items": []
+  "tag_states": {
+    "TSF": {
+      "updated_date": "20260322-20260420",
+      "carryover_days": 9,
+      "items": []
+    },
+    "LLM数据": {
+      "updated_date": "20260322-20260420",
+      "carryover_days": 9,
+      "items": []
+    }
+  }
 }

@@ -1,0 +1,70 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.01216v1/fig-001.webp",
+      "caption": "Fig. 8: LAPIS-SHRED backward inference on the 2D NDSI dataset from a single terminal frame using static padding. Ground truth (top row), LAPIS-SHRED reconstruction (second row), and SHRED baseline using the full sensor timeseries (third row), shown at selected time steps.",
+      "page": 11,
+      "index": 1,
+      "width": 526,
+      "height": 329
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01216v1/fig-002.webp",
+      "caption": "Fig. 7: LAPIS-SHRED forward inference on the 2D NDSI dataset. Ground truth for the 2025 snow season (top row), LAPIS-SHRED prediction from the initial 5 frames (second row), and SHRED baseline using the full sensor time-series (third row), shown at selected time steps.",
+      "page": 11,
+      "index": 2,
+      "width": 526,
+      "height": 329
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01216v1/fig-003.webp",
+      "caption": "Fig. 14: Distribution of relative reconstruction errors on the fluid-around-an-obstacle benchmark (reproduced from Tomasetto et al. [22], Figure 7b). SHRED-ROM outperforms all competing methods on the reconstruction task alone; the temporal inference setting addressed by LAPIS-SHRED introduces additional challenges that none of these methods are designed to handle.",
+      "page": 15,
+      "index": 3,
+      "width": 452,
+      "height": 324
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01216v1/fig-004.webp",
+      "caption": "Fig. 13: SHRED-ROM baseline (ensemble-interpolated) on the NDSI forward experiment. Ground truth (top), reconstruction from ensemble-interpolated sensor series (middle), and SHRED-ROM with full sensor time-series access (bottom). Compare with Figure 7.",
+      "page": 15,
+      "index": 4,
+      "width": 526,
+      "height": 290
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01216v1/fig-005.webp",
+      "caption": "Fig. 6: LAPIS-SHRED backward reconstruction on the 1D RDE ignition stage. Ground truth (top row), LAPIS-SHRED reconstruction from the terminal 20% of the trajectory (second row), and SHRED baseline using the full sensor history (third row), shown at selected time steps. Pressure field is shown in red; temperature in blue.",
+      "page": 10,
+      "index": 5,
+      "width": 526,
+      "height": 333
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01216v1/fig-006.webp",
+      "caption": "Fig. 15: LAPIS-SHRED backward reconstruction on 2D Kolmogorov flow: velocity field. Ground truth (top row), LAPIS-SHRED reconstruction from the terminal 10% of the trajectory (second row), and SHRED baseline using the full sensor time-series (third row), shown at selected time steps.",
+      "page": 18,
+      "index": 6,
+      "width": 526,
+      "height": 321
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01216v1/fig-007.webp",
+      "caption": "TABLE 3: Capability comparison of LAPIS-SHRED and related methods. ✓ = supported; ✗ = not supported.",
+      "page": 13,
+      "index": 7,
+      "width": 526,
+      "height": 255
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01216v1/fig-008.webp",
+      "caption": "Fig. 17: NDSI data preview: spatiotemporal structure of the 2020-2025 snow melt seasons after SCAF trimming.",
+      "page": 19,
+      "index": 8,
+      "width": 526,
+      "height": 587
+    }
+  ]
+}

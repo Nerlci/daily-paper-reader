@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.13977v1/fig-001.webp",
+      "caption": "Table 11: Breakdown scores for different existing rephrasing approaches.",
+      "page": 25,
+      "index": 1,
+      "width": 822,
+      "height": 196
+    },
+    {
+      "url": "assets/figures/arxiv/2604.13977v1/fig-002.webp",
+      "caption": "Table 16: Breakdown scores for different mix-in dataset Dmix choices with FWHQ (HQ) or FWLQ (LQ) as Dsource. Parentheses indicate the mix-in dataset quality (HQ vs. LQ).",
+      "page": 26,
+      "index": 2,
+      "width": 822,
+      "height": 219
+    },
+    {
+      "url": "assets/figures/arxiv/2604.13977v1/fig-003.webp",
+      "caption": "Table 15: Breakdown scores between synthetic-only and mixed training.",
+      "page": 26,
+      "index": 3,
+      "width": 822,
+      "height": 204
+    },
+    {
+      "url": "assets/figures/arxiv/2604.13977v1/fig-004.webp",
+      "caption": "Figure 3: Fine-grained evaluation of pedagogical formats against the DCLM baseline. The best result in each task is marked with ⋆. We use the best-performing SmolLM2 1.7B as G.",
+      "page": 7,
+      "index": 4,
+      "width": 826,
+      "height": 241
+    },
+    {
+      "url": "assets/figures/arxiv/2604.13977v1/fig-005.webp",
+      "caption": "Figure 4: GPU cost vs. performance. Symbols distinguish model variants; adjacent characters represent prompt formats (e.g., t: table, m: math).",
+      "page": 8,
+      "index": 5,
+      "width": 733,
+      "height": 313
+    },
+    {
+      "url": "assets/figures/arxiv/2604.13977v1/fig-006.webp",
+      "caption": "Table 19: Macro-averaged scores for different Gemma 3 model scales at 10K steps.",
+      "page": 27,
+      "index": 6,
+      "width": 462,
+      "height": 460
+    },
+    {
+      "url": "assets/figures/arxiv/2604.13977v1/fig-007.webp",
+      "caption": "Figure 5: FINEPHRASE prompts vs. baselines. The best result in each task is marked with ⋆. All FINEPHRASE runs use SmolLM2 1.7B on FineWeb, mixed with FineWeb-HQ.",
+      "page": 9,
+      "index": 7,
+      "width": 827,
+      "height": 248
+    }
+  ]
+}

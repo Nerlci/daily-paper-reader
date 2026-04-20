@@ -1,0 +1,110 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.08519v1/fig-001.webp",
+      "caption": "Figure 5 Fact memorization (in bits), fact accuracy (in accurate fact count), and exposures (needed till convergence) for pretraining on synthetic phonebook dataset. Fact memorization is measured by loss-based lower bound (Corollary A.7). Fact accuracy is measured by accurate fact count defined in Definition 3.4, i.e., the sum of probability of generating the correct answer for each fact under stochastic decoding. Exposure is measured by the number of epochs needed till convergence for training under tuned hyperparameters (Section B.1).",
+      "page": 26,
+      "index": 1,
+      "width": 932,
+      "height": 532
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08519v1/fig-002.webp",
+      "caption": "Table 2 Best fact accuracy (in accurate fact count, i.e., the expected number of correctly answered facts) for pretraining from scratch on power-law distributed phonebook facts under different data selection schemes. We bold the best result in each row, and show standard deviation across 10 runs in brackets for certain settings where the performances show more variances (in hindsight being the settings near the capacity threshold, i.e., where the number of model parameters roughly matches the number of facts in the training data). All settings consider sufficiently trained model with 110m parameters that trains for 800k steps, except for the 8x longer training runs which train for 6.4m steps. See Section B.1 for hyperparameter tuning setups for training on full dataset, and see Section 4.1 for hyperparameter tuning setups for training with data selection.",
+      "page": 30,
+      "index": 2,
+      "width": 968,
+      "height": 586
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08519v1/fig-003.webp",
+      "caption": "Figure 2 Fact accuracy (in accurate fact count) of a 110m parameter model pretrained on power-law distributed phonebook facts. Our LossHF selection Algorithm 1 boosts fact accuracy to close to capacity limit, significantly outperforming training on the full dataset. See Table 2 for detailed performance. Accurate fact count capacity limit is computed following Corollary 3.7 as follows: (2bits/param)×(110M params)/(22×log2(10) bits/fact) = 3.01m facts",
+      "page": 7,
+      "index": 3,
+      "width": 937,
+      "height": 244
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08519v1/fig-004.webp",
+      "caption": "Table 4 Our selective training improves fact accuracy without worsening forgetting during LoRA finetuning on titleauthors mapping facts in the arXiv-papers dataset. We show mean and standard deviation (in brackets) across three runs.",
+      "page": 34,
+      "index": 4,
+      "width": 972,
+      "height": 488
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08519v1/fig-005.webp",
+      "caption": "Table 5 Fact counts in processed Wikipedia corpus",
+      "page": 34,
+      "index": 5,
+      "width": 982,
+      "height": 416
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08519v1/fig-006.webp",
+      "caption": "Table 1 LossH-Wiki algorithm 2 (Ours) vs. Random Baseline for pretraining 110m model on annotated Wikipedia corpus. The Random baseline selects a fixed α fraction of facts via content hash (same facts every epoch), keeping all non-fact tokens, with 1/α rescaling of selected fact tokens.",
+      "page": 14,
+      "index": 6,
+      "width": 732,
+      "height": 300
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08519v1/fig-007.webp",
+      "caption": "Figure 7 Fact memorization and fact accuracy capacity of LoRA finetuning. See settings in Section 4.1.",
+      "page": 28,
+      "index": 7,
+      "width": 856,
+      "height": 596
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08519v1/fig-008.webp",
+      "caption": "Figure 4 Performance versus selection ratio α for using our LossH-Wiki data selection algorithm 2 for pretraining on annotated Wikipedia Corpus (3B tokens) with 66k steps and batch-size 320 (roughly 8 epochs). For the 110m model, we repeat 3 runs and report mean and standard deviation (shown in error bars). Dashed lines show full dataset training baselines for 335m and 1.3B for ease of comparison.",
+      "page": 13,
+      "index": 8,
+      "width": 981,
+      "height": 335
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08519v1/fig-009.webp",
+      "caption": "Figure 11 Sum of per-token loss over a sequence (right plot) shows stronger rank correlation to the fact-weight-tobits, when compared to average of per-token loss over a sequence (left plot). We consider the setting of training on mixture of power law phonebook datasets with heterogeneous prefix lengths and suffix lengths. See detailed settings in Section D.2.",
+      "page": 36,
+      "index": 9,
+      "width": 810,
+      "height": 293
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08519v1/fig-010.webp",
+      "caption": "Figure 8 Performance comparison between Full-Dataset Training and our LossHF Selection Algorithm 1 for LoRA finetuning across different ranks on title-authors mapping facts in the arXiv-papers dataset. All performances are averaged across three runs. See Section 4.1 for more details on the settings, and see Table 4 for detailed performances of each general capability task.",
+      "page": 32,
+      "index": 10,
+      "width": 873,
+      "height": 307
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08519v1/fig-011.webp",
+      "caption": "Figure 6 Gap in fact memorization in bits (left) and fact accuracy in accurate fact count (right) between sufficiently trained small model (110m parameters) and 10X larger model (1.3B parameters). Dashed lines show results for the small model trained for 800k steps, and shaded areas (extending above the dashed lines) show the improvement obtained by training the small model for 8× longer (6.4M steps). Each point in the curve shows result for one training dataset, and curves are plotted over increasingly large training datasets containing {160000, 320000, 640000, 1280000, 1600000, 1920000, 2240000, 2560000} facts, following different frequency distributions, including uniform, power law with exponent 0.5, and power law with exponent 1.0. All results are for the optimal run after hyperparameter tuning as discussed in Section B.1.",
+      "page": 27,
+      "index": 11,
+      "width": 871,
+      "height": 344
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08519v1/fig-012.webp",
+      "caption": "Figure 12 Fact accuracy (in accurate fact count) versus dataset selection ratio α for LoRA finetuned model on arXivpapers dataset. We vary the LoRA rank r (left plot) to control model size, and vary the number of training steps (right plot).",
+      "page": 37,
+      "index": 12,
+      "width": 980,
+      "height": 760
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08519v1/fig-013.webp",
+      "caption": "Table 3 Best weighted fact accuracy (combined weight of accurately answered facts in the underlying data distribution) for pretraining from scratch on power-law distributed phonebook facts under different data selection schemes. We bold the best result in each row, and show standard deviation across 10 runs in brackets for certain settings where the performances show more variances (in hindsight being the settings near the capacity threshold, i.e., where the number of model parameters roughly matches the number of facts in the training data). All settings consider sufficiently trained model with 110m parameters that trains for 800k steps, except for the 8x longer training runs which train for 6.4m steps. See Section B.1 for more details on the setup for training on full dataset, and see Section 4.1 for more details on the setup for training with data selection.",
+      "page": 31,
+      "index": 13,
+      "width": 810,
+      "height": 567
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.16238v1/fig-001.webp",
+      "caption": "Fig. 3: Average global forecast skill of AI models and their probabilistic bias corrections (PBC). (a) In 2025, PBC consistently enhances the subseasonal skill of ECMWF’s AI Forecasting System (AIFS-SUBS), tripling its positive skill for temperature (week 4) and precipitation (week 3) and doubling it for mean sea level pressure (week 4). (b) In 2024, the hybrid (AI + dynamical) model PoET already improves the skill of its dynamical input, ECMWF. Nevertheless, PBC further enhances skill for every variable and lead time with gains of 70–96% for precipitation, 15–24% for mean sea level pressure, and 5–7% for temperature. The error bars display 95% bootstrap confidence intervals.",
+      "page": 6,
+      "index": 1,
+      "width": 958,
+      "height": 819
+    },
+    {
+      "url": "assets/figures/arxiv/2604.16238v1/fig-002.webp",
+      "caption": "Fig. 4: AI Weather Quest real-time global forecast skill. MicroDuet, an ensemble of PBC-ECMWF and PBCPoET, placed first in the 2025 September-October-November AI Weather Quest competition for every variable and lead time, outperforming the debiased dynamical models of six government agencies (ECMWF, NOAA, ECCC, HMCR, KMA, and JMA), their dynamical multi-model ensemble (Dynamical MME), three ECMWF AI models (including their top-performing AIFShera model), and the forecasting systems of 34 teams worldwide (including the top competitors, FengshunHybrid and LPM).",
+      "page": 7,
+      "index": 2,
+      "width": 955,
+      "height": 537
+    },
+    {
+      "url": "assets/figures/arxiv/2604.16238v1/fig-003.webp",
+      "caption": "Fig. 1: Probabilistic bias correction (PBC) schematic. PBC takes as input lagged observations, climatological quantiles (e.g., quintiles, terciles, or deciles), and the deterministic forecasts of any dynamical or AI model and outputs a learning-enhanced probabilistic forecast designed to correct systematic prediction errors.",
+      "page": 3,
+      "index": 3,
+      "width": 964,
+      "height": 865
+    },
+    {
+      "url": "assets/figures/arxiv/2604.16238v1/fig-004.webp",
+      "caption": "Fig. 5: Forecasting extreme weather with the leading dynamical model (ECMWF) and its probabilistic bias correction (PBC) in week 4. (a, b) Across the globe and the years 2016–2024, PBC boosts ECMWF extreme forecast skill more effectively than operational debiasing protocols. Taking the same raw dynamical forecasts as input, PBC (a) improves the extreme forecasting skill of debiased ECMWF by 44–54% for temperature, 35–95% for pressure, and over 100% for precipitation with (b) skill gains in 87–97% of sites worldwide. (c) Across flood events catalogued by the Global Disaster Awareness and Coordination System, raw and debiased ECMWF routinely display negative BSS (underperforming climatology), while PBC delivers improved, positive flood forecasting skill each year. The error bars display 95% bootstrap confidence intervals.",
+      "page": 9,
+      "index": 4,
+      "width": 958,
+      "height": 1019
+    },
+    {
+      "url": "assets/figures/arxiv/2604.16238v1/fig-005.webp",
+      "caption": "Fig. 2: Average forecast skill of the leading dynamical model (ECMWF) and its probabilistic bias correction (PBC). (a) Across the globe and the years 2016–2024, PBC boosts the subseasonal skill of raw ECMWF forecasts more effectively than operational debiasing, transforming low- and no-skill inputs into skillful outputs that consistently outperform climatology. (b) PBC improvements are broadly distributed with 98% of grid cells showing skill gains over debiased ECMWF for precipitation, 91–92% for temperature, and 89–91% for sea level pressure. Negative RPSS indicates worse predictive performance than the climatological mean, while positive RPSS indicates improved forecasting skill. The error bars display 95% bootstrap confidence intervals.",
+      "page": 5,
+      "index": 5,
+      "width": 768,
+      "height": 1157
+    }
+  ]
+}

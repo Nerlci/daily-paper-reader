@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.08400v1/fig-001.webp",
+      "caption": "Figure 1: Reformulating multivariate time series forecasting as a scalar regression problem: A pictorial and tabular representation of a Lorenz system (a time series with three covariates x, y, z introduced in Lorenz (1963)) is presented on the left parts of the figure. The time-indexed table is “rolled out” by introducing a channel indicator column (as seen in the table on the right). We note that this transformation expands the size of the table by a factor equal to the number of covariates.",
+      "page": 2,
+      "index": 1,
+      "width": 826,
+      "height": 425
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08400v1/fig-002.webp",
+      "caption": "Table 1: Detailed performance comparison with TabPFN-TS. We evaluate our approach using the multivariate datsets in the Gift-Eval time series benchmark Aksu et al. (2024). Following standard practice we evaluate point forecast accuracy using the Mean Absolute Scaled Error (MASE) and probabilistic forecast accuracy via the Weighted Quantile Loss (WQL). Lower is better for both metrics. Standard deviations are omitted, as variance across random seeds for TabPFN was negligible.",
+      "page": 7,
+      "index": 2,
+      "width": 818,
+      "height": 688
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08400v1/fig-003.webp",
+      "caption": "Figure 5: Performance comparison between different strategies for mitigating cross-channel distributional shifts. The y-axis is in log scale. We observe that while the standardizing approach greatly improves performance, first order differencing degrades performance. We incorporate the standardization approach into our framework.",
+      "page": 10,
+      "index": 3,
+      "width": 826,
+      "height": 472
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08400v1/fig-004.webp",
+      "caption": "Figure 2: Performance of TabPFN-TS compared to ours on multivariate datasets in the gifteval benchmark our approach lowers MASE on 60% of the datasets. We refer the reader to Table 1 in the appendix for detailed results.",
+      "page": 4,
+      "index": 4,
+      "width": 826,
+      "height": 473
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08400v1/fig-005.webp",
+      "caption": "Figure 4: Performance of TabPFN-TS-MV compared to TimePFN: While TimePFN supports joint multivariate time series forecasting it only supports a maximum context window of 96 time steps. This poses a significant limitation as a majority of the datasets in Gift-Eval consist of much longer time series. All approaches are limited to a context window of 96 time steps (per variate) for fair comparison",
+      "page": 9,
+      "index": 5,
+      "width": 826,
+      "height": 472
+    },
+    {
+      "url": "assets/figures/arxiv/2604.08400v1/fig-006.webp",
+      "caption": "Figure 3: Performance of TabPFN-TS-MV compared to other SOTA time series approaches: The y-axis is log scale, Tabpfn-TS-MV (ours) and Chronos 2 supports channel dependent (CD) multivariate predictions while TabPFN-TS and TempoPFN only support univariate (channel independent) predictions.",
+      "page": 9,
+      "index": 6,
+      "width": 826,
+      "height": 472
+    }
+  ]
+}

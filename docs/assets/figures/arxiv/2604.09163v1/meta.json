@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.09163v1/fig-001.webp",
+      "caption": "Table 2. Tool evaluation based on the criteria defined in Section 4.",
+      "page": 7,
+      "index": 1,
+      "width": 710,
+      "height": 372
+    }
+  ]
+}

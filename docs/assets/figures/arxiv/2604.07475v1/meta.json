@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.07475v1/fig-001.webp",
+      "caption": "Figure 4: Correlations with respect to locations of the four major cities. top left, Delhi; top right, Kolkata; bottom left, Mumbai; bottom right, Chennai, based on trimmed data.",
+      "page": 15,
+      "index": 1,
+      "width": 501,
+      "height": 501
+    },
+    {
+      "url": "assets/figures/arxiv/2604.07475v1/fig-002.webp",
+      "caption": "Figure 8: Correlation matrices based on monthly DTR data of India from CRU, (a) based on original data; (b) based on trimmed data with 12 SVs and grids arranged according to climatic regions.",
+      "page": 21,
+      "index": 2,
+      "width": 523,
+      "height": 302
+    },
+    {
+      "url": "assets/figures/arxiv/2604.07475v1/fig-003.webp",
+      "caption": "Figure 9: Correlation matrices for DTR from 417 municipalities of Bahia: original data (left); trimmed DTR with 5 SVs, municipalities arranged by spatial proximity (right).",
+      "page": 21,
+      "index": 3,
+      "width": 525,
+      "height": 229
+    },
+    {
+      "url": "assets/figures/arxiv/2604.07475v1/fig-004.webp",
+      "caption": "Figure 3: (a) Left panel: Cumulative singular-values for original DTR data (D). (b) Right panel: Autocorrelations for the 280 time series based on trimmed data (S).",
+      "page": 14,
+      "index": 4,
+      "width": 605,
+      "height": 298
+    },
+    {
+      "url": "assets/figures/arxiv/2604.07475v1/fig-005.webp",
+      "caption": "Figure 6: Spatial Bergsma statistics (SB) at various spatio-temporal resolution based on trimmed data (S) and for lag-1 adjacency (red), and exponential distance decay (blue).",
+      "page": 18,
+      "index": 5,
+      "width": 767,
+      "height": 590
+    },
+    {
+      "url": "assets/figures/arxiv/2604.07475v1/fig-006.webp",
+      "caption": "Figure 7: Teleconnection and core spatial association (a) Categorized by ENSO information, distribution of Spatial Bergsma statistics (SB) from individual year’s trimmed data (S); (b) Correlations (instantaneous and lagged) between monthly SST of Indian Ocean and monthly Spatial Bergsma statistics (SB), at climatic region levels for India.",
+      "page": 20,
+      "index": 6,
+      "width": 805,
+      "height": 330
+    },
+    {
+      "url": "assets/figures/arxiv/2604.07475v1/fig-007.webp",
+      "caption": "Figure 1: 362 grids of India: 1-Tropical monsoon; 2-Tropical savannah, wet and dry; 3-Arid, steppe, hot; 4-Humid subtropical; 5-Montane climate; 6-Hot deserts, Arid.",
+      "page": 5,
+      "index": 7,
+      "width": 386,
+      "height": 346
+    }
+  ]
+}

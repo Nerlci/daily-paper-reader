@@ -1,0 +1,134 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.09041v1/fig-001.webp",
+      "caption": "Figure 3. WeatherBench 2 Comparison (1.5˝ resolution). We report the CRPS skill relative to the operational IFS ENS (%, lower is better) as a function of forecast horizon. Baseline scores are sourced from the official leaderboard (Rasp et al., 2024). Numbers after variable abbreviations denote pressure levels in hPa. Note that the GenCast baseline is the native 0.25˝ model regridded to 1.5˝ (see Section 4.2 for discussion of this resolution asymmetry). U-Cast consistently outperforms baselines on geopotential variables while remaining highly competitive on other fields.",
+      "page": 6,
+      "index": 1,
+      "width": 991,
+      "height": 602
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09041v1/fig-002.webp",
+      "caption": "Figure 14. Example visualizations of U-Cast (second row), the corresponding ground truth (first row), and the bias (last row) for specific humidity at 700 hPa (q700) and forecast lead times 3, 7, 10, and 14 days.",
+      "page": 21,
+      "index": 2,
+      "width": 901,
+      "height": 596
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09041v1/fig-003.webp",
+      "caption": "Figure 4. U-Cast ablations. We report CRPS relative to U-Cast (top row) and spread-skill ratio (bottom row; closer to 1 is better).",
+      "page": 7,
+      "index": 3,
+      "width": 492,
+      "height": 356
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09041v1/fig-004.webp",
+      "caption": "Table 2. Training compute costs and inference speeds for probabilistic weather forecasting models. Models are grouped by resolution. Inference speed is for one single-member 60-step rollout (15- days for NeuralGCM and IFS ENS, or if a 6h-resolution model). : TPU benchmarks for 1˝ GenCast unavailable, but official documentation indicates a « 3ˆ speed-up over a H100 GPU at 0.25˝. ˚ For each of the 4 individual models. 1˝ cost is estimated.",
+      "page": 7,
+      "index": 4,
+      "width": 460,
+      "height": 373
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09041v1/fig-005.webp",
+      "caption": "Figure 15. Example visualizations of U-Cast (second row), the corresponding ground truth (first row), and the bias (last row) for two example variables and forecast lead times 3, 7, 10, and 14 days.",
+      "page": 22,
+      "index": 5,
+      "width": 931,
+      "height": 1296
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09041v1/fig-006.webp",
+      "caption": "Figure 6. The Efficiency-Accuracy Pareto Frontier. We visualize forecast skill (y-axis, % improvement over IFS ENS in terms of CRPS on the left and RMSE on the right), training cost (x-axis), and inference latency (bubble size). Our model (top-left) achieves state-of-the-art performance while requiring an order of magnitude less compute for training or inference compared to leading baselines.",
+      "page": 14,
+      "index": 6,
+      "width": 983,
+      "height": 330
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09041v1/fig-007.webp",
+      "caption": "Figure 8. WeatherBench 2 Comparison (1.5˝ resolution): RMSE. We report the 50-member ensemble-mean RMSE skill relative to the operational IFS ENS (%, lower is better) as a function of forecast horizon. Baseline scores are sourced directly from the official leaderboard (Rasp et al., 2024). Numbers after the variable abbreviations refer to the pressure level in hPa. Note that the GenCast baseline uses native 0.25˝ forecasts regridded to 1.5˝, which may confer an advantage over models strictly operating at 1.5˝ (like U-Cast, ArchesWeatherGen, and NeuralGCM). Relative to the CRPS results, GenCast performs stronger in terms of RMSE than U-Cast.",
+      "page": 18,
+      "index": 7,
+      "width": 893,
+      "height": 544
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09041v1/fig-008.webp",
+      "caption": "Figure 9. WeatherBench 2 Comparison (1.5˝ resolution): SSR. We report the Spread-Skill ratio skill as a function of forecast horizon (closer to 1 is better). Baseline scores are sourced directly from the official leaderboard (Rasp et al., 2024). Numbers after the variable abbreviations refer to the pressure level in hPa. U-Cast generates more overconfident forecasts than the baselines, especially in the 1-to-7-day regime. U-Cast (DE) improves calibration, with SSR rarely falling below 0.85 and achieving better short-range calibration than NeuralGCM ENS for several variables.",
+      "page": 18,
+      "index": 8,
+      "width": 893,
+      "height": 543
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09041v1/fig-009.webp",
+      "caption": "Table 3. Description of data variables used.",
+      "page": 13,
+      "index": 9,
+      "width": 843,
+      "height": 417
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09041v1/fig-010.webp",
+      "caption": "Figure 5. Curriculum ablation. Validation CRPS (t850, 12h lead time) during probabilistic training. The curriculum (orange) fine-tunes from a deterministic checkpoint (dashed blue line) and converges rapidly to a CRPS of 0.218. Training from scratch on CRPS alone (gray) requires ą 3ˆ more steps to reach comparable performance and plateaus at a worse score (0.225).",
+      "page": 8,
+      "index": 10,
+      "width": 477,
+      "height": 275
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09041v1/fig-011.webp",
+      "caption": "Figure 11. Score card comparison of U-Cast (DeepEns) vs. U-Cast. Deep ensembling U-Cast via fine-tuning four different versions of it consistently improves CRPS scores, especially for short-to-mid-range geopotential and stratospheric (by up to 4%; except q50) variables.",
+      "page": 19,
+      "index": 11,
+      "width": 880,
+      "height": 599
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09041v1/fig-012.webp",
+      "caption": "Figure 10. Comparison of U-Cast (DE) evaluated on 2022 against IFS ENS (left) and against U-Cast (DE) evaluated on 2020 (right). Blue indicates that U-Cast achieves a lower (better) CRPS, while red favors the baseline. U-Cast consistently outperforms IFS ENS on 91.5% of metrics, with notable exceptions in long-range 2-meter temperature and a few variables at the 12-hour lead time (e.g., a 10.8% deficit in u500). On average, U-Cast improves upon IFS ENS by 4.45%, with the strongest gains (« 18–22%) observed at 12-to-36-hour lead times for mslp. These results are comparable to those obtained for the test year 2020 (Figure 2), demonstrating that U-Cast, despite being trained only on 1979–2019 data, generalizes well to more distant years. This robustness is further supported by the right panel, where the maximum degradation of U-Cast (DE; 2022) relative to its 2020 performance remains below 4.5%, concentrated in geopotential variables (especially z500), while specific humidity variables even show improved CRPS scores (up to 2%).",
+      "page": 19,
+      "index": 12,
+      "width": 938,
+      "height": 263
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09041v1/fig-013.webp",
+      "caption": "Figure 7. WeatherBench 2 Comparison (1.5˝ resolution): Absolute CRPS. We report the CRPS skill as a function of forecast horizon (lower is better). This figure visualizes the same as Figure 3 but in absolute terms, without normalizing by the performance of IFS ENS.",
+      "page": 17,
+      "index": 13,
+      "width": 991,
+      "height": 602
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09041v1/fig-014.webp",
+      "caption": "Figure 12. Curriculum and ensemble-size ablations (full evaluation). Relative CRPS vs. U-Cast across variables and lead times (higher means worse than U-Cast). End-to-end CRPS (orange) trains from scratch without deterministic pre-training; it consistently degrades short-range CRPS by 3–5% and stratospheric variables by 5–15% across all lead times, while recovering or slightly improving long-range scores for select variables (e.g., 2t). U-Cast (M “4) (blue) doubles the training ensemble size; it yields only marginal improvements despite doubling per-step cost, with modest gains concentrated at long-range stratospheric variables (up to 3% for t50).",
+      "page": 20,
+      "index": 14,
+      "width": 991,
+      "height": 438
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09041v1/fig-015.webp",
+      "caption": "Figure 13. Spectral density of 10-day forecasts, averaged over mid latitudes (r25˝, 55˝ s). While U-Cast generates realistic spectra for the surface and specific humidity variables, it tends to generate excess power at high frequencies for the other variables.",
+      "page": 20,
+      "index": 15,
+      "width": 917,
+      "height": 575
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09041v1/fig-016.webp",
+      "caption": "Figure 2. 1.5˝ CRPS comparison of U-Cast DeepEns against IFS ENS (left) and GenCast (right). Blue indicates lower (better) CRPS for U-Cast; red indicates baseline superiority. U-Cast broadly outperforms IFS ENS and is competitive with GenCast despite the latter’s finer native resolution (0.25˝). See text for details.",
+      "page": 5,
+      "index": 16,
+      "width": 942,
+      "height": 264
+    }
+  ]
+}

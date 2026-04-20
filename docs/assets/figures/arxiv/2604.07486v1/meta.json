@@ -1,0 +1,102 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.07486v1/fig-001.webp",
+      "caption": "Table 1: Downstream Task Performance Results for the non-DP Baseline (ϵ = ∞).",
+      "page": 6,
+      "index": 1,
+      "width": 427,
+      "height": 404
+    },
+    {
+      "url": "assets/figures/arxiv/2604.07486v1/fig-002.webp",
+      "caption": "Table 2: Lexical Diversity Results for the non-DP Baseline (ϵ = ∞).",
+      "page": 6,
+      "index": 2,
+      "width": 425,
+      "height": 404
+    },
+    {
+      "url": "assets/figures/arxiv/2604.07486v1/fig-003.webp",
+      "caption": "Table 7: Hyperparameters and Threshold Settings in our Experiments.",
+      "page": 15,
+      "index": 3,
+      "width": 912,
+      "height": 302
+    },
+    {
+      "url": "assets/figures/arxiv/2604.07486v1/fig-004.webp",
+      "caption": "Table 9: Lexical Diversity Results under Different Privacy Budgets.",
+      "page": 15,
+      "index": 4,
+      "width": 846,
+      "height": 204
+    },
+    {
+      "url": "assets/figures/arxiv/2604.07486v1/fig-005.webp",
+      "caption": "Table 6: Prompts Used in RPSG to Generate Synthetic Variants and Data.",
+      "page": 15,
+      "index": 5,
+      "width": 860,
+      "height": 225
+    },
+    {
+      "url": "assets/figures/arxiv/2604.07486v1/fig-006.webp",
+      "caption": "Figure 1: Illustration of the RPSG Method Pipeline. Comparative performance of RPSG against DP-SGD (ϵ = ∞), AUG-PE (ϵ = ∞), and RUPTA across different LLMs. RPSG achieves higher accuracy, diversity, and lexical quality on several settings, demonstrating advantages over existing approaches.",
+      "page": 2,
+      "index": 6,
+      "width": 923,
+      "height": 352
+    },
+    {
+      "url": "assets/figures/arxiv/2604.07486v1/fig-007.webp",
+      "caption": "Table 3: Evaluation of MIAs for the non-DP Baseline (ϵ = ∞): Lower deviation from 50% indicates stronger privacy.",
+      "page": 7,
+      "index": 7,
+      "width": 415,
+      "height": 436
+    },
+    {
+      "url": "assets/figures/arxiv/2604.07486v1/fig-008.webp",
+      "caption": "Table 17: Ablation results on Next-Word Prediction Accuracy, FID, and self-BLEU across temperature and synthetic sample size settings using Phi-4.",
+      "page": 22,
+      "index": 8,
+      "width": 775,
+      "height": 411
+    },
+    {
+      "url": "assets/figures/arxiv/2604.07486v1/fig-009.webp",
+      "caption": "Table 12: Evaluation of MIAs under Different Privacy Budgets.",
+      "page": 18,
+      "index": 9,
+      "width": 812,
+      "height": 204
+    },
+    {
+      "url": "assets/figures/arxiv/2604.07486v1/fig-010.webp",
+      "caption": "Table 18: Phrases Used to Filter Posts During Construction of the Reddit Dataset.",
+      "page": 23,
+      "index": 10,
+      "width": 787,
+      "height": 885
+    },
+    {
+      "url": "assets/figures/arxiv/2604.07486v1/fig-011.webp",
+      "caption": "Table 13: Example-based Qualitative Comparison Between Private, DP-SGD, AUG-PE, RUPTA, and RPSG Synthetic Samples under ϵ = ∞.",
+      "page": 19,
+      "index": 11,
+      "width": 912,
+      "height": 1058
+    },
+    {
+      "url": "assets/figures/arxiv/2604.07486v1/fig-012.webp",
+      "caption": "Table 10: Distributional and Semantic Similarity to the Private Data for the non-DP Baseline (ϵ = ∞).",
+      "page": 16,
+      "index": 12,
+      "width": 896,
+      "height": 421
+    }
+  ]
+}

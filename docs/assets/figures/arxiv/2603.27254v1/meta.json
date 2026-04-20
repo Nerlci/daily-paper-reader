@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.27254v1/fig-001.webp",
+      "caption": "Figure 2. Comparison of Amalgam synthesis for different LLMs on MIMIC-IV Admissions.",
+      "page": 7,
+      "index": 1,
+      "width": 982,
+      "height": 303
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27254v1/fig-002.webp",
+      "caption": "Figure 3. Energy usage comparison across different LLMs on MIMIC-IV Admissions dataset.",
+      "page": 8,
+      "index": 2,
+      "width": 837,
+      "height": 607
+    }
+  ]
+}

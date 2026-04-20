@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.07769v1/fig-001.webp",
+      "caption": "Table 2: Spearman rank correlation (p-values) between actual performance metrics and different loss-based metrics across different programming tasks",
+      "page": 6,
+      "index": 1,
+      "width": 1048,
+      "height": 335
+    },
+    {
+      "url": "assets/figures/arxiv/2604.07769v1/fig-002.webp",
+      "caption": "Figure 2: Performance trends on downstream programming tasks for models trained with Top and Bottom Samples selected by the 𝐷𝐼𝑆𝑐𝑜𝑟𝑒.",
+      "page": 6,
+      "index": 2,
+      "width": 1023,
+      "height": 206
+    },
+    {
+      "url": "assets/figures/arxiv/2604.07769v1/fig-003.webp",
+      "caption": "Figure 4: Spearman correlation coefficients of 𝐷𝐼𝑆𝑐𝑜𝑟𝑒 between different programming tasks based on the CodeShell-1B-CP100B.",
+      "page": 7,
+      "index": 3,
+      "width": 501,
+      "height": 434
+    },
+    {
+      "url": "assets/figures/arxiv/2604.07769v1/fig-004.webp",
+      "caption": "Figure 5: Distribution of 𝐷𝐼𝑆𝑐𝑜𝑟𝑒 on different programming languages.",
+      "page": 7,
+      "index": 4,
+      "width": 502,
+      "height": 280
+    },
+    {
+      "url": "assets/figures/arxiv/2604.07769v1/fig-005.webp",
+      "caption": "Table 3: Statistical Summary of 𝐷𝐼𝑆𝑐𝑜𝑟𝑒 Distributions (Mean and Standard Deviation) Across Tasks.",
+      "page": 7,
+      "index": 5,
+      "width": 506,
+      "height": 721
+    },
+    {
+      "url": "assets/figures/arxiv/2604.07769v1/fig-006.webp",
+      "caption": "Figure 6: Precision of negative and positive samples across CodeShell-1B checkpoints.",
+      "page": 8,
+      "index": 6,
+      "width": 502,
+      "height": 574
+    }
+  ]
+}

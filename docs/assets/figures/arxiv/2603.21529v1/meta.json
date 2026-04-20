@@ -1,0 +1,86 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.21529v1/fig-001.webp",
+      "caption": "Table 4: Overall performance on three benchmark datasets for psychiatric symptom identification.We adoptedMentalBERT [20] as the backbone encoder for models trained using SynSym-generated data. SynSymw/o Real refers to models trained solely on synthetic data, while SynSymwith Real refers to models initialized with SynSymw/o Real and further fine-tuned on real data. The highest score for each column is shown in bold. For PRIMATE, due to the longer average post length compared to the synthetic dataset, individual sentences were evaluated separately and their predicted symptoms were aggregated for SynSymw/o Real.",
+      "page": 6,
+      "index": 1,
+      "width": 1050,
+      "height": 287
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21529v1/fig-002.webp",
+      "caption": "Figure 4: Prompt for multi-symptom expression generation. Given a set of symptom combinations as input, the LLM generates natural language expressions that simultaneously reflect all symptoms. D Symptom-level Analysis Results",
+      "page": 11,
+      "index": 2,
+      "width": 506,
+      "height": 875
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21529v1/fig-003.webp",
+      "caption": "Figure 5: Prompt for evaluating multi-symptom expressions. Given a generated expression and its corresponding symptom labels, the LLM is instructed to assess whether all target symptoms are accurately reflected in the text.",
+      "page": 11,
+      "index": 3,
+      "width": 506,
+      "height": 823
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21529v1/fig-004.webp",
+      "caption": "Table 8: Label remapping scheme from DSM-5 symptom categories to PHQ-9 symptom categories, used for training and evaluation across datasetswith different annotation schemes.",
+      "page": 10,
+      "index": 4,
+      "width": 410,
+      "height": 335
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21529v1/fig-005.webp",
+      "caption": "Figure 3: Prompt for symptom concept expansion. Given a symptom keyword and its brief description as input, the LLM is instructed to generate a list of expanded sub-concepts that reflect more fine-grained aspects of the target symptom.",
+      "page": 10,
+      "index": 5,
+      "width": 506,
+      "height": 585
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21529v1/fig-006.webp",
+      "caption": "Figure 1: The SynSym framework consists of four stages: (1) Symptom Concept Expansion, which decomposes each symptom into fine-grained sub-concepts; (2) Single-Symptom Expression Generation, which produces expressions of individual symptoms in two linguistic styles: clinical and colloquial; (3)Multi-Symptom Expression Generation, which simulates realistic co-occurring symptom expressions based on clinical knowledge; and (4) Synthetic Data Evaluation, which assesses whether the generated expressions accurately reflect real clinical symptoms. The resulting synthetic dataset is then used to train multi-label classification models for identifying psychiatric symptoms from user-generated text.",
+      "page": 3,
+      "index": 6,
+      "width": 1056,
+      "height": 363
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21529v1/fig-007.webp",
+      "caption": "Figure 2: Extensibility experiment results across threemental health conditions. Bar heights represent the average MacroF1 score across all their corresponding symptom classes.",
+      "page": 8,
+      "index": 7,
+      "width": 456,
+      "height": 280
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21529v1/fig-008.webp",
+      "caption": "Table 11: Representative examples of sub-concepts generated for selected symptoms, illustrating plausible manifestations of high-level symptom concepts in real-world contexts.",
+      "page": 12,
+      "index": 8,
+      "width": 1048,
+      "height": 541
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21529v1/fig-009.webp",
+      "caption": "Figure 6: Symptom-level comparison between SynSymwith Real and MentalBERT on three benchmark datasets: PsySym (left), PRIMATE (center), and D2S (right). SynSym shows higher recall across most symptoms, particularly for low-frequency or underperforming symptom classes.",
+      "page": 12,
+      "index": 9,
+      "width": 1056,
+      "height": 342
+    },
+    {
+      "url": "assets/figures/arxiv/2603.21529v1/fig-010.webp",
+      "caption": "Table 2: Representative examples of the Suicidal Ideas symptom from the three benchmark datasets. PsySym contains concise, clinically grounded expressions, whereas D2S uses more figurative and indirect language. PRIMATE includes significantly longer posts that often encapsulate multiple symptom cues within a single entry (e.g., both Suicidal Ideas and Feeling Down are labeled in the presented example).",
+      "page": 5,
+      "index": 10,
+      "width": 1050,
+      "height": 196
+    }
+  ]
+}

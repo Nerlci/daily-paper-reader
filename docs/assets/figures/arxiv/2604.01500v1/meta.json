@@ -1,0 +1,126 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.01500v1/fig-001.webp",
+      "caption": "Figure 4: Numerical and simulation-based Spearman’s rho, upper and lower 5%-tail dependence coefficients and order of the copula of consecutive observations from a Gumbel-MAG(1), along with the dependence measures of the original copula K21.",
+      "page": 18,
+      "index": 1,
+      "width": 950,
+      "height": 217
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01500v1/fig-002.webp",
+      "caption": "Figure 5: Numerical and simulation-based Spearman’s rho, upper and lower 5%-tail dependence coefficients and order of the copula of consecutive observations from a Clayton-MAG(1), along with the dependence measures of the original copula K21.",
+      "page": 18,
+      "index": 2,
+      "width": 950,
+      "height": 217
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01500v1/fig-003.webp",
+      "caption": "Figure 6: Numerical and simulation-based Spearman’s rho, upper and lower 5%-tail dependence coefficients and order of the copula of consecutive observations from a t-MAG(1), along with the dependence measures of the original copula K21.",
+      "page": 18,
+      "index": 3,
+      "width": 952,
+      "height": 217
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01500v1/fig-004.webp",
+      "caption": "Figure 7: Numerical and simulation-based Spearman’s rho, upper and lower 5%-tail dependence coefficients and order of the copula of consecutive observations from a Frank-MAG(1), along with the dependence measures of the original copula K21.",
+      "page": 18,
+      "index": 4,
+      "width": 950,
+      "height": 217
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01500v1/fig-005.webp",
+      "caption": "Figure 3: Numerical and simulation-based Spearman’s rho, upper and lower 5%-tail dependence coefficients and order of the copula of consecutive observations from a Gaussian-MAG(1), along with the dependence measures of the original copula K21.",
+      "page": 18,
+      "index": 5,
+      "width": 945,
+      "height": 214
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01500v1/fig-006.webp",
+      "caption": "Table 1: In sample mean CRPS, NLL, RMSE and MAE values of fits on quarterly US-inflation. The time series contains 244 observations. The values displayed here show the fit on the first 171 observations, which act as train data. The highlighted values are the ones which are best in the respective model class.",
+      "page": 23,
+      "index": 6,
+      "width": 902,
+      "height": 413
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01500v1/fig-007.webp",
+      "caption": "Table 2: Validation mean CRPS, NLL, PBS 5% & 95%, RMSE, MAE and NLL values of forecasts of quarterly US-inflation. The time series contains 244 observations. The values displayed here show the evaluation on 37 validation-observations. The highlighted values are the ones which are best in the respective model class.",
+      "page": 23,
+      "index": 7,
+      "width": 902,
+      "height": 370
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01500v1/fig-008.webp",
+      "caption": "Figure 8: Spearman’s rho estimated from simulations of the model in Eq. 1 with AR Gumbel, whose parameter is on the x-axis and MAG Gaussian copula with parameter θ, along with the dependence measure values of the original copula C21.",
+      "page": 19,
+      "index": 8,
+      "width": 950,
+      "height": 217
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01500v1/fig-009.webp",
+      "caption": "Figure 11: Residuals of the Gaussian-MAG(1) process. The left plot shows the residuals calculated with the true parameter value, which lies above the critical threshold. The left plot shows the residuals under the reciprocal of the true value.",
+      "page": 19,
+      "index": 9,
+      "width": 633,
+      "height": 246
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01500v1/fig-010.webp",
+      "caption": "Figure 9: The negative log-likelihood of a Gaussian-MAG(1) model in dependence of the copula parameter. The black line is the NLL-value. The red line marks the true parameter value and the blue line the reciprocal true value, which is calculated as α† = √ 1 − α2.",
+      "page": 19,
+      "index": 10,
+      "width": 958,
+      "height": 246
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01500v1/fig-011.webp",
+      "caption": "Figure 10: The negative log-likelihood of a Gumbel-MAG(1) model in dependence of the copula parameter. The black line is the NLL-value. The red line marks the true parameter value and the blue line the approximate reciprocal true value defined above.",
+      "page": 19,
+      "index": 11,
+      "width": 954,
+      "height": 247
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01500v1/fig-012.webp",
+      "caption": "Table 4: In sample mean CRPS, NLL, RMSE and MAE values of fits on German wind power production. The time series contains 16 years of observations. The values displayed here show the fit on observations from the first two years (730 observations), which act as train data. The highlighted values are the ones which are best in the respective model class.",
+      "page": 24,
+      "index": 12,
+      "width": 902,
+      "height": 365
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01500v1/fig-013.webp",
+      "caption": "Table 5: Validation mean CRPS, NLL, Pinball 5% & 95%, RMSE and MAE values of forecasts of German wind power. The evaluation is performed on one year of data (365 observations). The highlighted values are the ones which are best in the respective model class.",
+      "page": 24,
+      "index": 13,
+      "width": 902,
+      "height": 327
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01500v1/fig-014.webp",
+      "caption": "Figure 1: Contour plots of a stationary D-vine corresponding to an autoregressive copula-based time series model of order p = 3.",
+      "page": 5,
+      "index": 14,
+      "width": 669,
+      "height": 415
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01500v1/fig-015.webp",
+      "caption": "Figure 2: Contour plots of a MAG D-vine corresponding to a q-dependent copula-based time series model of order q = 3. Only dependencies involving variable 1 are different from independence.",
+      "page": 5,
+      "index": 15,
+      "width": 669,
+      "height": 444
+    }
+  ]
+}

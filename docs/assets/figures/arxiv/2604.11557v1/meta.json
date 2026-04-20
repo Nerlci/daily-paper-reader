@@ -1,0 +1,86 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.11557v1/fig-001.webp",
+      "caption": "Figure 1: Existing datasets are severely limited by the fragmentation problem. To address these challenges, UniToolCall introduces a standardized framework that provides robust structural constraints, yielding SOTA over strong baselines.",
+      "page": 1,
+      "index": 1,
+      "width": 456,
+      "height": 370
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11557v1/fig-002.webp",
+      "caption": "Table 5: Statistics of the public datasets integrated into our framework. Conv. (Converted Count) represents the initial number of conversations obtained after standardizing the raw heterogeneous data into our unified QAOA format. Filt. (Filtered Count) indicates the final retained size after our rigorous quality filtering mechanism.",
+      "page": 15,
+      "index": 2,
+      "width": 461,
+      "height": 479
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11557v1/fig-003.webp",
+      "caption": "Figure 4: Performance breakdown of UniToolCall across the 7 sub-datasets in our unified evaluation benchmark Dtest. For each benchmark, we report both hop-level (left) and turn-level (right) results using the unified metrics introduced in Section 3.3.",
+      "page": 7,
+      "index": 3,
+      "width": 950,
+      "height": 283
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11557v1/fig-004.webp",
+      "caption": "Table 1: Comprehensive evaluation results across varying tool-use complexities. SH, MH, ST, and MT denote Single-Hop, Multi-Hop, Single-Turn, and Multi-Turn scenarios, respectively. All reported metrics are scaled to percentages (%). The best results are bolded and the second best results are underlined in all following tables.",
+      "page": 7,
+      "index": 4,
+      "width": 950,
+      "height": 372
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11557v1/fig-005.webp",
+      "caption": "Figure 7: The multi-stage data reduction flow of our toolset quality filtering process. Gray indicates the tool being deduplicated, and purple indicates the tool being retained.",
+      "page": 14,
+      "index": 5,
+      "width": 931,
+      "height": 592
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11557v1/fig-006.webp",
+      "caption": "Figure 2: The overall architecture of UniToolCall, comprising several interconnected modules: (1) Toolset construction; (2) Unified data synthesis engine; (3) Structural integration; (4) Evaluation protocol.",
+      "page": 3,
+      "index": 6,
+      "width": 946,
+      "height": 430
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11557v1/fig-007.webp",
+      "caption": "Table 3: The complete list of collected MCP servers used in our toolset construction.",
+      "page": 13,
+      "index": 7,
+      "width": 950,
+      "height": 403
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11557v1/fig-008.webp",
+      "caption": "Figure 5: Performance trends across different data compositions under varying parallel-to-serial ratios.",
+      "page": 8,
+      "index": 8,
+      "width": 950,
+      "height": 240
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11557v1/fig-009.webp",
+      "caption": "Table 2: Controlled analysis under a matched data budget (N = 979). MH Ratio denotes the proportion of serial to parallel multi-hop trajectories. Both Mixed datasets are constructed by proportionally sampling from their respective structural subsets.",
+      "page": 8,
+      "index": 9,
+      "width": 461,
+      "height": 289
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11557v1/fig-010.webp",
+      "caption": "Figure 8: Comprehensive statistics of our unified training dataset DPub. The top row illustrates the structural complexity and scale, including the distribution of tool calls per sample, token length density, and the proportions of multi-turn and multi-hop trajectories. The bottom row demonstrates the broad semantic diversity across tool domains and functional categories, alongside conversation density metrics. Note that Messages per Sample reflects the total count of user queries, tool calls, environment observations, and assistant answers within a single dialogue episode.",
+      "page": 17,
+      "index": 10,
+      "width": 950,
+      "height": 325
+    }
+  ]
+}

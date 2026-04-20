@@ -1,0 +1,158 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.16182v1/fig-001.webp",
+      "caption": "Fig. 2a.",
+      "page": 6,
+      "index": 1,
+      "width": 927,
+      "height": 670
+    },
+    {
+      "url": "assets/figures/arxiv/2604.16182v1/fig-002.webp",
+      "caption": "Figure 6: Losses during training: BTC.",
+      "page": 11,
+      "index": 2,
+      "width": 517,
+      "height": 897
+    },
+    {
+      "url": "assets/figures/arxiv/2604.16182v1/fig-003.webp",
+      "caption": "Figure 12: Original series vs generated series: BTC - data first period.",
+      "page": 15,
+      "index": 3,
+      "width": 621,
+      "height": 588
+    },
+    {
+      "url": "assets/figures/arxiv/2604.16182v1/fig-004.webp",
+      "caption": "Figure 13: Original series vs generated series: BTC - data second period.",
+      "page": 15,
+      "index": 4,
+      "width": 621,
+      "height": 588
+    },
+    {
+      "url": "assets/figures/arxiv/2604.16182v1/fig-005.webp",
+      "caption": "Figure 3: Cryptocurrencies evolution (2022-2025)",
+      "page": 7,
+      "index": 5,
+      "width": 886,
+      "height": 799
+    },
+    {
+      "url": "assets/figures/arxiv/2604.16182v1/fig-006.webp",
+      "caption": "Figure 11: Dispersion real vs generated - XRP.",
+      "page": 14,
+      "index": 6,
+      "width": 881,
+      "height": 246
+    },
+    {
+      "url": "assets/figures/arxiv/2604.16182v1/fig-007.webp",
+      "caption": "Figure 9: Dispersion real vs generated - BTC.",
+      "page": 14,
+      "index": 7,
+      "width": 881,
+      "height": 246
+    },
+    {
+      "url": "assets/figures/arxiv/2604.16182v1/fig-008.webp",
+      "caption": "Figure 10: Dispersion real vs generated - ETH.",
+      "page": 14,
+      "index": 8,
+      "width": 881,
+      "height": 246
+    },
+    {
+      "url": "assets/figures/arxiv/2604.16182v1/fig-009.webp",
+      "caption": "Figure 17: Original series vs generated series: ETH - data third period.",
+      "page": 18,
+      "index": 9,
+      "width": 621,
+      "height": 588
+    },
+    {
+      "url": "assets/figures/arxiv/2604.16182v1/fig-010.webp",
+      "caption": "Figure 8: Losses during training: XRP.",
+      "page": 13,
+      "index": 10,
+      "width": 517,
+      "height": 897
+    },
+    {
+      "url": "assets/figures/arxiv/2604.16182v1/fig-011.webp",
+      "caption": "Figure 4: Volatility by periods",
+      "page": 8,
+      "index": 11,
+      "width": 903,
+      "height": 547
+    },
+    {
+      "url": "assets/figures/arxiv/2604.16182v1/fig-012.webp",
+      "caption": "Figure 19: Original series vs generated series: XRP - data second period.",
+      "page": 19,
+      "index": 12,
+      "width": 621,
+      "height": 588
+    },
+    {
+      "url": "assets/figures/arxiv/2604.16182v1/fig-013.webp",
+      "caption": "Figure 18: Original series vs generated series: XRP - data first period.",
+      "page": 19,
+      "index": 13,
+      "width": 619,
+      "height": 588
+    },
+    {
+      "url": "assets/figures/arxiv/2604.16182v1/fig-014.webp",
+      "caption": "Figure 15: Original series vs generated series: ETH - data first period.",
+      "page": 17,
+      "index": 14,
+      "width": 621,
+      "height": 588
+    },
+    {
+      "url": "assets/figures/arxiv/2604.16182v1/fig-015.webp",
+      "caption": "Figure 16: Original series vs generated series: ETH - data second period.",
+      "page": 17,
+      "index": 15,
+      "width": 621,
+      "height": 588
+    },
+    {
+      "url": "assets/figures/arxiv/2604.16182v1/fig-016.webp",
+      "caption": "Figure 7: Losses during training: ETH.",
+      "page": 12,
+      "index": 16,
+      "width": 517,
+      "height": 897
+    },
+    {
+      "url": "assets/figures/arxiv/2604.16182v1/fig-017.webp",
+      "caption": "Fig. 5a.",
+      "page": 9,
+      "index": 17,
+      "width": 929,
+      "height": 624
+    },
+    {
+      "url": "assets/figures/arxiv/2604.16182v1/fig-018.webp",
+      "caption": "Figure 20: Original series vs generated series: XRP - data third period.",
+      "page": 20,
+      "index": 18,
+      "width": 621,
+      "height": 587
+    },
+    {
+      "url": "assets/figures/arxiv/2604.16182v1/fig-019.webp",
+      "caption": "Figure 14: Original series vs generated series: BTC - data third period.",
+      "page": 16,
+      "index": 19,
+      "width": 621,
+      "height": 588
+    }
+  ]
+}

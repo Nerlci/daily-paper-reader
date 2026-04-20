@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.04963v1/fig-001.webp",
+      "caption": "Table 2: Empirical results on financial time series (2019–2023 test set).",
+      "page": 8,
+      "index": 1,
+      "width": 772,
+      "height": 199
+    },
+    {
+      "url": "assets/figures/arxiv/2604.04963v1/fig-002.webp",
+      "caption": "Figure 1: Estimated risk-off transition probabilities as a function of VIX and investor sentiment. Only the semi-parametric model recovers the joint-tail threshold behavior.",
+      "page": 9,
+      "index": 2,
+      "width": 926,
+      "height": 413
+    }
+  ]
+}

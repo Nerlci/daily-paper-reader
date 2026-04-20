@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.25473v1/fig-001.webp",
+      "caption": "Fig. 4. Qbic and structural F1 trajectories as a function of graph sparsity for a representative fMRI dataset (Sim3). The Qbic minimum occurs at an edge count m̂ that yields near-maximal F1, demonstrating that Qbic reliably selects high-quality graph structures without access to ground-truth labels.",
+      "page": 7,
+      "index": 1,
+      "width": 507,
+      "height": 306
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25473v1/fig-002.webp",
+      "caption": "Fig. 3. Runtime scaling with the number of variables. Mean wall-clock runtime over three runs for CausalFormer and Causal-INSIGHT (CF) with fixed sequence length T . Shaded regions denote ±1 standard deviation across three runs. Non-monotonic behavior reflects early stopping in Qbic graph selection.",
+      "page": 7,
+      "index": 2,
+      "width": 508,
+      "height": 284
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25473v1/fig-003.webp",
+      "caption": "Fig. 1. Overview of Causal-INSIGHT. The method is organized into two stages: (left) the prediction problem, and (right) the causal graph construction problem. The analysis proceeds as follows: (A) Training of a temporal predictor fθ under causal (no-leakage) masking constraints. (B) Model probing via input clamping at inference time with the predictor held fixed. (C) Construction of causal influence signals by comparing clamped and unclamped predictions. (D) Temporal reduction of influence signals to obtain a soft structural adjacency with associated peak lags. (E) Qbic scoring of candidate graphs using parent-based masking with a sparsity penalty. (F) Selection of the final directed causal graph by minimizing Qbic over sparsity levels.",
+      "page": 2,
+      "index": 3,
+      "width": 1056,
+      "height": 451
+    }
+  ]
+}

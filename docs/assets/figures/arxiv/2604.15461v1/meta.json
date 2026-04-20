@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.15461v1/fig-001.webp",
+      "caption": "Figure 1: Experimental setup comparing two approaches: Profile-then-Simulate (left) aggregates 24M transactions into 1.6K user personas with 27 behavioral features then uses PersonaLedger to generate synthetic transaction sequences, while Direct Synthesis (right) samples 80K transaction records with 12 attributes. Both use AIM for DP synthesis before TSTR evaluation.",
+      "page": 3,
+      "index": 1,
+      "width": 645,
+      "height": 443
+    },
+    {
+      "url": "assets/figures/arxiv/2604.15461v1/fig-002.webp",
+      "caption": "Table 3: Transaction Schema: 12 features used for direct synthesis and evaluation",
+      "page": 6,
+      "index": 2,
+      "width": 744,
+      "height": 417
+    },
+    {
+      "url": "assets/figures/arxiv/2604.15461v1/fig-003.webp",
+      "caption": "Table 2: Summary Statistics Schema: 27 features extracted from transaction logs",
+      "page": 6,
+      "index": 3,
+      "width": 740,
+      "height": 691
+    }
+  ]
+}
