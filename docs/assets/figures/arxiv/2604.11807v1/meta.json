@@ -1,0 +1,102 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.11807v1/fig-001.webp",
+      "caption": "Table 2. Functional categorization of the 15-dimensional dynamic state space input vector prior to Hankel embedding.",
+      "page": 6,
+      "index": 1,
+      "width": 1112,
+      "height": 372
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11807v1/fig-002.webp",
+      "caption": "Figure 2. Dynamical State Space Construction and Tensor Dimensionality Transformation via Hankel Matrix Unrolling.",
+      "page": 6,
+      "index": 2,
+      "width": 731,
+      "height": 341
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11807v1/fig-003.webp",
+      "caption": "Fig 6. Comparative performance of PISSM against state-of-the-art models from recent literature.",
+      "page": 11,
+      "index": 3,
+      "width": 1004,
+      "height": 746
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11807v1/fig-004.webp",
+      "caption": "Fig 5. Physics-Informed Gating Mechanism Integrating Solar Zenith Angle and Clearness Index",
+      "page": 10,
+      "index": 4,
+      "width": 819,
+      "height": 386
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11807v1/fig-005.webp",
+      "caption": "Table 3. Detailed configuration of the proposed Physics-Informed State Space Model architecture.",
+      "page": 10,
+      "index": 5,
+      "width": 1025,
+      "height": 483
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11807v1/fig-006.webp",
+      "caption": "Fig 9. Training and Validation Convergence Curves Over 100 Epochs Indicating Stable Learning Dynamics and Absence of Overfitting.",
+      "page": 14,
+      "index": 6,
+      "width": 891,
+      "height": 400
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11807v1/fig-007.webp",
+      "caption": "Fig 1: Overall architecture and data processing steps for the proposed model.",
+      "page": 3,
+      "index": 7,
+      "width": 977,
+      "height": 450
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11807v1/fig-008.webp",
+      "caption": "Fig 8. Performance of the PISSM Architecture on the Test Set Showing Target Trajectories and Prediction Errors During Both Diurnal and Nocturnal Periods.",
+      "page": 13,
+      "index": 8,
+      "width": 939,
+      "height": 524
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11807v1/fig-009.webp",
+      "caption": "Fig 3. Macro-Architecture and Sequential Dataflow of the Proposed Physics-Informed State Space Model PISSM",
+      "page": 8,
+      "index": 9,
+      "width": 991,
+      "height": 302
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11807v1/fig-010.webp",
+      "caption": "Table 1. Description of the physical, meteorological, and temporal input features utilized in t he proposed PISSM architecture.",
+      "page": 4,
+      "index": 10,
+      "width": 1056,
+      "height": 590
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11807v1/fig-011.webp",
+      "caption": "Fig 7: Multi-Year Predictive Stability and Error Metric Consistency Across the 2020-2024 Stress-Testing Horizon",
+      "page": 12,
+      "index": 11,
+      "width": 1035,
+      "height": 519
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11807v1/fig-012.webp",
+      "caption": "Fig 4. Internal Dynamics and Update Loop of the Linear State Space Model SSM",
+      "page": 9,
+      "index": 12,
+      "width": 754,
+      "height": 369
+    }
+  ]
+}

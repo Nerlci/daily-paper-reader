@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.16240v1/fig-001.webp",
+      "caption": "Table 3: Cross-dataset evaluation.",
+      "page": 11,
+      "index": 1,
+      "width": 398,
+      "height": 440
+    },
+    {
+      "url": "assets/figures/arxiv/2604.16240v1/fig-002.webp",
+      "caption": "Fig. 1: TTC forecasting task using multi-scale spatial and temporal information.",
+      "page": 2,
+      "index": 2,
+      "width": 673,
+      "height": 437
+    },
+    {
+      "url": "assets/figures/arxiv/2604.16240v1/fig-003.webp",
+      "caption": "Table 2: Comparison of model complexity in Parameters. Convolutional models, which are generally light-weight, are shown in grey.",
+      "page": 10,
+      "index": 3,
+      "width": 747,
+      "height": 325
+    },
+    {
+      "url": "assets/figures/arxiv/2604.16240v1/fig-004.webp",
+      "caption": "Fig. 3: The correlation score cj quantifies the relationship between Q + i and Kj . Output Yi at the current segment i is determined by using the similarity between Qi−1 from the previous segment i− 1 and the key Kj as the weight for the value Vj+1 in the aggregation process.",
+      "page": 8,
+      "index": 4,
+      "width": 723,
+      "height": 401
+    },
+    {
+      "url": "assets/figures/arxiv/2604.16240v1/fig-005.webp",
+      "caption": "Table 1: Performance comparison across CCD, DoTA, and DAD datasets. Results are in MSE, where lower is better.",
+      "page": 9,
+      "index": 5,
+      "width": 577,
+      "height": 325
+    },
+    {
+      "url": "assets/figures/arxiv/2604.16240v1/fig-006.webp",
+      "caption": "Fig. 2: The architecture of the proposed method, CollideNet is presented. First, the hierarchical spatial encoder uses MUA-based attention in fHierarchical",
+      "page": 5,
+      "index": 6,
+      "width": 642,
+      "height": 328
+    }
+  ]
+}

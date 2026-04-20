@@ -1,0 +1,2603 @@
+Title: Topology-Aware PAC-Bayesian Generalization Analysis for Graph Neural Networks
+
+URL Source: https://arxiv.org/pdf/2604.10553v1
+
+Published Time: Tue, 14 Apr 2026 01:08:59 GMT
+
+Number of Pages: 13
+
+Markdown Content:
+> 1
+
+# Topology-Aware PAC-Bayesian Generalization Analysis for Graph Neural Networks 
+
+Xinping Yi, Member, IEEE 
+
+Abstract —Graph neural networks have demonstrated excellent applicability to a wide range of domains, including social net-works, biological systems, recommendation systems, and wireless communications. Yet a principled theoretical understanding of their generalization behavior remains limited, particularly for graph classification tasks where complex interactions between model parameters and graph structure play a crucial role. Among existing theoretical tools, PAC-Bayesian norm-based generalization bounds provide a flexible and data-dependent framework; however, current results for GNNs often restrict the exploitation of graph structures. In this work, we propose a topology-aware PAC-Bayesian norm-based generalization frame-work for graph convolutional networks (GCNs) that extends a previously developed framework to graph-structured models. Our approach reformulates the derivation of generalization bounds as a stochastic optimization problem and introduces sensitivity matrices that measure the response of classification outputs with respect to structured weight perturbations. By imposing different structures on sensitivity matrices from both spatial and spectral perspectives, we derive a family of generalization error bounds with graph structures explicitly embedded. Such bounds could recover existing results as special cases, while yielding bounds that are tighter than state-of-the-art PAC-Bayesian bounds for GNNs. Notably, the proposed framework explicitly integrates graph structural properties into the generalization analysis, enabling a unified inspection of GNN generalization behavior from both spatial aggregation and spectral filtering viewpoints. 
+
+I. I NTRODUCTION 
+
+Despite the wide adoption and strong empirical performance of graph neural networks in learning from relational and structured data across domains such as social networks, biology, and wireless networks, fundamental questions as to how and why these models generalize beyond the training graphs are still largely unexplored. From a statistical learning perspective, the nature of graph data, together with weight sharing and topology-dependent message passing, poses fundamental challenges for classical generalization analysis. To address these challenges, a variety of theoretical frameworks have been explored for GNNs, including VC dimension–based capacity control [1], [2], data-dependent measures such as Rademacher complexity [3], [4], algorithmic stability [5], [6], and PAC-Bayesian approaches [7], [8] tailored to dependent samples and graph structures. Among existing approaches, PAC-Bayesian theory has emerged as one of the most promising tools for analyz-ing deep learning models, owing to its flexibility, data-dependent nature, and ability to produce non-vacuous bounds in over-parameterized regimes. A growing body of work has demonstrated the effectiveness of PAC-Bayesian analysis  
+
+> X. Yi is with the School of Information Science and Engineering, Southeast University, Nanjing, China. Email: xyi@seu.edu.cn .
+
+for neural networks (e.g., [9]–[13]) and, more recently, for graph-structured models (e.g., [8], [14]–[17]), motivating the development of a topology-aware PAC-Bayesian generalization framework that explicitly accounts for the architectural and spectral properties unique to graph neural networks. 
+
+A. Related Works 
+
+Theoretical analysis of generalization for graph neural networks has become an active research area in statistical learning, driven by the wide adoption of GNNs across node-level and graph-level prediction tasks. Early attempts to characterize GNN generalization relied on classical capacity measures such as the VC dimension (e.g., [2] for a specific class of GNNs and [18] for node classification in the transductive setting), which directly bounds the generalization gap but often scales unfavorably with model and graph size. More refined analyses have used Rademacher complexity (e.g., [4], [19] for message passing GNNs in the supervised setting, [18] for node classification in the transductive setting, [20] for one-layer GCNs in the semi-supervised node classification) and algorithmic stability (e.g., [6] for 1-layer GNNs in the transductive setting, and the multi-layer extension in [21]) to obtain data-dependent bounds that capture graph sampling and aggregation dynamics. There also exist some other approaches such as [22] considered an infinitely wide multi-layer GNN with neural tangent kernel, and a number of works leverages the covering number [23]–[27]. Please refer to the survey of generalization for GNNs [28] and references therein. Of particular relevance is the norm-based PAC-Bayesian framework, which has been successfully extended to GNNs in graph classification tasks for high-probability generalization guarantees that incorporate both model complexity and uncer-tainty in learned parameters. Recent works demonstrated that graph-specific factors such as maximum node degree, feature distribution, and spectral properties of diffusion operators can significantly influence generalization behavior. A notable example is the work by Liao et al. [8], which derives PAC-Bayesian generalization bounds for major classes of GNNs, including graph convolutional networks (GCNs) [29] and message passing GNNs (MPGNNs) [30]. Their results reveal that both the maximum node degree and the spectral/Frobenius norms of weight matrices govern the generalization bound. Subsequent PAC-Bayesian analyses have further refined this perspective, for example, [15] addressed robust generalization under adversarial perturbations in graph data, while still leveraging spectral properties in the bound formulation. Ju et al. [14] developed improved PAC-Bayesian generalization 
+
+> arXiv:2604.10553v1 [cs.LG] 12 Apr 2026 2
+
+bounds that scale with the largest singular value of the graph feature diffusion matrix rather than solely with node degrees. Importantly, the use of spectral norms of graph operators and weight matrices aligns well with empirical observations about generalization in graph-level tasks and offers sharper insight into how graph structure impacts predictive performance. Most recently, such a norm-based PAC-Bayesian framework has been extended to derive generalization bounds for topological [16] and hypergraph [17] neural networks. Notably, these results rely critically on extending the perturbation bound in [11] to graph-structured models with matrix spectral norm concentration, which limits potential thorough inspection into the impact of network architectures. 
+
+B. Motivation and Contributions 
+
+Motivation. Despite the growing body of PAC-Bayesian generalization results for graph neural networks, existing analyses remain subject to several limitations that motivate the current work. First, most prior works assume isotropic Gaussian posteriors with homogeneous uncertainty across all parameters, which is particularly misaligned with GNNs, where weight sharing, depth-dependent aggregation, and graph-induced correlations lead to highly anisotropic and layer-specific sensitivity patterns in practice. Second, existing PAC-Bayesian bounds for GNNs often rely heavily on controlling the spectral norms of weight perturbations and graph propagation operators, where the corresponding spectral norm concentration inequalities are known to be brittle for deep, wide, or structured architectures, therefore limiting the tightness of the resulting guarantees. Third, existing approaches typically incorporate graph structure only through coarse quantities such as maximum degree or global spectral radius, and rarely account for the heterogeneous influence of different graph components or the diverse sensitivity of the loss landscape with respect to individual weights and layers. These limitations collectively suggest that a topology-aware PAC-Bayesian norm-based gen-eralization framework for GNNs—one that allows anisotropic posteriors, refined perturbation control beyond global spectral norms, and explicit integration of graph structure and parameter-wise sensitivity—is essential for a more theoretically grounded understanding of generalization in graph neural networks. 
+
+Contributions. Building on the above motivation, this work makes the following contributions toward a topology-aware theory of PAC-Bayesian norm-based generalization for graph neural networks, with a particular focus on graph convolutional networks (GCNs) for graph classification:  
+
+> •
+
+Topology-aware generalization bounds within a unified framework. We demonstrate that the previously proposed unified PAC-Bayesian norm-based generalization frame-work for deep neural networks in [31] can be naturally extended to graph-structured models, explicitly accounting for the message-passing and aggregation mechanisms inherent to GCNs. By introducing sensitivity matrices that capture the graph classification differences to weight perturbations in GCNs, we derive a family of PAC-Bayesian generalization bounds under different structural considerations. In particular, imposing diagonal, low-rank, or graph-aligned structures on these matrices—motivated from both spatial (node- and neighborhood-level aggre-gation) and spectral (graph Fourier and operator-norm) perspectives—yields a spectrum of generalization error bounds. These bounds recover existing PAC-Bayesian results for GNNs as special cases and are shown to be tighter than state-of-the-art bounds that rely on isotropic perturbations or global spectral-norm control.  
+
+> •
+
+Explicit integration of graph structure into gener-alization analysis. Our framework explicitly integrates graph structural information into the generalization bounds, enabling a transparent inspection of how topology, dif-fusion operators, and spectral properties of the graph influence generalization performance. By either capturing spatial aggregation effects or spectral filtering behavior, the resulting bounds provide new insights into the role of graph structure in controlling model complexity and robustness, offering a distinct lens through which the generalization behavior of GNNs can be analyzed from both spatial and spectral viewpoints. The paper is organized as follows: Section I presents some preliminaries for graph neural networks and the PAC-Bayesian margin-based bounds, followed by the extension of a unified framework to the graph settings. Section IV details the specific designs of different sensitivity matrices, ended up with various PAC-Bayesian generalization bounds under the unified framework. Section V concludes the paper, and the Appendix gives some detailed proofs of key results used in Section III. 
+
+Notation. We interchangeably use random variables and their realizations unless they are unclear from the context. We use a, a, A, and A to represent the scalar, vector, matrix and set, respectively. Accordingly, ai is the i-th element of 
+
+a, Ai, : is the i-th row of A, and Aij is the element at the 
+
+i-th row and the j-th column in A. The vectorization of a matrix, i.e., vec( A), is the concatenation of the columns of 
+
+A as a long vector. We use 1, 0, 0, and In to denote the all-one, all-zero vectors, all-zero matrix, and the n × n identity matrix, respectively, and the size of the vectors is determined by the context. The operators Tr( ·) and det( ·) are the trace and determinant of a square matrix, respectively. Given a vector 
+
+a, the ℓ2 and ℓ∞ vector norm are given by ∥a∥2 = pP  
+
+> i
+
+a2
+
+> i
+
+and ∥a∥∞ = max i |ai|, with ∥a∥∞ ≤ ∥ a∥2. Given a matrix 
+
+A, we use ∥A∥2, ∥A∥F , ∥A∥2,∞ to represent the spectral norm, the Frobenius norm, and the (2 , ∞) norm, such that 
+
+∥A∥2 = max x̸=0 ∥Ax ∥2 
+
+> ∥x∥2
+
+, ∥A∥2 
+
+> F
+
+= P
+
+> i
+
+P 
+
+> j
+
+A2 
+
+> ij
+
+= Tr( AT A),and ∥A∥2,∞ = max i ∥Ai, :∥22, which is the maximum value of the vector norms of the rows of A. For any vector x and any matrices A and B, we have ∥Ax ∥2 ≤ ∥ A∥2∥x∥2 and 
+
+∥AB ∥2 ≤ ∥ A∥2∥B∥2. Given two matrices A ∈ Rm×n and 
+
+B ∈ Rp×q , the Kronecker product A ⊗ B is a mp × nq 
+
+matrix such that the (i, j )-th block is Aij B with size p × q.For two matrices A and B, there are some properties of the Kronecker product, e.g., A ⊗ (aB) = a(A ⊗ B), (A ⊗ B)T =
+
+AT ⊗ BT , (A ⊗ B)( C ⊗ D) = ( AC ) ⊗ (BD ), det( An×n ⊗
+
+Bm×m) = (det A)m(det B)n, Tr( A ⊗ B) = Tr( A) Tr( B),
+
+∥A ⊗ B∥2 = ∥A∥2∥B∥2, ∥A ⊗ B∥F = ∥A∥F ∥B∥F , and 
+
+vec( AXB ) = ( BT ⊗ A)vec( X), according to Lemma 4. 3
+
+The matrix A is said to be semi-definite, denoted by A ⪰ 0,such that for any x, xT Ax ≥ 0 holds. A ⪰ B, equivalently 
+
+B ⪯ A, if and only if A − B ⪰ 0.II. P RELIMINARIES 
+
+Following the problem setting of [8], we consider the K-class graph classification task for simple and undirected graphs 
+
+G = ( V, E ) with n nodes. The input space Z consists of graph samples z = ( AG, X, y ) ∈ Z where AG ∈ { 0, 1}n×n is the adjacency matrix such that [AG]ij = 1 if (i, j ) ∈ E is an edge, X ∈ Rn×h0 is the node features over n nodes subject to ∥X∥2,∞ = max i ∥Xi, :∥2 ≤ B, and y ∈ { 1, . . . , K } is the output. We denote y = arg max y fw(X)[ y], where fw ∈ H :
+
+X ×G → RK is a function specified by a parameterized learning model (e.g., graph neural networks) with the collected model parameters w.1 The space Z, X , G and H are defined as input sample space, node feature space, graph space, and hypothesis class space, respectively. A dataset S = {z1, . . . , z m} with m
+
+training samples drawn identically and independently from an unknown distribution D is given to learn the model parameters. For the graph classification task, a graph convolutional network (GCN)-type model is considered such that the node embeddings at the l-th graph convolutional layer ( l < d ) and the last readout layer are given by Conv: Hl = ϕ(LH l−1Wl) (1) Readout: f T 
+
+> w
+
+(X) = 1
+
+n 1T Hd−1Wd (2) where ϕ is a 1-Lipschitz element-wise activation function, e.g., ReLU and tanh, L is the graph diffusion/propagation matrix, 
+
+Hl ∈ Rn×hl is node embedding at the l-th GCN layer with 
+
+H0 = X, and Wl ∈ Rhl−1×hl is the weight matrix for linear transformation at each node at the l-th layer, whose parameters are shared across nodes. When l = d, hd = K. By setting L
+
+to be different matrices, we have various GCN-like models. 
+
+Vanilla GCN [29]. When we consider the normalized adjacency matrix as the graph propagation matrix, i.e., L =˜AG, we have the spectral radius ρ(L) = max j |λj | = 1 ,and the spectral norm ∥L∥2 = 1 , according to Lemma 6 in Appendix. The normalized adjacency matrix is defined as ˜AG = ˜D− 12 (I + AG) ˜D− 12 where ˜D = I + D such that D = diag( D1, . . . , D n) with Di being the degree of node i, and Dmax , D min being the maximum and minimum degrees across nodes. Let (λi, vi) be eigenpairs of L, i.e., 
+
+Lv i = λivi where self-loops remove negative eigenvalues, i.e., 
+
+0 ≤ λn ≤ · · · ≤ λ1 = 1 , and improve numerical stability. As far as SGC [32] is concerned, we have ϕ = I and L = AG,such that the product of {Wl} reduces to a single W .
+
+Random Walk GCN . When we consider the random walk as the graph propagation matrix, i.e., L = D−1AG, we have 
+
+L a row-stochastic matrix with the sum of each row being 1. As such, 1 is a right eigenvector of L with the corresponding eigenvalue λ1 = 1 . Therefore, the spectral radius ρ(L) = 1 , and the eigenvalues lie in the range of [−1, 1] . A GCN-style variant 
+
+> 1For simplicity, the bias term is absorbed into the weight matrices by appending constant 1 to the node feature, which is a common trick in deep learning community.
+
+of graphSAGE [33] can be represented as L = ˜D−1(I + AG),a row-stochastic matrix, such that it performs a row-normalized mean over its closed neighborhood. The difference from the random walk GCN is the self-loops, so that we have the spectral radius ρ(L) = 1 , the spectral norm 1 ≤ ∥ L∥2 ≤
+
+q Dmax +1 
+
+> Dmin +1
+
+according to Lemma 6, and the eigenvalues lie in the range of 
+
+[0 , 1] , yielding more stable and smoothing behavior. 
+
+A. Norm-based Bounds 
+
+Margin loss. For any distribution D and margin γ > 0, the expected margin loss is defined as 
+
+Lγ (fw) ≜ Ez∼D 1
+
+
+
+fw(X)[ y] ≤ γ + max   
+
+> j̸=y
+
+fw(X)[ j]
+
+
+
+(3) where 1(·) is the indicator function. The empirical margin loss 
+
+ˆLγ (fw) is the estimate of Lγ (fw) with the average over the training dataset S. When γ = 0 , L0(fw) and ˆL0(fw) denote the expected risk and the training error, respectively. 
+
+PAC-Bayesian generalization bounds. Given a determin-istic classifier fw ∈ H , consider its randomized counterpart 
+
+fw+u with the prior distribution P and the corresponding pos-terior distribution Q, where u is a random weight perturbation. With probability at least 1 − δ, over the i.i.d. training set S
+
+of size m, we have the “two-sided” PAC-generalization error bound [7], [8] 
+
+Eu[L0(fw+u)] ≤ Eu[ ˆL0(fw+u)] +
+
+s
+
+DKL (w + u|| P ) + ln 2mδ
+
+2( m − 1) , (4) where DKL (·||· ) is the KL divergence of two distributions. For any γ, δ > 0, for any w and random perturbation u subject to the perturbation condition 
+
+Pu[max  
+
+> x∈X
+
+∥fw+u(x) − fw(x)∥∞ < γ
+
+4 ] ≥ 12 (5) with probability at least 1 − δ, we have the margin-based PAC-Bayesian generalization error bound [7], [8], [34] 
+
+L0(fw) ≤ ˆLγ (fw) + 
+
+s
+
+2DKL (w + u|| P ) + ln 8mδ
+
+2( m − 1) . (6) Let the random weight perturbation be u = ( uT 
+
+> 1
+
+, . . . , uTd )T
+
+where ul = vec( Ul) is the weight perturbation at l-th layer with Ul being the perturbation added to Wl. Let h = max l hl
+
+for simplicity. Assuming u ∼ N (0, σ 2I), for any B, d, h > 0,for a d-layer neural network with ReLU activation functions, for any γ, δ > 0, with probability at least 1 − δ, we have the following spectrally-normalized margin-based generalization error bound [8], [11] 
+
+L0(fw) ≤ ˆLγ (fw) + O
+
+s
+
+B2d2h ln( dh )Φ( w) + ln dm δ
+
+γ2m
+
+
+
+(7) with spectral complexity Φ( w) = Qdl=1 ∥Wl∥22
+
+Pdl=1 
+
+> ∥Wl∥2
+> F
+> ∥Wl∥22
+
+.4
+
+PAC-Bayesian bound for GCN. The generalization error bound can be extended to the GCNs [8], [15], taking graph structure into account, 2 i.e., 
+
+L0(fw) ≤ ˆLγ (fw)+ O
+
+s
+
+B2d2h ln( dh )∥L∥2d−22 Φ( w) + ln dm δ
+
+γ2m
+
+ . (8) The generalization bound Eq-(8) is built upon a key lemma of the GCN perturbation bound in [8, Lemma 3.1] and [15, Lemma 4.3], where the change of the output due to weight perturbation is upper bounded as 
+
+∥fw+u(X) − fw(X)∥2 ≤ eB ∥L∥d−12
+
+> d
+
+Y
+
+> l=1
+
+∥Wl∥2
+
+> d
+
+X
+
+> l=1
+
+∥Ul∥2
+
+∥Wl∥2
+
+(9) when ∥Ul∥2 ≤ 1 
+
+> d
+
+∥Wl∥2, for any weight perturbation u and any bounded input X subject to ∥X∥2,∞ ≤ B. Notice that 
+
+Qdl=1 ∥Wl∥2 is the multiplicative chain of Lipschitz constants across layers, and Pdl=1  
+
+> ∥Ul∥2
+> ∥Wl∥2
+
+linearly aggregates perturbation sensitivity via a weighted sum of normalized perturbations. 
+
+B. A Unified Framework 
+
+To address the issues of isotropically Gaussian distributed weight perturbation and the reliance on the concentration inequality of matrix spectral norm, a unified framework has been proposed in [31] by introducing two auxiliary variables. First, consider an anisotropic weight perturbation, e.g., u ∼ N (0 , σ 2R) to capture different sensitivities to weight perturbations, where R possesses a block-diagonal structure, i.e., R = blkdiag( R1, . . . , Rd) with each diagonal block 
+
+Rl up to optimization. Then, introduce a sensitivity matrix 
+
+A = blkdiag( A1, . . . , Ad) with Al being carefully designed for each layer l, to encode different network structures, so as to impose different sensitivities on the perturbation to the output, and enable the flexible designs of perturbation bounds. It is worth noting that, the block-diagonal structure is only imposed on the random weight perturbations {ul}dl=1 , but not the model weights {wl}dl=1 that can be correlated across layers. It is because {ul}dl=1 serves as a probabilistic probe of network sensitivity, so that its design can be arbitrary to align with the model’s sensitivity geometry. Such an inductive bias of 
+
+u offers us interpretable generalization bounds, although the block-diagonal structures might render itself less thoroughly probing the network’s sensitivity across layers, and possibly yield not sufficiently tight bounds. In doing so, the derivation of the generalization bound can be done by solving the stochastic optimization problem on the top of the next page. Note here that the ℓ∞ norm is upper-bounded by the ℓ2 norm in such a way that proper concentration inequalities of the ℓ2 norm ensure a closed-form solution Rl
+
+with respect to Al. Here Al is referred to as a Jacobian-like           
+
+> 2In [8], there is an additional factor of Dd−1to capture graph structure, which is turned out to be unnecessary as stated in [15]. In addition, the factor
+> ∥L∥d−12can also be removed, when considering L=˜AGfor the graph convolutional layers as ∥˜AG∥2= 1 , according to Lemma 6.
+
+sensitivity matrix, which is a function of the weights and the inputs. The goal is to design proper sensitivity matrices to obtain tighter and interpretable generalization bounds. Directly optimizing Eq-(10) is intractable, as it involves the perturbation condition in a probabilistic form. Therefore, [31] proposed to take the following steps to design Al, σ2, and Rl in parallel. 
+
+1) Design sensitivity matrix to satisfy perturbation bound: 
+
+By bounding the output difference with respect to weight perturbation {ul}dl=1 , we design proper choices of sensitivity matrices {Al}dl=1 to satisfy the perturbation bound in Eq-(10c). There are two possible ways revealed in [31] to find proper choices of Al: one is from the first-order Taylor expansion of 
+
+fw+u(x) − fw(x) as a function of the Jacobian of the weights and the weight perturbation u; the other one is to relate it to the perturbation bound derived in [11] and widely used in the literature (e.g., [8], [15]). As such, we could end up with various designs of {Al}dl=1 as a function of weights {Wl}dl=1 
+
+and some imposed biases related to network structures, e.g., diagonal, residual, low-rank, circulant, and Toeplitz. 
+
+2) Figure out the prior variance with concentration in-equalities: Next, we can further leverage the concentration inequalities for ℓ2 norm of vectors, e.g., the Hanson-Wright inequality [35] that bounds the quadratic form of sub-Gaussian random vectors, to figure out the proper choices of σ2,so that the perturbation condition in Eq-(10b) is satisfied with probability at least 12 . As such, ∥ P 
+
+> l
+
+Alul∥22 can be concentrated on its mean with a deviation term controlled via its Frobenius and ℓ2 norms, i.e., with probability at least  
+
+> 12
+
+, it holds 
+
+> d
+
+X
+
+> l=1
+
+∥Alul∥22 ≤ σ2κ
+
+> d
+
+X
+
+> l=1
+
+Tr( AlRlATl ) ≤ γ2
+
+16 (11) where κ = 1 + 2 ln 2 + √4 ln 2 comes from the upper bounds of its deviation terms of Frobenius and ℓ2 norms. By setting 
+
+1
+
+σ2 = 16 κγ2
+
+> d
+
+X
+
+> l=1
+
+Tr( AlRlATl ), (12) the original perturbation condition can be satisfied. However, the prior variance σ2 should not depend on the trained weights {Wl}dl=1 , yet the sensitivity matrices {Al}
+
+are inevitably involving weight matrices. To resolve such an issue, we follow the tricks proposed in [11] to consider the spectral-normalized weights, i.e., replacing β = ∥Wl∥2 for all 
+
+l with its estimate ˆβ = ∥ ˆWl∥2 subject to |β − ˆβ| ≤ 1 
+
+> d
+
+β, in such a way that σ2 is chosen as a function of { ˆWl}dl=1 instead. 
+
+3) Optimize the posterior covariance matrix to minimize the KL divergence: To figure out the optimal R∗ 
+
+> l
+
+as a function of 
+
+γ and Al, by KKT conditions, we have 
+
+R∗ 
+
+> l
+
+=
+
+
+
+I + 16 κ∥w∥22
+
+γ2 ATl Al
+
+−1
+
+. (13) 
+
+4) Upper-bound the KL divergence: Given a fixed ˆβ, for all β such that |β − ˆβ| ≤ 1 
+
+> d
+
+β, with the optimized posterior covariance {Rl}dl=1 and the prior variance σ2, we are able to derive an upper bound of the KL divergence term in Eq-(10a), and therefore the generalization error bounds. Finally, by taking 5
+
+min 
+
+> σ2,Rl,Al
+
+DKL (σ2, Rl) ≜ 12
+
+> d
+
+X
+
+> l=1
+
+∥Wl∥2
+
+> F
+
+σ2 + Tr( Rl) − log det Rl − dim( Rl) (10a) 
+
+s.t. Pul∼N (0,σ 2Rl)
+
+h dX
+
+> l=1
+
+∥Alul∥22 < γ2
+
+16 
+
+i
+
+≥ 12 , (10b) 
+
+∥fw+u(x) − fw(x)∥2 
+
+> ∞
+
+≤
+
+> d
+
+X
+
+> l=1
+
+∥Alul∥22, (10c) a union bound over all chosen ˆβ, we end up with the final generalization bound for any weights. Such a unified framework allows us to probe the sensitivity of neural networks at hand by flexible designs of sensitivity matrices, in such a way that the generalization bounds measure how sensitive certain network architectures are to the gener-alization performance. This gives us a flexible and powerful tool to inspect DNN’s generalization. III. PAC-B AYESIAN GENERALIZATION BOUNDS 
+
+In what follows, we extend this unified framework to graph neural networks for graph classification and obtain two generalization error bounds with spatial and spectral sensitivity matrix designs that account for graph structures. 
+
+Theorem 1. Consider a GCN-type model fw : X × G → 
+
+RK with the graph diffusion matrix L ∈ Rn×n and ReLU activations, depth d, width at most h, and bounded inputs 
+
+∥X∥2,∞ ≤ B. For any δ, γ > 0, with probability at least 1 − δ,for any w, the generalization error over an i.i.d. training set of size m can be upper-bounded by 
+
+L0(fw ) ≤ ˆLγ (fw ) + O
+
+s
+
+B2d2K 1 
+
+> n
+
+∥Ld−11∥22Φ( w) + ln dm δ
+
+γ2m
+
+
+
+(14) 
+
+where Φ( w) = Q 
+
+> l
+
+∥Wl∥22
+
+Pdl=1 
+
+> ∥Wl∥2
+> F
+> ∥Wl∥22
+
+.Proof. See Section IV-A. 
+
+Remark 1. Besides the spectral complexity of weight matrices, i.e., Φ( w), we have an additional term ∥Ld−11∥22 to capture the graph structures for generalization. Specifically, it measures the total energy of the propagated constant signal over d graph convolutional layers. If it grows with d, the graph operator amplifies constant signals, potentially leading to instability or over-smoothing. If it decays, the operator suppresses constant signals, which may help preserve node distinctions. As ∥Ld−11∥22 ≤ n∥Ld−1∥22 ≤ n∥L∥2d−22 always holds, the generalization bound in Theorem 1 is strictly tighter than the state-of-the-art ones by at least a factor of ln( dh ). Notably, for some specific designs of GCNs, we could obtain strictly much tighter bounds. For the vanilla GCN, L is the normalized adjacency matrix, so that, as in Lemma 6, we have 
+
+P
+
+> i
+
+√Di
+
+pP  
+
+> i
+
+Di
+
+!2
+
+≤ ∥ Ld−11∥22 ≤ n, (15) where the last equality holds when considering regular graphs that yield the loosest bound with ∥Ld−11∥22 = n. When graphs are irregular, we have the tightest bound which is node degree dependent. Therefore, the scaling factor is at most O(d2KΦ( w)) , which is strictly tighter than 
+
+O(d2h ln( dh )Φ( w)) in [8], [15]. For the random walk GCN with self-loops, as L1 = 1,we have Ld−11 = 1, which is irrelevant to d. That is, 
+
+∥Ld−11∥22 = n for any d. It implies that, regardless of the depth d, the sum of the incoming “influence” to each node remains uniformly constant at 1, indicating a measure-preserving diffusion. As such, the generalization bound scaling as O(d2KΦ( w)) , which is still tighter than the existing bounds in [8], [15] with scaling factor of O(d2h ln( dh )∥L∥2d−22 Φ( w)) ,given that 1 ≤ ∥ L∥2 ≤
+
+q Dmax +1  
+
+> Dmin +1
+
+according to Lemma 6. 
+
+Theorem 2. Consider a GCN-type model fw : X × G → RK
+
+with ReLU activations, graph spectra {λi}ni=1 , depth d, width at most h, and bounded inputs ∥X∥2,∞ ≤ B. For any δ, γ > 0,with probability at least 1 − δ, for any w, the generalization error over an i.i.d. training set with size m can be upper-bounded by 
+
+L0(fw) ≤ ˆLγ (fw) + O
+
+s
+
+B2d2hΦsp (w) + ln dm δ
+
+γ2m
+
+ (16) 
+
+with the graph spectral complexity Φsp (w) =
+
+Qdl=1 ∥Wl∥22
+
+Pdl=1 g2 
+
+> l
+
+(λ) ∥Wl∥2
+
+> F
+> ∥Wl∥22
+
+and the spectral sensitivity function gl(λ) = max i |λd−l−1 
+
+> i
+
+| max j |ψ(λj )λl−1 
+
+> j
+
+| with ψ(·)
+
+being graph filters up to design. Proof. See Section IV-B. 
+
+Remark 2. In terms of scaling laws, compared with the general-ization bounds in [8], [15], i.e., O(d2h ln( dh )Φ( w)) , Theorem 2 has an order of O(d2hΦsp (w)) , which is smaller with respect to d and h, yet Φsp (w) depends on the choices of the spectral sensitivity function gl(λ). In doing so, the generalization bounds are topology-aware in the sense that different designs of graph filters help us probe network sensitivities to inspect possible over-smoothing or over-squashing for homophilic or heterophilic graphs. By choosing the graph filter ψ(λ) to be an identity, a low-pass and a high-pass filters, we have different designs of gl(λ) with the same scaling as ρ(L)d−1,which is similar to those in [8], [15]. Nevertheless, gl(λ) has different spectral behaviors against the graph spectra λ, in such a way that Φsp (w)) reflects different generalization behavior 6
+
+for different graph neural networks with over-smoothing/over-squashing and/or homophily/heterophily properties. IV. P ROOFS 
+
+To prove Theorems 1 and 2, we start with the derivation of the Jacobian matrix, leveraging the first-order Taylor expansion of network outputs as a function of the Jacobian of the weights in the unified framework. Define Jl = ∂f w 
+
+> ∂vec( Wl)
+
+as the Jacobian matrix of the network output with respect to the weight matrix at the l-th layer. For the readout layer, we have 
+
+Jd = 1
+
+n Ihd ⊗ (1T Hd−1) ∈ Rhd×hd−1hd . (17) Define Gl = ∂f ∂vec( Hl) ∈ RK×nh l as the Jacobian matrix of the output with respect to the graph embeddings at the l-th layer. According to Lemma 1 in Appendix, for the graph convolutional layer-l, we have 
+
+Jl = GlBl
+
+ Ihl ⊗ (LH l−1) (18) with Hl−1 = ϕ(LH l−2Wl−1), where 
+
+Gl = 1
+
+n
+
+ W Td ⊗ 1T  l+1 Y
+
+> k=d−1
+
+Bk(W Tk ⊗ L)
+
+!
+
+(19) and the diagonal matrix Bl = diag(vec( ϕ′(LH l−1Wl)) ∈
+
+Rnh l×nh l , with ϕ′ being the derivative of the activation function. When ϕ is ReLU, then the diagonal elements in 
+
+Bl is either 0 or 1, yielding Bl ⪯ I. Therefore we have 
+
+JTl Jl =  Ihl ⊗ (HTl−1L)BlGTl GlBl
+
+ Ihl ⊗ (LH l−1).
+
+(20) In what follows, we present two types of sensitivity matrix design approaches. One is from a spatial perspective to consider a similar design of Al as the Jacobian matrix Jl, and the other is from a spectral viewpoint to consider different graph filters. 
+
+A. Spatial Designs and Proof of Theorem 1 1) Perturbation bound: For the Jacobian matrix in Eq-(20), given the fact that Bl ⪯ I, we have 
+
+JTl Jl =
+
+
+
+Ihl ⊗ (HTl−1LT )
+
+
+
+Bl
+
+> d−1
+
+Y
+
+> k=l+1
+
+(Wk ⊗ LT )BTk
+
+!
+
+· 1
+
+n2
+
+ WdW Td ⊗ 11 T  l+1 Y
+
+> k=d−1
+
+Bk(W Tk ⊗ L)
+
+!
+
+· Bl
+
+
+
+Ihl ⊗ (LH l−1)
+
+
+
+(21) 
+
+⪯ 1
+
+n2
+
+  l+1 Y
+
+> k=d
+
+W Tk
+
+  dY
+
+> k=l+1
+
+Wk
+
+
+
+⊗ HTl−1Ld−l11 T Ld−lHl−1 (22) 
+
+⪯ 1
+
+n2
+
+  l+1 Y
+
+> k=d
+
+W Tk
+
+  dY
+
+> k=l+1
+
+Wk
+
+
+
+⊗
+
+> 1
+
+Y
+
+> k=l−1
+
+W Tk XT Ld−111 T Ld−1X
+
+> l−1
+
+Y
+
+> k=1
+
+Wk (23) Let 
+
+Al =
+
+√dn
+
+  l+1 Y
+
+> k=d
+
+W Tk
+
+ ⊗ (1T Ld−1X
+
+> l−1
+
+Y
+
+> k=1
+
+Wk). (24) It is readily to verify that JTl Jl ⪯ 1 
+
+> d
+
+ATl Al, where 
+
+ATl Al = NlN Tl ⊗ vlvTl (25) 
+
+AlATl = ∥vl∥22N Tl Nl (26) with N Tl = √dn
+
+Ql+1  
+
+> k=d
+
+W Tk and vTl = 1T Ld−1X Ql−1 
+
+> k=1
+
+Wk.According to the first-order Taylor expansion, we have 
+
+∥fw+u(X) − fw(X)∥22 = ∥
+
+> d
+
+X
+
+> l=1
+
+Jlul∥22 + o(∥ul∥22) (27) 
+
+≤ d
+
+> d
+
+X
+
+> l=1
+
+∥Jlul∥22 (28) 
+
+≤
+
+> d
+
+X
+
+> l=1
+
+∥Alul∥22. (29) Therefore, the perturbation bound is satisfied since ∥·∥ ∞ ≤ ∥·∥ 2
+
+for vectors. As a byproduct, by the first-order Taylor expansion, we are able to obtain a new GCN perturbation bound in Lemma 7 comparable as in [8] with relaxed assumptions. To make the KL term more tractable, we make the following two specific designs of Al.
+
+2) Sensitivity matrices: In what follows, we consider two designs of Jacobian-type sensitivity matrices. 
+
+Diagonal case. For simplicity, we can set the sensitivity matrix Al as a diagonal matrix, i.e., 
+
+Adiag  
+
+> l
+
+=
+
+r dn B∥Ld−11∥2
+
+Y
+
+> i̸=l
+
+∥Wi∥2Ihlhl−1 (30) so that Pdl=1 ∥Alul∥22 ≤ Pdl=1 ∥Adiag  
+
+> l
+
+ul∥22 for any ul due to 
+
+ATl Al ⪯ (Adiag  
+
+> l
+
+)T Adiag  
+
+> l
+
+resulted from ∥X∥2 ≤ ∥ X∥F ≤√n∥X∥2,∞ ≤ √nB and the triangle inequalities of the operator norms. 
+
+Low-rank case. As Al is a fat matrix with usually K =
+
+hd ≤ hlhl−1, we define an explicit rank-K sensitivity matrix, i.e., 
+
+Alr  
+
+> l
+
+=
+
+√dn
+
+  l+1 Y
+
+> k=d
+
+∥Wk∥2IK
+
+ ⊗  1T Ld−1X
+
+> l−1
+
+Y
+
+> k=1
+
+Wk
+
+ (31) so that Pdl=1 ∥Alul∥22 ≤ Pdl=1 ∥Alr  
+
+> l
+
+ul∥22 for any ul due to 
+
+ATl Al ⪯ (Alr  
+
+> l
+
+)T Alr  
+
+> l
+
+resulted from Lemma 3 and the fact that 
+
+N Tl Nl ⪯ ∥ Nl∥22IK is equivalent to NlN Tl ⪯ ∥ Nl∥22Ihl . It also holds that 
+
+AlATl = ∥vl∥22N Tl Nl ⪯ ∥ vl∥2∥Nl∥22IK = Alr  
+
+> l
+
+(Alr  
+
+> l
+
+)T .
+
+(32) 
+
+3) Prior variance: In general, we need to choose a proper 
+
+σ2 as a function of γ, Al and Rl to satisfy the perturbation condition Eq-(10b) with the following chain of inequalities 
+
+> d
+
+X
+
+> l=1
+
+∥Alul∥22 ≤ σ2κ
+
+> d
+
+X
+
+> l=1
+
+Tr( AlRlATl ) ≤ γ2
+
+16 . (33) 7
+
+As long as there is some σ2 to make the above inequalities satisfied, the perturbation condition holds. As σ2 also appears in the prior distribution, which should not depend on training weights w, we introduce the estimates of weight matrices as auxiliary variables leveraging the spectral normalization tricks in [8], [11]. 
+
+Diagonal case. Specifically, for the diagonal design, let 
+
+ˆAdiag  
+
+> l
+
+=
+
+r dn B∥Ld−11∥2
+
+Y
+
+> i̸=l
+
+∥ ˆWi∥2Ihlhl−1 . (34) Given β = ∥Wl∥2 and ˆβ = ∥ ˆWl∥2, for |β − ˆβ| ≤ 1 
+
+> d
+
+β, we have 1 
+
+> e
+
+βd−1 ≤ ˆβd−1 ≤ eβ d−1, such that 
+
+1
+
+e2 Adiag  
+
+> l
+
+(Adiag  
+
+> l
+
+)T ⪯ ˆAdiag  
+
+> l
+
+( ˆAdiag  
+
+> l
+
+)T ⪯ e2Adiag  
+
+> l
+
+(Adiag  
+
+> l
+
+)T .
+
+(35) Together with the fact that 
+
+AlRlATl ⪯ AlATl ⪯ Adiag  
+
+> l
+
+(Adiag  
+
+> l
+
+)T (36) as Rl ⪯ I, we rewrite the perturbation condition as 
+
+> d
+
+X
+
+> l=1
+
+∥Alul∥22 ≤ σ2κ
+
+> d
+
+X
+
+> l=1
+
+Tr( AlRlATl )
+
+≤ e2σ2κ
+
+> d
+
+X
+
+> l=1
+
+Tr( ˆAdiag  
+
+> l
+
+( ˆAdiag  
+
+> l
+
+)T ) ≤ γ2
+
+16 , (37) which yields a valid choice of σ2, i.e, 
+
+1
+
+σ2 = 16 e2κγ2
+
+> d
+
+X
+
+> l=1
+
+Tr( ˆAdiag  
+
+> l
+
+( ˆAdiag  
+
+> l
+
+)T ) (38) as a function of weight estimates { ˆWl}dl=1 .
+
+Low-rank case. Given β = ∥Wl∥2 and ˆβ = ∥ ˆWl∥2, for 
+
+|β − ˆβ| ≤ 1 
+
+> d
+
+β, we have 1 
+
+> e
+
+βd−1 ≤ ˆβd−1 ≤ eβ d−1, such that 
+
+Alr  
+
+> l
+
+(Alr  
+
+> l
+
+)T = dn2 ∥vl∥22
+
+> l+1
+
+Y
+
+> k=d
+
+∥Wk∥22IK (39) 
+
+⪯ B2dn ∥Ld−11∥22
+
+Y 
+
+> k̸=l
+
+∥Wk∥22IK (40) 
+
+⪯ e2B2dn ∥Ld−11∥22
+
+Y 
+
+> k̸=l
+
+∥ ˆWk∥22IK (41) with ˆvTl = 1T Ld−1X Ql−1 
+
+> k=1
+
+ˆWk. Together with the fact that 
+
+AlRlATl ⪯ AlATl ⪯ Alr  
+
+> l
+
+(Alr  
+
+> l
+
+)T (42) as Rl ⪯ I, we rewrite the perturbation condition as 
+
+> d
+
+X
+
+> l=1
+
+∥Alul∥22 ≤ σ2κ
+
+> d
+
+X
+
+> l=1
+
+Tr( AlRlATl )
+
+≤ σ2κ
+
+> d
+
+X
+
+> l=1
+
+Tr( Alr  
+
+> l
+
+(Alr  
+
+> l
+
+)T ) (43) 
+
+≤ e2B2dKσ 2κn ∥Ld−11∥22
+
+> d
+
+X
+
+> l=1
+
+Y 
+
+> k̸=l
+
+∥ ˆWk∥22 ≤ γ2
+
+16 ,
+
+(44) which yields a valid choice of σ2, i.e, 
+
+1
+
+σ2 = 16 e2κB 2dK γ2n ∥Ld−11∥22
+
+> d
+
+X
+
+> l=1
+
+Y 
+
+> k̸=l
+
+∥ ˆWk∥22, (45) relaxing the dependent of weight matrices. 
+
+4) Generalization bounds: In what follows, we consider the diagonal and low-rank cases separately. 
+
+Diagonal case. With the adjusted σ2 for a fixed ˆβ and the optimized R∗ 
+
+> l
+
+, i.e., 
+
+R∗ 
+
+> l
+
+=
+
+
+
+I + 16 κ∥w∥22
+
+γ2 (Adiag  
+
+> l
+
+)T Adiag 
+
+> l
+
+−1
+
+, (46) we can obtain the resulting upper bound of the KL divergence in Eq-(10a) for h = max l hl, i.e., 
+
+DKL = 12
+
+> d
+
+X
+
+> l=1
+
+∥Wl∥2
+
+> F
+
+σ2 + Tr( R∗ 
+
+> l
+
+) − log det R∗ 
+
+> l
+
+− h2 (47) 
+
+≤ 8e2κ∥w∥22
+
+γ2
+
+> d
+
+X
+
+> l=1
+
+Tr( ˆAdiag  
+
+> l
+
+( ˆAdiag  
+
+> l
+
+)T )+ η2
+
+2 Tr(( Adiag  
+
+> l
+
+)T Adiag  
+
+> l
+
+) (48) 
+
+≤ 8( e4 + 1) κ∥w∥22
+
+γ2
+
+> d
+
+X
+
+> l=1
+
+Tr( Adiag  
+
+> l
+
+(Adiag  
+
+> l
+
+)T ) (49) 
+
+≲ O
+
+ B2d2h2β2d−2
+
+γ2n ∥w∥22∥Ld−11∥22
+
+
+
+(50) 
+
+≲ O
+
+ B2d2h2∥Ld−11∥22
+
+γ2n Φ( w)
+
+
+
+(51) where the first inequality is due to Lemma 2 presented in the Appendix, the second inequality comes from Eq-(35), and the last inequity is with 
+
+Φ( w) = Y
+
+> l
+
+∥Wl∥22
+
+> d
+
+X
+
+> l=1
+
+∥Wl∥2
+
+> F
+
+∥Wl∥22
+
+. (52) As such, we end up with new generalization error bounds 
+
+L0(fw) ≤ ˆLγ (fw)+ O
+
+s
+
+B2d2h2 1  
+
+> n
+
+∥Ld−11∥22Φ( w) + ln dm δ
+
+γ2m
+
+ (53) by taking a union bound over all possible ˆβ.
+
+Low-rank case. Given the optimized R∗ 
+
+> l
+
+, i.e., 
+
+R∗ 
+
+> l
+
+=
+
+
+
+I + 16 κ∥w∥22
+
+γ2 (Alr  
+
+> l
+
+)T Alr 
+
+> l
+
+−1
+
+, (54) together with the adjusted σ2 for a fixed ˆβ, we can obtain the resulting KL divergence and its upper bounds with h = max l hl
+
+for simplicity, i.e., 
+
+DKL = 12
+
+> d
+
+X
+
+> l=1
+
+∥Wl∥2
+
+> F
+
+σ2 + Tr( R∗ 
+
+> l
+
+) − log det R∗ 
+
+> l
+
+− h2 (55) 
+
+≤ 8e2κB 2dK γ2n ∥w∥22∥Ld−11∥22
+
+> d
+
+X
+
+> l=1
+
+Y 
+
+> k̸=l
+
+∥ ˆWk∥228
+
++ η2
+
+2 Tr(( Alr  
+
+> l
+
+)T Alr  
+
+> l
+
+) (56) 
+
+≤ 8( e4 + 1) κB 2dK γ2n ∥w∥22∥Ld−11∥22
+
+> d
+
+X
+
+> l=1
+
+Y 
+
+> k̸=l
+
+∥Wk∥22
+
+(57) 
+
+≲ O
+
+ B2d2K∥Ld−11∥22
+
+γ2n Φ( w)
+
+
+
+(58) by which we have the similar generalization bound as in Eq-(53) for any weights as 
+
+L0(fw) ≤ ˆLγ (fw)+ O
+
+s
+
+B2d2K 1 
+
+> n
+
+∥Ld−11∥22Φ( w) + ln dm δ
+
+γ2m
+
+ (59) It is worth noting that when considering the low-rank design of sensitivity matrix, the full dimension of h2 is reduced to K,such that K ≪ h2 in practice implies a tighter bound. 
+
+B. Spectral Designs and Proof of Theorem 2 
+
+Given the Laplacian eigenpairs (λi, vi) of the graph prop-agation matrix L, i.e., L = V ΛV T , we can design the sensitivity matrices according to the eigenspace representations. Specifically, let 
+
+Al = αl
+
+ Ihl ⊗ (V ψ(Λ)V T Hl−1) (60) with 
+
+αl =
+
+√dn ∥1T Ld−l−1∥2
+
+> l+1
+
+Y
+
+> k=d
+
+∥Wk∥2. (61) where ψ(Λ) = diag( λ1, . . . , λ n) is the spectral filter, and 
+
+ψ : R → R is a function (e.g., polynomial, exponential) up to design. For notational simplicity, we denote ψ(L) = 
+
+V f (Λ)V T , such that ψ(L)l = V ψ(Λ)lV T for any l. It is readily to verify that, if we ensure |ψ(λ)| ≥ | λ| for all λ, we have ψ(L) ⪰ L. As such, the goal of design is to find proper graph filters f to make sure the perturbation bound is satisfied, and at the same time to be as small as possible to yield a tight generalization bound. 
+
+1) Perturbation bound: Given Eq-(19), it follows αl ≥√d∥Gl∥2 for all l, since 
+
+∥Gl∥22 ≤ 1
+
+n2 ∥(
+
+> l+1
+
+Y
+
+> k=d
+
+W Tk ) ⊗ (1T Ld−l−1)∥22 (62) 
+
+≤ 1
+
+n2
+
+> l+1
+
+Y
+
+> k=d
+
+∥Wk∥22∥1T Ld−l−1)∥22. (63) Due to the fact that BTl Bl = Bl, we have BlGTl GlBl ⪯∥Gl∥22I ⪯ α2 
+
+> l
+> d
+
+I. Further, if we ensure |ψ(λ)| ≥ | λ| for all λ,it follows that JTl Jl ⪯ 1 
+
+> d
+
+ATl Al. Therefore, we have 
+
+∥fw+u(X) − fw(X)∥22 = ∥
+
+> d
+
+X
+
+> l=1
+
+Jlul∥22 + o(∥ul∥22) (64) 
+
+≤ d
+
+> d
+
+X
+
+> l=1
+
+∥Jlul∥22 ≤
+
+> d
+
+X
+
+> l=1
+
+∥Alul∥22
+
+(65) such that the perturbation bound is satisfied. 
+
+2) Prior variance: Given the spectral design of the sensi-tivity matrix in Eq-(60), we have 
+
+Tr( ATl Al) = α2 
+
+> l
+
+hl Tr( HTl−1V ψ(Λ)2V T Hl−1) (66) 
+
+= α2 
+
+> l
+
+hl∥ψ(L)Hl−1∥2 
+
+> F
+
+(67) 
+
+≤ dh l
+
+n2 ∥1T Ld−l−1∥22
+
+> l+1
+
+Y
+
+> k=d
+
+∥Wk∥22
+
+· ∥ ψ(L)Ll−1X∥2
+
+> Fl−1
+
+Y
+
+> k=1
+
+∥Wk∥22 (68) 
+
+≤ dh l
+
+n2 ∥X∥2 
+
+> F
+
+∥1T Ld−l−1∥22
+
+· ∥ ψ(L)Ll−1∥22
+
+Y 
+
+> k̸=l
+
+∥Wk∥22 (69) 
+
+≤ dh lB2g2 
+
+> l
+
+(λ) Y 
+
+> k̸=l
+
+∥Wk∥22 (70) where ∥X∥F ≤ √n∥X∥2,∞ ≤ √nB , ∥1T Ld−l−1∥22 ≤
+
+nρ (L)2d−2l−2 with the spectral radius defined as ρ(L) = max j |λj |, and the spectral sensitivity function 
+
+gl(λ) = max  
+
+> i
+
+|λd−l−1 
+
+> i
+
+| max  
+
+> j
+
+|ψ(λj )λl−1 
+
+> j
+
+|, (71) where the first factor ρ(L)2d−2l−2 is the worst-case amplifica-tion of a constant signal over d − l − 1 hops, and the second factor represents the strongest single-step amplification possible from the filtered operator ψ(L)Ll−1.In general, we need to choose a proper σ2 as a function of 
+
+γ, Al and Rl to satisfy the perturbation condition Eq-(10b). As σ2 also appears in the prior distribution, which should not depend on training weights w, we introduce an auxiliary sensitivity matrix leveraging the spectral normalization tricks in [8], [11]. For simplicity, we assume h = max l hl. For the spectral design of the sensitivity matrix, we further have 
+
+Tr( ATl Al) ≤ e2dhB 2g2 
+
+> l
+
+(λ) Y 
+
+> k̸=l
+
+∥ ˆWk∥22 (72) due to the fact that βd−1 ≤ e ˆβd−1 for |β − ˆβ| ≤ 1 
+
+> d
+
+β with 
+
+β = ∥Wk∥2 and ˆβ = ∥ ˆWk∥2.According to the perturbation condition, we need to choose a proper σ2 to ensure the following inequalities 
+
+> d
+
+X
+
+> l=1
+
+∥Alul∥22 ≤ σ2κ
+
+> d
+
+X
+
+> l=1
+
+Tr( AlRlATl ) ≤ σ2κ
+
+> d
+
+X
+
+> l=1
+
+Tr( AlATl )
+
+(73) 
+
+≤ σ2κe 2dhB 2
+
+> d
+
+X
+
+> l=1
+
+g2 
+
+> l
+
+(λ) Y 
+
+> k̸=l
+
+∥ ˆWk∥22 ≤ γ2
+
+16 
+
+(74) where κ = 1 + 2 ln 2 + √4 ln 2 , and Rl = ( I + η2ATl Al)−1
+
+according to our previous work [31]. As long as there is some 
+
+σ2 to make the above inequalities satisfied, the perturbation condition holds. 9
+
+By simply setting 
+
+1
+
+σ2 = 16 e2κdhB 2
+
+γ2
+
+> d
+
+X
+
+> l=1
+
+g2 
+
+> l
+
+(λ) Y 
+
+> k̸=l
+
+∥ ˆWk∥22 (75) we have a proper choice of σ2 independent of model weights to make the perturbation condition satisfied. 
+
+3) Generalization bounds: According to different graph filter designs and the corresponding choices of σ2, we can derive the different generalization bounds. With the adjusted σ2 and the optimized R∗ 
+
+> l
+
+, i.e., 
+
+R∗ 
+
+> l
+
+=
+
+
+
+I + 16 κ∥w∥22
+
+γ2 ATl Al
+
+−1
+
+, (76) we can obtain the resulting KL divergence in Eq-(10a) or its upper bounds, i.e., 
+
+DKL = 12
+
+> d
+
+X
+
+> l=1
+
+∥Wl∥2
+
+> F
+
+σ2 + Tr( R∗ 
+
+> l
+
+) − log det R∗ 
+
+> l
+
+− h2 (77) 
+
+≤ 8e2κdhB 2
+
+γ2 ∥w∥22
+
+> d
+
+X
+
+> l=1
+
+gl(λ) Y 
+
+> k̸=l
+
+∥ ˆWk∥22
+
++ η2
+
+2 Tr( ATl Al) (78) 
+
+≤ 8( e4 + 1) κdhB 2
+
+γ2 ∥w∥22
+
+> d
+
+X
+
+> l=1
+
+g2 
+
+> l
+
+(λ) Y 
+
+> k̸=l
+
+∥Wk∥22 (79) 
+
+≲ O
+
+ B2d2hγ2 Φsp (w)
+
+
+
+(80) where the graph spectral complexity is defined as 
+
+Φsp (w) = 
+
+> d
+
+Y
+
+> l=1
+
+∥Wl∥22
+
+> d
+
+X
+
+> l=1
+
+g2 
+
+> l
+
+(λ) ∥Wl∥2
+
+> F
+
+∥Wl∥22
+
+(81) that involves both spectral complexities of the weight matrices and the graph propagation matrix. The first term in Eq-(81) measures the worst-case Lipschitz constant of the entire d
+
+graph convolutional layers. If any layer has a large weight norm, the entire product blows up, indicating high sensitivity to input perturbations. In the second term, gl(λ) is the graph-induced sensitivity at layer l, and ∥Wl∥2
+
+> F
+> ∥Wl∥22
+
+is effective number of parameters in layer l. This sum captures the total graph-weighted complexity across all layers. It turns out that layers with high graph sensitivity ( gl) and many effective parameters contribute more to the graph spectral complexity. Therefore, we end up with a new generalization bound 
+
+L0(fw) ≤ ˆLγ (fw) + O
+
+s
+
+B2d2hΦsp (w) + ln dm δ
+
+γ2m
+
+ (82) by taking the union bound over all possible choices of ˆβ.Compared with the previous bounds both in this paper and the existing works, the key factor is the new graph spectral complexity term Φsp (w), which is a function of both the weight matrices {Wl}dl=1 and the graph propagation matrix L.
+
+4) Sensitivity matrices: The most critical design in the sensitivity matrix is the graph filters ψ(λ) for capturing the graph structures in generalization subject to the condition that 
+
+|ψ(λ)| ≥ | λ| for all λ to satisfy the perturbation condition. With different designs of the sensitivity graph filters ψ(λ), we end up with different generalization bounds. In the following, we focus on different designs of the graph filters ψ(λ).
+
+Identity filter. When ψ(λ) = λ, i.e., ψ(L) = L, we have 
+
+gid  
+
+> l
+
+(λ) = max  
+
+> i
+
+|λd−l−1 
+
+> i
+
+| max  
+
+> j
+
+|λlj | (83) which can be upper bounded by gid  
+
+> l
+
+(λ) ≤ ρ(L)d−1. This recovers the generalization bounds in [8], [15] with ρ(L) = 1 
+
+for the normalized adjacency matrix L.The identity filter amplifies all frequencies equally. For smooth graphs (large λ ≈ 1), gl(λ) grows with l, indicating depth-dependent sensitivity. For graphs with negative eigen-values (heterophily), the maximum absolute value could come from λ ≈ − 1, leading to oscillatory behavior with layer. 
+
+Low-pass filter. When ψ(λ) = 1+2 ξ 
+
+> 1+ ξ(1 −λ)
+
+with ξ > 0,it probes sensitivity to smooth signals ( λ ≈ 1). A large value reflects certain strong low-frequency influence, indicating potential over-smoothness. Therefore, we have 
+
+glp  
+
+> l
+
+(λ) ≈ (1 + 2 ξ)ρ(L)d−1. (84) When the graph has strong low-frequency components, glp  
+
+> l
+
+(λ)
+
+will be high. A layer with high glp  
+
+> l
+
+/g id  
+
+> l
+
+usually indicates high susceptibility to over-smoothing. If glp  
+
+> l
+
+/g id  
+
+> l
+
+grows with l, it means the smoothness-induced sensitivity compounds with depth—a clear risk signal for deep GNNs. Such a design of 
+
+ψ(λ) satisfies |ψ(λ)| ≥ | λ| while amplifying low λ, so that the sensitivity bound is specific for over-smoothness. There are also some alternative low-pass filter designs with tunable emphasis on smoothness, e.g., ψ(λ) = |λ| + ξ(1 −
+
+λ2) with ξ ≥ 0. Thus, glp  
+
+> l
+
+(λ) depends on ξ and the specific eigenvalue distribution, which can be tuned to diagnose if mid-range frequencies contribute significantly to sensitivity. It is worth noting that due to |ψ(λ)| ≥ | λ|, the low-pass filter always excesses the identity one, where the “excess” term in the bound is not just a penalty—it quantifies a design trade-off to answer the question as to how much worse could the generalization be if the smoothness is enforced for better empirical performance. 
+
+High-pass filter. When ψ(λ) = 1+2 ξ 
+
+> 1+ ξ(1+ λ)
+
+with ξ > 0, it probes sensitivity to smooth signals ( λ ≈ − 1). A large result signals strong high-frequency influence, indicating sensitivity to heterophily or local noise. Therefore, we have 
+
+ghp  
+
+> l
+
+(λ) ≈ (1 + 2 ξ)ρ(L)d−1. (85) Such a design of ψ(λ) satisfies |ψ(λ)| ≥ | λ| while amplifying high λ, so that we end up with a sensitivity bound specifically for heterophily. Some other high-pass filter designs could aim to amplify negative eigenvalues, e.g., ψ(λ) = |λ| + ξ(1 + λ) with ξ ≥ 0.Such a filter selectively amplifies the influence of negative eigenvalues. Therefore, a large bound indicates that operations in strongly heterophilic settings are highly sensitive. 10 
+
+Impact on generalization. For the above low-/high-pass filter designs, although the cost is a slightly larger bound, the payoff is a clear, spectral explanation for why the bound is large and what that implies about the GNN’s behavior on a given graph via the spectral sensitivity function gl(λ).If glp  
+
+> l
+
+≫ gid  
+
+> l
+
+for later layers, it follows that GNN’s sensitivity is dominated by low frequencies, thus it indicates that low-frequency (smooth) components dominate the sensitivity at depth. This is a spectral signature of over-smoothing. If 
+
+ghp  
+
+> l
+
+≫ gid  
+
+> l
+
+for early layers, sensitivity is dominated by high frequencies, which indicates high-frequency (oscillatory) components drive sensitivity. This suggests the model is highly sensitive to local variations, a potential indicator of heterophily or over-squashing. Regarding generalization bounds, deep GNNs on homophilic graphs generalize well if later layers have moderate weights, and the generalization on heterophilic graphs depends critically on layer parity and weight distribution. In practical designs, it is suggested choosing filters that minimize gl(λ) for the graph’s spectral profile. For homophily, low-pass filters yield tighter bounds; for heterophily, high-pass or adaptive filters are better. If gl(λ) grows with l, shallow networks may generalize better; If it decays, depth is beneficial. The tightest bound 
+
+ψ(λ) = λ tells the worst-case and the global spectral limit, whilst a “suboptimal” bound can tell local connectivity, spectral energy distribution, or the cost of smoothing. Choosing a “suboptimal” sensitivity matrix Al that leads to a looser bound can be a powerful analytical tool. The goal shifts from minimizing a scalar to structuring the bound to reveal how specific graph properties influence generalization. A strategically “worse” design for Al can make the bound explicitly depend on more interpretable or controllable graph properties, offering these key insights. V. C ONCLUSION 
+
+This work conducted PAC-Bayesian generalization analysis for graph convolutional networks in graph classification, explicitly accounting for graph structures in generalization bounds. By extending a unified PAC-Bayesian framework for deep neural networks to graph-structured models, we provided a principled approach that accommodates anisotropic Gaussian posteriors, structured sensitivity to weight perturbations, and explicit incorporation of graph topology. The resulting topology-aware generalization bounds capture either spatial or spectral characteristics of GCNs and recover several existing PAC-Bayesian bounds as special cases, while offering guarantees that are tighter than prior results. Beyond their theoretical sharpness, the proposed bounds offer improved interpretability by clarifying how graph structure and heterogeneous parameter sensitivity jointly influence generalization in graph neural networks. Future works consist of the extension of the proposed framework to other classes of GNNs, such as message-passing neural networks, attention-based GNNs, and architectures with adaptive or learnable graph operators, as well as the integration of adversarial settings, including adversarial perturbations of node/edge features and/or graph structure. VI. A PPENDIX 
+
+A. Useful Lemmas 
+
+Lemma 1. For a graph convolutional network (GCN) with the node embeddings Hl = ϕ(LH l−1Wl) at the l-th graph convolutional layer ( l < d) and the last readout layer 
+
+f T 
+
+> w
+
+(X) = 1 
+
+> n
+
+1T Hd−1Wd, the Jacobian of the output with respect to weights at the l-th layer, i.e., Jl = ∂f w 
+
+> ∂vec( Wl)
+
+, can be given by 
+
+Jl = 1
+
+n
+
+ W Td ⊗ 1T  l+1 Y
+
+> k=d−1
+
+Bk(W Tk ⊗ L)
+
+!
+
+· Bl
+
+
+
+Ihl ⊗ (LH l−1)
+
+
+
+. (86) 
+
+Proof. For the readout layer, we have 
+
+vec( f T 
+
+> w
+
+(X)) = 
+
+ 1
+
+n Ihd ⊗ (1T Hd−1)
+
+
+
+vec( Wd) (87) which yields 
+
+Jd = 1
+
+n Ihd ⊗ (1T Hd−1) ∈ Rhd×hd−1hd . (88) For the graph convolutional layer-l with l < d, define 
+
+Bl = diag(vec( ϕ′(LH l−1Wl)) ∈ Rnh l×nh l , where ϕ′ is the derivative of the activation function. When ϕ is ReLU, then the diagonal elements in Bl is either 0 or 1. For the last readout layer, the output difference is ∆f T 
+
+> w
+
+(X) = 1 
+
+> n
+
+1T ∆Hd−1Wd,where ∆Hk is the output difference at the k-th layer due to the accumulated weight perturbation from the previous layers, resulting in 
+
+vec(∆ fw(X)) = 
+
+ 1
+
+n W Td ⊗ 1T 
+
+vec(∆ Hd−1). (89) Let ∆Wl be the weight perturbation of Wl. When k = d −
+
+1, . . . , l + 1 , define 
+
+∆Zk = L∆Hk−1Wk + LH k−1∆Wk (90) where the first term is due to the propagated perturbation from the previous layer, and the second term is the direct weight perturbation at the current layer. So, by vectorization and applying the ReLU activation, we have 
+
+vec(∆ Hk) = Bkvec(∆ Zk) (91) 
+
+= Bk(W Tk ⊗ L)vec(∆ Hk−1)+ Bk(Ihk ⊗ LH k−1)vec(∆ Wk).
+
+(92) Therefore, we have 
+
+∂vec( Hk)
+
+∂vec( Hk−1) = vec(∆ Hk)vec(∆ Hk−1) ∆Hk−1→0
+
+= Bk(W Tk ⊗ L)
+
+(93) 
+
+∂vec( Hl)
+
+∂vec( Wl) = vec(∆ Hl)vec(∆ Wl) ∆Wl→0 = Bl(Ihl ⊗ LH l−1).
+
+(94) Therefore, 
+
+Jl = ∂vec( fw)
+
+∂vec( Hd−1)
+
+> l+1
+
+Y
+
+> k=d−1
+
+∂vec( Hk)
+
+∂vec( Hk−1)
+
+∂vec( Hl)
+
+∂vec( Wl) (95) 11 
+
+= 1
+
+n
+
+ W Td ⊗ 1T  l+1 Y
+
+> k=d−1
+
+Bk(W Tk ⊗ L)
+
+!
+
+· Bl
+
+
+
+Ihl ⊗ (LH l−1)
+
+
+
+(96) with Hl−1 = ϕ(LH l−2Wl−1).
+
+Lemma 2. Given a matrix X ∈ Rm×n and α > 0 is independent of X such that R = ( I + αXT X)−1, we have 
+
+f (X) = Tr( R) − log det R − n ≤ α Tr( XT X) (97) 
+
+where the equality holds if and only if X = 0.Proof. Let λi ≥ 0 be the eigenvalues of XT X and define 
+
+μi = 11+ αλ i ∈ (0 , 1] . Then 
+
+f (X) = 
+
+> n
+
+X
+
+> i=1
+
+(μi − log μi − 1) (98) 
+
+=
+
+> n
+
+X
+
+> i=1
+
+ 11 + αλ i
+
++ log(1 + αλ i) − 1
+
+
+
+(99) 
+
+=
+
+> n
+
+X
+
+> i=1
+
+h(αλ i) (100) where h(u) = 11+ u + log(1 + u) − 1 for u ≥ 0. It is readily verified that h(u) ≤ u for all u ≥ 0, where the equality holds if and only if u = 0 . Thus, we have 
+
+f (X) = 
+
+> n
+
+X
+
+> i=1
+
+h(αλ i) ≤
+
+> n
+
+X
+
+> i=1
+
+αλ i = α Tr( XT X) (101) where the equality holds if and only if λi = 0 for all i, i.e., 
+
+X = 0. This completes the proof. 
+
+Lemma 3. For positive semidefinite matrices A, B, and C,the following inequality holds 
+
+A ⊗ B ⪯ A ⊗ C if and only if B ⪯ C (102) 
+
+where ⊗ is the Kronecker product and ⪯ denotes the Lowner order, i.e., X ⪯ Y means Y − X is positive semidefinite. Proof. Forward pass. Given A⊗B ⪯ A⊗C, for any vectors 
+
+x and y, we have 
+
+(x ⊗ y)T (A ⊗ B)( x ⊗ y) ≤ (x ⊗ y)T (A ⊗ C)( x ⊗ y).
+
+(103) Using the identity (U ⊗ V )( x ⊗ y) = ( U x ) ⊗ (V y ), we have 
+
+(xT Ax )( yT By ) ≤ (xT Ax )( yT Cy ). (104) As there exist some x such that xT Ax > 0, then we have, for any vector y, that 
+
+yT By ≤ yT Cy , (105) which yields B ⪯ C.
+
+Backward pass. Given B ⪯ C, it follows C − B ⪰ 0 and 
+
+A ⊗ (C − B) is also positive semidefinite, i.e., 
+
+A ⊗ (C − B) = A ⊗ C − A ⊗ B ⪰ 0, (106) which implies A ⊗ B ⪯ A ⊗ C.
+
+Lemma 4. For two matrices A and B, we have ∥A ⊗ B∥2 =
+
+∥A∥2∥B∥2 and ∥A ⊗ B∥F = ∥A∥F ∥B∥F .Proof. Let the SVD of A and B be A = P 
+
+> i
+
+σiuivTi and 
+
+B = P 
+
+> i
+
+λixiyTi , where {ui}, {vi}, {xi}, and {yi} are their left and right singular vectors. Thus, we have 
+
+A ⊗ B = ( X
+
+> i
+
+σiuivTi ) ⊗ (X
+
+> i
+
+xiyTi ) (107) 
+
+= X
+
+> i
+
+X
+
+> j
+
+σiλj (ui ⊗ xj )( vTi ⊗ yTj ) (108) 
+
+= X
+
+> i
+
+X
+
+> j
+
+σiλj (ui ⊗ xj )( vi ⊗ yj )T . (109) As any two vectors in {vi ⊗ xj }i,j are orthogonal for different (i, j ), so are {ui ⊗ yj }i,j , it follows that the two sets of orthogonal vectors are eigenvectors of A ⊗ B with corresponding singular values {σiλj }i,j . Therefore, we have 
+
+∥A ⊗ B∥2 = max  
+
+> i
+
+σi max  
+
+> j
+
+λj = ∥A∥2∥B∥2 (110) 
+
+∥A ⊗ B∥2 
+
+> F
+
+= X
+
+> i
+
+X
+
+> j
+
+σ2 
+
+> i
+
+λ2 
+
+> j
+
+= ∥A∥2 
+
+> F
+
+∥B∥2 
+
+> F
+
+. (111) 
+
+Lemma 5. Given matrices A, X, and B, we have 
+
+∥AXB ∥F ≤ ∥ A∥2∥B∥2∥X∥F .Proof. For any matrix X, the vectorization operator vec( ·)
+
+stacks the columns of a matrix into a column vector so that 
+
+∥X∥2 
+
+> F
+
+= ∥vec( X)∥22. Then, it follows that 
+
+∥AXB ∥2 
+
+> F
+
+= ∥vec( AXB )∥22 (112) 
+
+= ∥(BT ⊗ A)vec( X)∥22 (113) 
+
+≤ ∥ BT ⊗ A∥22∥vec( X)∥22 (114) 
+
+= ∥A∥22∥B∥22∥vec( X)∥22 (115) 
+
+= ∥A∥22∥B∥22∥X∥2 
+
+> F
+
+(116) where the inequality is due to the fact that the Euclidean norm of a matrix-vector product is bounded by the spectral norm of the matrix times the Euclidean norm of the vector. 
+
+Lemma 6. Consider a graph G = ( V, E ) with adjacency matrix AG ∈ { 0, 1}n×n and its. Let I + AG be the adjacency matrix with self-loops, and ˜D = I + D with D = diag( AG1)
+
+the corresponding degree matrix. For vanilla GCNs L = ˜D− 12 (I + AG) ˜D− 12 , we have 
+
+ρ(L) = ∥L∥2 = 1 , (117) 
+
+P
+
+> i
+
+√1 + Dii 
+
+pP 
+
+> i
+
+(1 + Dii ) ≤ ∥ Ld−11∥2 ≤ √n. (118) 
+
+For random walk GCNs Lrw = ˜D−1(I + AG), we have 
+
+ρ(Lrw ) = 1 , ∥Ld−1rw 1∥22 = n (119) 
+
+1 ≤ ∥ Lrw ∥2 ≤
+
+r Dmax + 1 
+
+Dmin + 1 . (120) 
+
+Proof. We first show that L and Lrw have the same set of eigenvalues, followed by the separate proofs. Note that Lrw = ˜D−1(I + AG) is a random walk matrix, which is a transition matrix of a lazy random walk, such that 12 
+
+at each step one can stay still or move to a neighbor. The elements in Lrw are the transition probabilities. It is readily verified that L and Lrw are similar in the sense that 
+
+Lrw = ˜D−1(I + AG) (121) 
+
+= ˜D− 12 ˜D− 12 (I + AG) ˜D− 12 ˜D 12 = ˜D− 12 L ˜D 12 (122) so that they share the same set of eigenvalues {λi}ni=1 . As Lrw 
+
+is diagonally similar to a symmetric matrix L, the eigenvalues are real-valued. Since Lrw is a row-stationary matrix, by the Perron-Frobenius theorem, we have 0 ≤ λi ≤ 1 for all i.
+
+a) Vanilla GCNs: Given that the eigenvalues of L lie in the range of [0,1], we have 
+
+˜D− 12 (I + AG) ˜D− 12 ˜D 12 1 = ˜D− 12 (I + AG)1 (123) 
+
+= ˜D− 12 ˜D1 = ˜D 12 1, (124) which indicates ˜D 12 1 is an eigenvector of L with eigenvalue 1. Since L is symmetric, we have ρ(L) = ∥L∥2 = λmax (L) = 1 .Let (λi, vi) be eigenpairs of L with the eigenvalues λi ∈
+
+[0 , 1] . If letting λ1 = 1 be the largest eigenvalue, then v1 =     
+
+> ˜D121
+> ∥˜D121∥2
+
+is the normalized eigenvector. Let 1 = Pni=1 αivi
+
+with {αi}ni=1 being the coefficients of projecting 1 on the eigenspace span( {vi}ni=1 ). Therefore, 
+
+Ld−11 =
+
+> n
+
+X
+
+> i=1
+
+λd−1 
+
+> i
+
+vivTi
+
+! 
+
+> n
+
+X
+
+> j=1
+
+αj vj
+
+ (125) 
+
+=
+
+> n
+
+X
+
+> i=1
+
+αiλd−1 
+
+> i
+
+vi. (126) Since λi ∈ [0 , 1] , we have 
+
+∥Ld−11∥22 =
+
+> n
+
+X
+
+> i=1
+
+α2 
+
+> i
+
+λ2( d−1)  
+
+> i
+
+≤
+
+> n
+
+X
+
+> i=1
+
+α2 
+
+> i
+
+= ∥1∥22 = n. (127) As a side remark, the over-smoothing occurs as d increases because all terms where |λi| < 1 decay to zero, leaving only the components aligned with |λi| = 1 .On the other hand 
+
+∥Ld−11∥2 ≥ α1λd−11 = α1 (128) where 
+
+α1 = 1T v1 = 1T ˜D 12 1
+
+∥ ˜D 12 1∥2
+
+=
+
+P
+
+> i
+
+√1 + Dii 
+
+pP 
+
+> i
+
+(1 + Dii ) , (129) given 1 = Pni=1 αivi. Note here that the upper and lower bounds of ∥Ld−11∥2 coincide when G is a regular graph with the same degree for all nodes. 
+
+b) Random walk GCNs: Note that Lrw shares the same eigenvalues λi ∈ [0 , 1] , yet the different eigenvectors due to the asymmetry. As Lrw is a row-stationary matrix, we have 
+
+L1 = 1, i.e., λ1 = 1 . Thus, we have ρ(Lrw ) = 1 and 
+
+Ld−11 = 1, for any d. (130) This yields ∥Ld−11∥2 = ∥1∥2 = √n. Further, we have the lower bound ∥Lrw ∥2 ≥ ρ(Lrw ) = 1 and the upper bound 
+
+∥Lrw ∥2 = ∥ ˜D− 12 L ˜D 12 ∥ ≤ ∥ ˜D− 12 ∥2∥L∥2∥ ˜D 12 ∥2 (131) 
+
+=
+
+r Dmax + 1 
+
+Dmin + 1 . (132) This completes the proof. 
+
+Lemma 7. Let fw(X) be a GCN model with d layers, such that ∥X∥2,∞ ≤ B. Let L be the graph propagation matrix. Given any weight perturbation Ul to the weight Wl, we have the output difference bounded by 
+
+∥fw+u(X) − fw(X)∥22 ≤ dB 2∥L∥2d−22
+
+> d
+
+Y
+
+> l=1
+
+∥Wl∥22
+
+> d
+
+X
+
+> l=1
+
+∥Ul∥22
+
+∥Wl∥22
+
+.
+
+Proof. Let 
+
+Al = αl
+
+ Ihl ⊗ (LH l−1) (133) with 
+
+αl =
+
+√dn ∥1T Ld−l−1∥2
+
+> l+1
+
+Y
+
+> k=d
+
+∥Wk∥2. (134) Therefore, we have 
+
+∥Alul∥22 = ∥Alvec( Ul)∥22 (135) 
+
+= α2 
+
+> l
+
+∥vec( LH l−1Ul)∥22 (136) 
+
+= α2 
+
+> l
+
+∥LH l−1Ul∥2 
+
+> F
+
+(137) 
+
+≤ α2 
+
+> l
+
+∥LH l−1∥2 
+
+> F
+
+∥Ul∥22 (138) 
+
+≤ α2 
+
+> l
+
+∥L∥22∥Hl−1∥2 
+
+> F
+
+∥Ul∥22 (139) 
+
+≤ α2 
+
+> l
+
+∥X∥2 
+
+> F
+
+∥L∥2l
+
+> 2
+> l−1
+
+Y
+
+> k=1
+
+∥Wk∥22∥Ul∥22 (140) 
+
+≤ dn ∥X∥2 
+
+> F
+
+∥L∥2d−22
+
+> d
+
+Y 
+
+> k̸=l
+
+∥Wk∥22∥Ul∥22 (141) 
+
+≤ dB 2∥L∥2d−22
+
+> d
+
+Y 
+
+> k̸=l
+
+∥Wk∥22∥Ul∥22 (142) where ∥Hl∥F ≤ ∥ L∥2∥Hl−1∥F ∥Wl∥2 due to Lemma 5, and 
+
+αl ≤
+
+q dn ∥L∥d−l−12
+
+Ql+1  
+
+> k=d
+
+∥Wk∥2.Therefore, we have 
+
+∥fw+u(X) − fw(X)∥22 (143) 
+
+= ∥
+
+> d
+
+X
+
+> l=1
+
+Jlul∥22 + o(∥ul∥22) (144) 
+
+≤ d
+
+> d
+
+X
+
+> l=1
+
+∥Jlul∥22 ≤
+
+> d
+
+X
+
+> l=1
+
+∥Alul∥22 (145) 
+
+≤ dB 2∥L∥2d−22
+
+> d
+
+Y
+
+> l=1
+
+∥Wl∥22
+
+> d
+
+X
+
+> l=1
+
+∥Ul∥22
+
+∥Wk∥22
+
+. (146) Compared with the GCN perturbation bounds in [8], [15], we have the only difference of d Pdl=1  
+
+> ∥Ul∥22
+> ∥Wk∥22
+
+versus 
+
+(Pdl=1   
+
+> ∥Ul∥2
+> ∥Wk∥2
+
+)2, where the former is slightly larger than the latter. Especially, when ∥Ul∥2  
+
+> ∥Wk∥2
+
+is equal for all l, our bound is similar to those in [8], [15] without the e2 factor. Nevertheless, the above GCN perturbation bound removes the factor of e2
+
+and the required condition of ∥Ul∥ ≤ 1 
+
+> d
+
+∥Wl∥ for all l. For the GCN models, d is usually not big, so the above bound is comparable to those in [8], [15]. 13 
+
+REFERENCES [1] V. N. Vapnik and A. Y. Chervonenkis, “On the uniform convergence of relative frequencies of events to their probabilities,” in Measures of complexity: festschrift for alexey chervonenkis , pp. 11–30, Springer, 2015. [2] F. Scarselli, A. C. Tsoi, and M. Hagenbuchner, “The vapnik–chervonenkis dimension of graph and recursive neural networks,” Neural Networks ,vol. 108, pp. 248–259, 2018. [3] P. L. Bartlett and S. Mendelson, “Rademacher and gaussian complexities: Risk bounds and structural results,” Journal of machine learning research ,vol. 3, no. Nov, pp. 463–482, 2002. [4] V. Garg, S. Jegelka, and T. Jaakkola, “Generalization and representational limits of graph neural networks,” in International conference on machine learning , pp. 3419–3430, PMLR, 2020. [5] O. Bousquet and A. Elisseeff, “Stability and generalization,” Journal of Machine Learning Research , vol. 2, no. Mar, pp. 499–526, 2002. [6] S. Verma and Z.-L. Zhang, “Stability and generalization of graph convolutional neural networks,” in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining ,pp. 1539–1548, 2019. [7] D. McAllester, “Simplified PAC-Bayesian margin bounds,” Lecture Notes in Computer Science , pp. 203–215, 2003. [8] R. Liao, R. Urtasun, and R. Zemel, “A PAC-Bayesian approach to generalization bounds for graph neural networks,” International Conference on Learning Representations , 2021. [9] B. Neyshabur, R. Tomioka, and N. Srebro, “Norm-based capacity control in neural networks,” in Conference on Learning Theory , pp. 1376–1401, PMLR, 2015. [10] G. K. Dziugaite and D. M. Roy, “Computing nonvacuous generalization bounds for deep (stochastic) neural networks with many more parameters than training data,” arXiv preprint arXiv:1703.11008 , 2017. [11] B. Neyshabur, S. Bhojanapalli, and N. Srebro, “A PAC-Bayesian approach to spectrally-normalized margin bounds for neural networks,” 
+
+International Conference on Learning Representations , 2018. [12] W. Zhou, V. Veitch, M. Austern, R. P. Adams, and P. Orbanz, “Non-vacuous generalization bounds at the imagenet scale: A PAC-Bayesian compression approach,” arXiv preprint arXiv:1804.05862 , 2018. [13] S. Lotfi, M. Finzi, S. Kapoor, A. Potapczynski, M. Goldblum, and A. G. Wilson, “PAC-Bayes compression bounds so tight that they can explain generalization,” Advances in Neural Information Processing Systems ,vol. 35, pp. 31459–31473, 2022. [14] H. Ju, D. Li, A. Sharma, and H. R. Zhang, “Generalization in graph neural networks: Improved pac-bayesian bounds on graph diffusion,” in 
+
+International conference on artificial intelligence and statistics , pp. 6314– 6341, PMLR, 2023. [15] T. Sun and J. Lin, “PAC-Bayesian adversarially robust generalization bounds for graph neural network,” arXiv preprint arXiv:2402.04038 ,2024. [16] K. Brilliantov, A. Souza, and V. Garg, “Compositional pac-bayes: Generalization of gnns with persistence and beyond,” Advances in Neural Information Processing Systems , vol. 37, pp. 107890–107931, 2024. [17] Y. Wang, G. R. Arce, and G. Tong, “Generalization performance of hypergraph neural networks,” in Proceedings of the ACM on Web Conference 2025 , pp. 1273–1291, 2025. [18] P. Esser, L. Chennuru Vankadara, and D. Ghoshdastidar, “Learning theory can (sometimes) explain generalisation in graph neural networks,” 
+
+Advances in Neural Information Processing Systems , vol. 34, pp. 27043– 27056, 2021. [19] R. Karczewski, A. H. Souza, and V. Garg, “On the generalization of equivariant graph neural networks,” in Forty-first International Conference on Machine Learning , 2024. [20] S. Lv, “Generalization bounds for graph convolutional neural networks via rademacher complexity,” arXiv preprint arXiv:2102.10234 , 2021. [21] X. Zhou and H. Wang, “The generalization error of graph convolutional networks may enlarge with more layers,” Neurocomputing , vol. 424, pp. 97–106, 2021. [22] S. S. Du, K. Hou, R. R. Salakhutdinov, B. Poczos, R. Wang, and K. Xu, “Graph neural tangent kernel: Fusing graph neural networks with graph kernels,” Advances in neural information processing systems , vol. 32, 2019. [23] R. Levie, “A graphon-signal analysis of graph neural networks,” Advances in Neural Information Processing Systems , vol. 36, pp. 64482–64525, 2023. [24] S. Maskey, R. Levie, Y. Lee, and G. Kutyniok, “Generalization analysis of message passing neural networks on large random graphs,” Advances in neural information processing systems , vol. 35, pp. 4805–4817, 2022. [25] S. Maskey, G. Kutyniok, and R. Levie, “Generalization bounds for message passing networks on mixture of graphons,” SIAM Journal on Mathematics of Data Science , vol. 7, no. 2, pp. 802–825, 2025. [26] L. Rauchwerger, S. Jegelka, and R. Levie, “Generalization, expressivity, and universality of graph neural networks on attributed graphs,” arXiv preprint arXiv:2411.05464 , 2024. [27] A. Vasileiou, B. Finkelshtein, F. Geerts, R. Levie, and C. Morris, “Covered forest: Fine-grained generalization analysis of graph neural networks,” 
+
+arXiv preprint arXiv:2412.07106 , 2024. [28] A. Vasileiou, S. Jegelka, R. Levie, and C. Morris, “Survey on generaliza-tion theory for graph neural networks,” arXiv preprint arXiv:2503.15650 ,2025. [29] T. N. Kipf and M. Welling, “Semi-supervised classification with graph convolutional networks,” in International Conference on Learning Representations , 2017. [30] J. Gilmer, S. S. Schoenholz, P. F. Riley, O. Vinyals, and G. E. Dahl, “Neural message passing for quantum chemistry,” in International conference on machine learning , pp. 1263–1272, Pmlr, 2017. [31] X. Yi, G. Jin, X. Huang, and S. Jin, “Towards a unified pac-bayesian framework for norm-based generalization bounds,” arXiv preprint arXiv:2601.08100 , 2026. [32] F. Wu, A. Souza, T. Zhang, C. Fifty, T. Yu, and K. Weinberger, “Simplifying graph convolutional networks,” in International conference on machine learning , pp. 6861–6871, Pmlr, 2019. [33] W. Hamilton, Z. Ying, and J. Leskovec, “Inductive representation learning on large graphs,” Advances in neural information processing systems ,vol. 30, 2017. [34] J. Langford and J. Shawe-Taylor, “PAC-Bayes & margins,” Advances in Neural Information Processing Systems , vol. 15, 2002. [35] M. Rudelson and R. Vershynin, “Hanson-Wright inequality and sub-gaussian concentration,” Electronic Communications in Probability ,vol. 18, pp. 1–9, 2013.

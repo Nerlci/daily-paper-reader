@@ -1,0 +1,1249 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-04-20T20:26:48.970925+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 2,
+    "deep_divecandidates": 33,
+    "deep_cap": 7,
+    "deep_selected": 19,
+    "quick_candidates": 82,
+    "quick_skim_target": 12,
+    "quick_selected": 12
+  },
+  "deep_dive": [
+    {
+      "id": "2604.10544v1",
+      "source": "arxiv",
+      "title": "WaveMoE: A Wavelet-Enhanced Mixture-of-Experts Foundation Model for Time Series Forecasting",
+      "abstract": "Time series foundation models (TSFMs) have recently achieved remarkable success in universal forecasting by leveraging large-scale pretraining on diverse time series data. Complementing this progress, incorporating frequency-domain information yields promising performance in enhancing the modeling of complex temporal patterns, such as periodicity and localized high-frequency dynamics, which are prevalent in real-world time series. To advance this direction, we propose a new perspective that integrates explicit frequency-domain representations into scalable foundation models, and introduce WaveMoE, a wavelet-enhanced mixture-of-experts foundation model for time series forecasting. WaveMoE adopts a dual-path architecture that jointly processes time series tokens and wavelet tokens aligned along a unified temporal axis, and coordinates them through a shared expert routing mechanism that enables consistent expert specialization while efficiently scaling model capacity. Preliminary experimental results on 16 diverse benchmark datasets indicate that WaveMoE has the potential to further improve forecasting performance by incorporating wavelet-domain corpora.",
+      "authors": [
+        "Shunyu Wu",
+        "Jiawei Huang",
+        "Weibin Feng",
+        "Boxin Li",
+        "Xiao Zhang",
+        "Erli Meng",
+        "Dan Li",
+        "Jian Lou",
+        "See-Kiong Ng"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-04-12T09:17:19+00:00",
+      "link": "https://arxiv.org/pdf/2604.10544v1",
+      "tags": [
+        "keyword:LLM数据",
+        "keyword:TSF",
+        "query:LLM数据",
+        "query:TSF"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "wavelet-enhanced mixture-of-experts foundation model for time series forecasting",
+      "llm_evidence_cn": "用于时间序列预测的小波增强混合专家基础模型",
+      "llm_evidence": "用于时间序列预测的小波增强混合专家基础模型",
+      "canonical_evidence": "用于时间序列预测的小波增强混合专家基础模型",
+      "llm_tldr_en": "Proposes WaveMoE, a foundation model integrating frequency-domain representations for time series forecasting.",
+      "llm_tldr_cn": "提出WaveMoE，一种集成频域表示的时间序列预测混合专家基础模型。",
+      "llm_tldr": "提出WaveMoE，一种集成频域表示的时间序列预测混合专家基础模型。",
+      "llm_tags": [
+        "query:tsf:composite"
+      ],
+      "matched_query_tag": "query:tsf:composite",
+      "matched_query_text": "Papers central to 时间序列预测/时空, especially work that connects or combines: deep learning models for time series forecasting; multivariate time series forecasting methods; long-term time series forecasting techniques; temporal fusion transformer for forecasting; deep learning models for spatio-temporal forecasting; spatial-temporal graph convolutional networks; latest research papers on time series forecasting; state of the art deep learning models for time series; state of the art deep learning models for spatio temporal forecasting; recent advances in spatial temporal graph neural networks.",
+      "matched_requirement_id": "req-composite-tsf",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.13977v1",
+      "source": "arxiv",
+      "title": "How Can We Synthesize High-Quality Pretraining Data? A Systematic Study of Prompt Design, Generator Model, and Source Data",
+      "abstract": "Synthetic data is a standard component in training large language models, yet systematic comparisons across design dimensions, including rephrasing strategy, generator model, and source data, remain absent. We conduct extensive controlled experiments, generating over one trillion tokens, to identify critical factors in rephrasing web text into synthetic pretraining data. Our results reveal that structured output formats, such as tables, math problems, FAQs, and tutorials, consistently outperform both curated web baselines and prior synthetic methods. Notably, increasing the size of the generator model beyond 1B parameters provides no additional benefit. Our analysis also demonstrates that the selection of the original data used for mixing substantially influences performance. By applying our findings, we develop \\textbf{\\textsc{FinePhrase}}, a 486-billion-token open dataset of rephrased web text. We show that \\textsc{FinePhrase} outperforms all existing synthetic data baselines while reducing generation costs by up to 30 times. We provide the dataset, all prompts, and the generation framework to the research community.",
+      "authors": [
+        "Joel Niklaus",
+        "Atsuki Yamaguchi",
+        "Michal Štefánik",
+        "Guilherme Penedo",
+        "Hynek Kydlíček",
+        "Elie Bakouch",
+        "Lewis Tunstall",
+        "Edward Emanuel Beeching",
+        "Thibaud Frere",
+        "Colin Raffel",
+        "Leandro von Werra",
+        "Thomas Wolf"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-04-15T15:24:59+00:00",
+      "link": "https://arxiv.org/pdf/2604.13977v1",
+      "tags": [
+        "keyword:LLM数据",
+        "query:LLM数据"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "systematic study of synthesizing and selecting high-quality pretraining data for LLMs",
+      "llm_evidence_cn": "系统研究如何合成和选择高质量的大语言模型预训练数据",
+      "llm_evidence": "系统研究如何合成和选择高质量的大语言模型预训练数据",
+      "canonical_evidence": "系统研究如何合成和选择高质量的大语言模型预训练数据",
+      "llm_tldr_en": "This study evaluates factors in synthesizing high-quality pretraining data to improve LLM performance.",
+      "llm_tldr_cn": "该研究系统评估了合成高质量预训练数据的关键因素，以提升大语言模型性能。",
+      "llm_tldr": "该研究系统评估了合成高质量预训练数据的关键因素，以提升大语言模型性能。",
+      "llm_tags": [
+        "query:llm:composite"
+      ],
+      "matched_query_tag": "query:llm:composite",
+      "matched_query_text": "Papers central to 大语言模型数据筛选（data curation）, especially work that connects or combines: data curation techniques for large language models; methods for filtering training data for LLMs; assessing data quality for language model pre-training; optimizing data mixture and proportions for LLMs; survey of data curation methods for large language models; state of the art techniques for LLM data selection and filtering; how to improve LLM performance through data curation; automated data quality assessment for training large language models.",
+      "matched_requirement_id": "req-composite-llm",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.10414v1",
+      "source": "arxiv",
+      "title": "Neural Stochastic Processes for Satellite Precipitation Refinement",
+      "abstract": "Accurate precipitation estimation is critical for flood forecasting, water resource management, and disaster preparedness. Satellite products provide global hourly coverage but contain systematic biases; ground-based gauges are accurate at point locations but too sparse for direct gridded correction. Existing methods fuse these sources by interpolating gauge observations onto the satellite grid, but treat each time step independently and therefore discard temporal structure in precipitation fields. We propose Neural Stochastic Process (NSP), a model that pairs a Neural Process encoder conditioning on arbitrary sets of gauge observations with a latent Neural SDE on a 2D spatial representation. NSP is trained under a single variational objective with simulation-free cost. We also introduce QPEBench, a benchmark of 43{,}756 hourly samples over the Contiguous United States (2021--2025) with four aligned data sources and six evaluation metrics. On QPEBench, NSP outperforms 13 baselines across all six metrics and surpasses JAXA's operational gauge-calibrated product. An additional experiment on Kyushu, Japan confirms generalization to a different region with independent data sources.",
+      "authors": [
+        "Shunya Nagashima",
+        "Takumi Bannai",
+        "Shuitsu Koyama",
+        "Tomoya Mitsui",
+        "Shuntaro Suzuki"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2026-04-12T02:17:41+00:00",
+      "link": "https://arxiv.org/pdf/2604.10414v1",
+      "tags": [
+        "keyword:TSF",
+        "query:TSF"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Neural Stochastic Processes for spatio-temporal precipitation refinement",
+      "llm_evidence_cn": "用于时空降水细化的神经随机过程",
+      "llm_evidence": "用于时空降水细化的神经随机过程",
+      "canonical_evidence": "用于时空降水细化的神经随机过程",
+      "llm_tldr_en": "Combines Neural Processes and SDEs for spatio-temporal fusion and refinement of precipitation data.",
+      "llm_tldr_cn": "结合神经过程和随机微分方程，用于降水数据的时空融合与细化。",
+      "llm_tldr": "结合神经过程和随机微分方程，用于降水数据的时空融合与细化。",
+      "llm_tags": [
+        "query:tsf"
+      ],
+      "matched_query_tag": "query:tsf",
+      "matched_query_text": "deep learning models for spatio-temporal forecasting",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.11198v3",
+      "source": "arxiv",
+      "title": "From Time Series to State: Situation-Aware Modeling for Air Traffic Flow Prediction",
+      "abstract": "Accurate air traffic prediction in the terminal airspace (TA) is pivotal for proactive air traffic management (ATM). However, existing data-driven approaches predominantly rely on time series-based forecasting paradigms, which inherently overlook critical aircraft state information, such as real-time kinematics and proximity to airspace boundaries. To address this limitation, we propose \\textit{AeroSense}, a direct state-to-flow modeling framework for air traffic prediction. Unlike classical time series-based methods that first aggregate aircraft trajectories into macroscopic flow sequences before modeling, AeroSense explicitly represents the real-time airspace situation as \\textit{a dynamic set of aircraft states}, enabling the direct processing of a variable number of aircraft instead of time series as inputs. Specifically, we introduce a situation-aware state representation that enables AeroSense to sense the instantaneous terminal airspace situation directly from microscopic aircraft states. Furthermore, we design a model architecture that incorporates masked self-attention to capture inter-aircraft interactions, together with two decoupled prediction heads to model heterogeneous flow dynamics across two key functional areas of the TA. Extensive experiments on a large-scale real-world airport dataset demonstrate that AeroSense consistently achieves state-of-the-art performance, validating that direct modeling of microscopic aircraft states yields substantially higher predictive fidelity than time series-based baselines. Moreover, the proposed framework exhibits superior robustness during peak traffic periods, achieves Pareto-optimal performance under dayparting multi-object evaluation, and provides meaningful interpretability through attention-based visualizations.",
+      "authors": [
+        "Anqi Liu",
+        "Jiangtao Zhao",
+        "Guiyuan Jiang",
+        "Feng Hong",
+        "Yanwei Yu",
+        "Bin Wang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-04-13T08:54:19+00:00",
+      "link": "https://arxiv.org/pdf/2604.11198v3",
+      "tags": [
+        "keyword:TSF",
+        "query:TSF"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "spatio-temporal air traffic flow prediction using dynamic aircraft states",
+      "llm_evidence_cn": "使用动态飞机状态进行时空空中交通流量预测",
+      "llm_evidence": "使用动态飞机状态进行时空空中交通流量预测",
+      "canonical_evidence": "使用动态飞机状态进行时空空中交通流量预测",
+      "llm_tldr_en": "Proposes AeroSense, a state-to-flow framework for air traffic prediction that captures real-time airspace situations.",
+      "llm_tldr_cn": "提出AeroSense框架，通过动态飞机状态建模实现更精准的终端空域交通流量预测。",
+      "llm_tldr": "提出AeroSense框架，通过动态飞机状态建模实现更精准的终端空域交通流量预测。",
+      "llm_tags": [
+        "query:tsf"
+      ],
+      "matched_query_tag": "query:tsf",
+      "matched_query_text": "deep learning models for spatio-temporal forecasting",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.11290v1",
+      "source": "arxiv",
+      "title": "Polyglot Teachers: Evaluating Language Models for Multilingual Synthetic Data Generation",
+      "abstract": "Synthesizing supervised finetuning (SFT) data from language models (LMs) to teach smaller models multilingual tasks has become increasingly common. However, teacher model selection is often ad hoc, typically defaulting to the largest available option, even though such models may have significant capability gaps in non-English languages. This practice can result in poor-quality synthetic data and suboptimal student downstream performance. In this work, we systematically characterize what makes an effective multilingual teacher. We measure intrinsic measures of data quality with extrinsic student model performance in a metric we call Polyglot Score; evaluating 10 LMs across 6 typologically diverse languages, generating over 1.4M SFT examples and training 240 student models. Among the models tested, Gemma 3 27B and Aya Expanse 32B emerge as consistently effective teachers across different student base model families. Further analyses reveal that model scale alone does not significantly predict teacher effectiveness; instead, data qualities such as prompt diversity, length, and response fluency capture over 93.3% of variance in intrinsic data quality and predict student performance. Finally, we provide practical recommendations, including matching the model families of teacher-student pairs and translating from or responding to existing prompts, which can yield improvements for less-resourced languages. We hope that our work advances data-centric research in multilingual synthetic data and LM development.",
+      "authors": [
+        "Lester James V. Miranda",
+        "Ivan Vulić",
+        "Anna Korhonen"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-04-13T10:53:51+00:00",
+      "link": "https://arxiv.org/pdf/2604.11290v1",
+      "tags": [
+        "keyword:LLM数据",
+        "query:LLM数据"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "measuring intrinsic measures of data quality for multilingual synthetic data",
+      "llm_evidence_cn": "衡量多语言合成数据的内在数据质量指标",
+      "llm_evidence": "衡量多语言合成数据的内在数据质量指标",
+      "canonical_evidence": "衡量多语言合成数据的内在数据质量指标",
+      "llm_tldr_en": "Characterizes effective multilingual teacher models by measuring synthetic data quality and student performance.",
+      "llm_tldr_cn": "通过衡量合成数据质量和学生模型表现，系统地表征了有效的多语言教师模型。",
+      "llm_tldr": "通过衡量合成数据质量和学生模型表现，系统地表征了有效的多语言教师模型。",
+      "llm_tags": [
+        "query:llm"
+      ],
+      "matched_query_tag": "query:llm",
+      "matched_query_text": "assessing data quality for language model pre-training",
+      "matched_requirement_id": "req-13",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.11807v1",
+      "source": "arxiv",
+      "title": "Physics-Informed State Space Models for Reliable Solar Irradiance Forecasting in Off-Grid Systems",
+      "abstract": "The stable operation of autonomous off-grid photovoltaic systems dictates reliance on solar forecasting algorithms that respect atmospheric thermodynamics. Contemporary deep learning models consistently exhibit critical anomalies, primarily severe temporal phase lags during cloud transients and physically impossible nocturnal power generation. To resolve this divergence between data-driven modeling and deterministic celestial mechanics, this research introduces the Thermodynamic Liquid Manifold Network. The proposed methodology projects 15 meteorological and geometric variables into a Koopman-linearized Riemannian manifold to systematically map complex climatic dynamics. The architecture integrates a Spectral Calibration unit and a multiplicative Thermodynamic Alpha-Gate. This system synthesizes real-time atmospheric opacity with theoretical clear-sky boundary models, structurally enforcing strict celestial geometry compliance. This completely neutralizes phantom nocturnal generation while maintaining zero-lag synchronization during rapid weather shifts. Validated against a rigorous five-year testing horizon in a severe semi-arid climate, the framework achieves an RMSE of 18.31 Wh/m2 and a Pearson correlation of 0.988. The model strictly maintains a zero-magnitude nocturnal error across all 1826 testing days and exhibits a sub-30-minute phase response during high-frequency transients. Comprising exactly 63,458 trainable parameters, this ultra-lightweight design establishes a robust, thermodynamically consistent standard for edge-deployable microgrid controllers.",
+      "authors": [
+        "Mohammed Ezzaldin Babiker Abdullah"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "eess.SY"
+      ],
+      "published": "2026-04-13T17:59:49+00:00",
+      "link": "https://arxiv.org/pdf/2604.11807v1",
+      "tags": [
+        "keyword:TSF",
+        "query:TSF"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "solar forecasting algorithms using deep learning and thermodynamics",
+      "llm_evidence_cn": "结合深度学习和热力学的太阳能预测算法",
+      "llm_evidence": "结合深度学习和热力学的太阳能预测算法",
+      "canonical_evidence": "结合深度学习和热力学的太阳能预测算法",
+      "llm_tldr_en": "Proposes a Thermodynamic Liquid Manifold Network for reliable solar irradiance forecasting.",
+      "llm_tldr_cn": "提出了一种热力学液体流形网络，用于可靠的太阳辐照度预测。",
+      "llm_tldr": "提出了一种热力学液体流形网络，用于可靠的太阳辐照度预测。",
+      "llm_tags": [
+        "query:tsf"
+      ],
+      "matched_query_tag": "query:tsf",
+      "matched_query_text": "deep learning models for time series forecasting",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.11909v1",
+      "source": "arxiv",
+      "title": "Thermodynamic Liquid Manifold Networks: Physics-Bounded Deep Learning for Solar Forecasting in Autonomous Off-Grid Microgrids",
+      "abstract": "The stable operation of autonomous off-grid photovoltaic systems requires solar forecasting algorithms that respect atmospheric thermodynamics. Contemporary deep learning models consistently exhibit critical anomalies, primarily severe temporal phase lags during cloud transients and physically impossible nocturnal power generation. To resolve this divergence between data-driven modeling and deterministic celestial mechanics, this research introduces the Thermodynamic Liquid Manifold Network. The methodology projects 22 meteorological and geometric variables into a Koopman-linearized Riemannian manifold to systematically map complex climatic dynamics. The architecture integrates a Spectral Calibration unit and a multiplicative Thermodynamic Alpha-Gate. This system synthesizes real-time atmospheric opacity with theoretical clear-sky boundary models, structurally enforcing strict celestial geometry compliance. This completely neutralizes phantom nocturnal generation while maintaining zero-lag synchronization during rapid weather shifts. Validated against a rigorous five-year testing horizon in a severe semi-arid climate, the framework achieves an RMSE of 18.31 Wh/m2 and a Pearson correlation of 0.988. The model strictly maintains a zero-magnitude nocturnal error across all 1826 testing days and exhibits a sub-30-minute phase response during high-frequency optical transients. Comprising exactly 63,458 trainable parameters, this ultra-lightweight design establishes a robust, thermodynamically consistent standard for edge-deployable microgrid controllers.",
+      "authors": [
+        "Mohammed Ezzaldin Babiker Abdullah"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "eess.SY"
+      ],
+      "published": "2026-04-13T18:02:47+00:00",
+      "link": "https://arxiv.org/pdf/2604.11909v1",
+      "tags": [
+        "keyword:TSF",
+        "query:TSF"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Deep learning for solar forecasting using meteorological and geometric variables",
+      "llm_evidence_cn": "利用气象和几何变量进行太阳能预测的深度学习模型",
+      "llm_evidence": "利用气象和几何变量进行太阳能预测的深度学习模型",
+      "canonical_evidence": "利用气象和几何变量进行太阳能预测的深度学习模型",
+      "llm_tldr_en": "Introduces Thermodynamic Liquid Manifold Networks to improve solar forecasting by respecting physical constraints.",
+      "llm_tldr_cn": "引入热力学液体流形网络，通过遵守物理约束来改进太阳能预测。",
+      "llm_tldr": "引入热力学液体流形网络，通过遵守物理约束来改进太阳能预测。",
+      "llm_tags": [
+        "query:tsf"
+      ],
+      "matched_query_tag": "query:tsf",
+      "matched_query_text": "deep learning models for time series forecasting",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.12033v1",
+      "source": "arxiv",
+      "title": "Benchmarking Deflection and Hallucination in Large Vision-Language Models",
+      "abstract": "Large Vision-Language Models (LVLMs) increasingly rely on retrieval to answer knowledge-intensive multimodal questions. Existing benchmarks overlook conflicts between visual and textual evidence and the importance of generating deflections (e.g., Sorry, I cannot answer...) when retrieved knowledge is incomplete. These benchmarks also suffer from rapid obsolescence, as growing LVLM training sets allow models to answer many questions without retrieval. We address these gaps with three contributions. First, we propose a dynamic data curation pipeline that preserves benchmark difficulty over time by filtering for genuinely retrieval-dependent samples. Second, we introduce VLM-DeflectionBench, a benchmark of 2,775 samples spanning diverse multimodal retrieval settings, designed to probe model behaviour under conflicting or insufficient evidence. Third, we define a fine-grained evaluation protocol with four scenarios that disentangle parametric memorization from retrieval robustness. Experiments across 20 state-of-the-art LVLMs indicate that models usually fail to deflect in the presence of noisy or misleading evidence. Our results highlight the need to evaluate not only what models know, but how they behave when they do not, and serve as a reusable and extensible benchmark for reliable KB-VQA evaluation. All resources will be publicly available upon publication.",
+      "authors": [
+        "Nicholas Moratelli",
+        "Christopher Davis",
+        "Leonardo F. R. Ribeiro",
+        "Bill Byrne",
+        "Gonzalo Iglesias"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "published": "2026-04-13T20:22:22+00:00",
+      "link": "https://arxiv.org/pdf/2604.12033v1",
+      "tags": [
+        "keyword:LLM数据",
+        "query:LLM数据",
+        "query:TSF"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "dynamic data curation pipeline for filtering retrieval-dependent samples",
+      "llm_evidence_cn": "用于过滤检索依赖样本的动态数据策展流水线",
+      "llm_evidence": "用于过滤检索依赖样本的动态数据策展流水线",
+      "canonical_evidence": "用于过滤检索依赖样本的动态数据策展流水线",
+      "llm_tldr_en": "Proposes a data curation pipeline to filter high-quality samples for benchmarking vision-language models.",
+      "llm_tldr_cn": "提出一种数据策展流水线，为视觉语言模型基准测试过滤高质量样本。",
+      "llm_tldr": "提出一种数据策展流水线，为视觉语言模型基准测试过滤高质量样本。",
+      "llm_tags": [
+        "query:llm"
+      ],
+      "matched_query_tag": "query:llm",
+      "matched_query_text": "methods for filtering training data for LLMs",
+      "matched_requirement_id": "req-12",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.12350v1",
+      "source": "arxiv",
+      "title": "Scaffold-Conditioned Preference Triplets for Controllable Molecular Optimization with Large Language Models",
+      "abstract": "Molecular property optimization is central to drug discovery, yet many deep learning methods rely on black-box scoring and offer limited control over scaffold preservation, often producing unstable or biologically implausible edits. While large language models (LLMs) are promising molecular generators, optimization remains constrained by the lack of chemistry-grounded preference supervision and principled data curation. We introduce \\textbf{Scaffold-Conditioned Preference Triplets (SCPT)}, a pipeline that constructs similarity-constrained triplets $\\langle\\text{scaffold}, \\text{better}, \\text{worse}\\rangle$ via scaffold alignment and chemistry-driven filters for validity, synthesizability, and meaningful property gains. Using these preferences, we align a pretrained molecular LLM as a conditional editor, enabling property-improving edits that retain the scaffold. Across single- and multi-objective benchmarks, SCPT improves optimization success and property gains while maintaining higher scaffold similarity than competitive baselines. Compared with representative non-LLM molecular optimization methods, SCPT-trained LLMs are better suited to scaffold-constrained and multi-objective optimization. In addition, models trained on single-property and two-property supervision generalize effectively to three-property tasks, indicating promising extrapolative generalization under limited higher-order supervision. SCPT also provides controllable data-construction knobs that yield a predictable similarity-gain frontier, enabling systematic adaptation to diverse optimization regimes.",
+      "authors": [
+        "Yi Xiong",
+        "Liang Xiong",
+        "Xiaohong Ji",
+        "Sen Yang",
+        "Zhifeng Gao",
+        "Huaimin Wang",
+        "Kele Xu"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-04-14T06:38:07+00:00",
+      "link": "https://arxiv.org/pdf/2604.12350v1",
+      "tags": [
+        "keyword:LLM数据"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "principled data curation and chemistry-driven filters for LLM optimization",
+      "llm_evidence_cn": "针对LLM优化的原则性数据策展和化学驱动过滤器",
+      "llm_evidence": "针对LLM优化的原则性数据策展和化学驱动过滤器",
+      "canonical_evidence": "针对LLM优化的原则性数据策展和化学驱动过滤器",
+      "llm_tldr_en": "SCPT introduces a data curation pipeline with chemistry-driven filters to improve LLM-based molecular optimization.",
+      "llm_tldr_cn": "SCPT通过化学驱动的过滤器和数据策展流程，提升了大语言模型在分子优化任务中的表现。",
+      "llm_tldr": "SCPT通过化学驱动的过滤器和数据策展流程，提升了大语言模型在分子优化任务中的表现。",
+      "llm_tags": [
+        "query:llm:composite"
+      ],
+      "matched_query_tag": "query:llm:composite",
+      "matched_query_text": "Papers central to 大语言模型数据筛选（data curation）, especially work that connects or combines: data curation techniques for large language models; methods for filtering training data for LLMs; assessing data quality for language model pre-training; optimizing data mixture and proportions for LLMs; survey of data curation methods for large language models; state of the art techniques for LLM data selection and filtering; how to improve LLM performance through data curation; automated data quality assessment for training large language models.",
+      "matched_requirement_id": "req-composite-llm",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.12905v1",
+      "source": "arxiv",
+      "title": "Frequency-aware Decomposition Learning for Sensorless Wrench Forecasting on a Vibration-rich Hydraulic Manipulator",
+      "abstract": "Force and torque (F/T) sensing is critical for robot-environment interaction, but physical F/T sensors impose constraints in size, cost, and fragility. To mitigate this, recent studies have estimated force/wrench sensorlessly from robot internal states. While existing methods generally target relatively slow interactions, tasks involving rapid interactions, such as grinding, can induce task-critical high-frequency vibrations, and estimation in such robotic settings remains underexplored. To address this gap, we propose a Frequency-aware Decomposition Network (FDN) for short-term forecasting of vibration-rich wrench from proprioceptive history. FDN predicts spectrally decomposed wrench with asymmetric deterministic and probabilistic heads, modeling the high-frequency residual as a learned conditional distribution. It further incorporates frequency-awareness to adaptively enhance input spectra with learned filtering and impose a frequency-band prior on the outputs. We pretrain FDN on a large-scale open-source robot dataset and transfer the learned proprioception-to-wrench representation to the downstream. On real-world grinding excavation data from a 6-DoF hydraulic manipulator and under a delayed estimation setting, FDN outperforms baseline estimators and forecasters in the high-frequency band and remains competitive in the low-frequency band. Transfer learning provides additional gains, suggesting the potential of large-scale pretraining and transfer learning for robotic wrench estimation. Code and data will be made available upon acceptance.",
+      "authors": [
+        "Hyeonbeen Lee",
+        "Min-Jae Jung",
+        "Tae-Kyeong Yeu",
+        "Jong-Boo Han",
+        "Daegil Park",
+        "Jin-Gyun Kim"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "published": "2026-04-14T15:54:29+00:00",
+      "link": "https://arxiv.org/pdf/2604.12905v1",
+      "tags": [
+        "keyword:LLM数据",
+        "keyword:TSF",
+        "query:TSF"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "frequency-aware decomposition for short-term forecasting of vibration-rich wrench",
+      "llm_evidence_cn": "用于高频振动扳手短期预测的频率感知分解",
+      "llm_evidence": "用于高频振动扳手短期预测的频率感知分解",
+      "canonical_evidence": "用于高频振动扳手短期预测的频率感知分解",
+      "llm_tldr_en": "Proposes a frequency-aware decomposition network for forecasting high-frequency robotic sensor data.",
+      "llm_tldr_cn": "提出一种频率感知分解网络，用于机器人高频传感器数据的短期时间序列预测。",
+      "llm_tldr": "提出一种频率感知分解网络，用于机器人高频传感器数据的短期时间序列预测。",
+      "llm_tags": [
+        "query:tsf"
+      ],
+      "matched_query_tag": "query:tsf",
+      "matched_query_text": "deep learning models for time series forecasting",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.12927v1",
+      "source": "arxiv",
+      "title": "Forecasting Oil Prices Across the Distribution: A Quantile VAR Approach",
+      "abstract": "We develop a Quantile Bayesian Vector Autoregression (QBVAR) to forecast real oil prices across different quantiles of the conditional distribution. The model allows predictor effects to vary across quantiles, capturing asymmetries that standard mean-focused approaches miss. Using monthly data from 1975 to 2025, we document three findings. First, the QBVAR improves median forecasts by 2-5\\% relative to Bayesian VARs, demonstrating that quantile-specific dynamics matter even for point prediction. Second, uncertainty and financial condition variables strongly predict downside risk, with left-tail forecast improvements of 10-25\\% that intensify during crisis episodes. Third, right-tail forecasting remains difficult; stochastic volatility models dominate for upside risk, though forecast combinations that include the QBVAR recover these losses. The results show that modeling the conditional distribution yields substantial gains for tail risk assessment, particularly during major oil market disruptions.",
+      "authors": [
+        "Hilde C. Bjornland",
+        "Nicolas Hardy",
+        "Dimitris Korobilis"
+      ],
+      "primary_category": "econ.EM",
+      "categories": [
+        "econ.EM",
+        "q-fin.GN"
+      ],
+      "published": "2026-04-14T16:16:53+00:00",
+      "link": "https://arxiv.org/pdf/2604.12927v1",
+      "tags": [
+        "keyword:TSF",
+        "query:TSF"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Quantile Bayesian Vector Autoregression for oil price forecasting",
+      "llm_evidence_cn": "用于石油价格预测的分位数贝叶斯向量自回归",
+      "llm_evidence": "用于石油价格预测的分位数贝叶斯向量自回归",
+      "canonical_evidence": "用于石油价格预测的分位数贝叶斯向量自回归",
+      "llm_tldr_en": "Develops a QBVAR model to forecast real oil prices across different quantiles of the conditional distribution.",
+      "llm_tldr_cn": "开发 QBVAR 模型，通过分位数回归捕捉石油价格预测中的不对称动态。",
+      "llm_tldr": "开发 QBVAR 模型，通过分位数回归捕捉石油价格预测中的不对称动态。",
+      "llm_tags": [
+        "query:tsf"
+      ],
+      "matched_query_tag": "query:tsf",
+      "matched_query_text": "deep learning models for time series forecasting",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.13459v1",
+      "source": "arxiv",
+      "title": "Asymmetric-Loss-Guided Hybrid CNN-BiLSTM-Attention Model for Industrial RUL Prediction with Interpretable Failure Heatmaps",
+      "abstract": "Turbofan engine degradation under sustained operational stress necessitates robust prognostic systems capable of accurately estimating the Remaining Useful Life (RUL) of critical components. Existing deep learning approaches frequently fail to simultaneously capture multi-sensor spatial correlations and long-range temporal dependencies, while standard symmetric loss functions inadequately penalize the safety-critical error of over-estimating residual life. This study proposes a hybrid architecture integrating Twin-Stage One-Dimensional Convolutional Neural Networks (1D-CNN), a Bidirectional Long Short-Term Memory (BiLSTM) network, and a custom Bahdanau Additive Attention mechanism. The model was trained and evaluated on the NASA Commercial Modular Aero-Propulsion System Simulation (C-MAPSS) FD001 sub-dataset employing a zero-leakage preprocessing pipeline, piecewise-linear RUL labeling capped at 130 cycles, and the NASA-specified asymmetric exponential loss function that disproportionately penalizes over-estimation to enforce industrial safety constraints. Experiments on 100 test engines achieved a Root Mean Squared Error (RMSE) of 17.52 cycles and a NASA S-Score of 922.06. Furthermore, extracted attention weight heatmaps provide interpretable, per-engine insights into the temporal progression of degradation, supporting informed maintenance decision-making. The proposed framework demonstrates competitive performance against established baselines and offers a principled approach to safe, interpretable prognostics in industrial settings.",
+      "authors": [
+        "Mohammed Ezzaldin Babiker Abdullah"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "eess.SY"
+      ],
+      "published": "2026-04-15T04:25:38+00:00",
+      "link": "https://arxiv.org/pdf/2604.13459v1",
+      "tags": [
+        "keyword:TSF",
+        "query:TSF"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "hybrid CNN-BiLSTM-Attention for industrial RUL prediction and temporal dependencies",
+      "llm_evidence_cn": "用于工业剩余寿命预测的CNN-BiLSTM-Attention混合模型及时间依赖性建模",
+      "llm_evidence": "用于工业剩余寿命预测的CNN-BiLSTM-Attention混合模型及时间依赖性建模",
+      "canonical_evidence": "用于工业剩余寿命预测的CNN-BiLSTM-Attention混合模型及时间依赖性建模",
+      "llm_tldr_en": "Proposes a hybrid deep learning model for industrial time series forecasting with spatial-temporal features.",
+      "llm_tldr_cn": "提出一种结合CNN、BiLSTM和注意力机制的混合深度学习模型，用于工业时间序列预测。",
+      "llm_tldr": "提出一种结合CNN、BiLSTM和注意力机制的混合深度学习模型，用于工业时间序列预测。",
+      "llm_tags": [
+        "query:tsf:composite"
+      ],
+      "matched_query_tag": "query:tsf:composite",
+      "matched_query_text": "Papers central to 时间序列预测/时空, especially work that connects or combines: deep learning models for time series forecasting; multivariate time series forecasting methods; long-term time series forecasting techniques; temporal fusion transformer for forecasting; deep learning models for spatio-temporal forecasting; spatial-temporal graph convolutional networks; latest research papers on time series forecasting; state of the art deep learning models for time series; state of the art deep learning models for spatio temporal forecasting; recent advances in spatial temporal graph neural networks.",
+      "matched_requirement_id": "req-composite-tsf",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.13714v1",
+      "source": "arxiv",
+      "title": "An End-to-end Building Load Forecasting Framework with Patch-based Information Fusion Network and Error-weighted Adaptive Loss",
+      "abstract": "Accurate building load forecasting plays a critical role in facilitating demand response aggregation and optimizing energy management. However, the complex temporal dependencies and high volatility of building loads limit the improvement of prediction accuracy. To this end, we propose a novel end-to-end building load forecasting framework. Specifically, the framework can be divided into two main stages. In the two-stage data preprocessing module enhanced by interpretable feature selection, we utilize the Local Outlier Factor (LOF) algorithm to accurately detect and correct anomalies in the original building load series. Furthermore, we employ SVM-SHAP feature analysis to quantify the impact of environmental variables, filtering out critical feature combinations to mitigate redundancy. In the building load forecasting module, we propose the patch-based information fusion network (PIF-Net). This model applies patching technology to process input series into local blocks, extracting temporal features through a shared Gated Recurrent Unit (GRU) network with residual connections. Subsequently, an information fusion module based on a customized gating mechanism integrates the ensemble hidden states to weight the importance of different temporal patches dynamically. Additionally, the framework is trained using a novel Error-weighted Adaptive Loss (EWAL) function. By combining a rational quadratic function and logarithmic loss to dynamically adjust penalty weights based on real-time prediction error distributions, EWAL significantly enhances the model's robustness under extreme load conditions. Finally, extensive experiments demonstrate the effectiveness and superiority of our proposed framework.",
+      "authors": [
+        "Hang Fan",
+        "Ying Lu",
+        "Weican Liu",
+        "Dunnan Liu",
+        "Xiaotao Chen",
+        "Shengwei Mei"
+      ],
+      "primary_category": "cs.CE",
+      "categories": [
+        "cs.CE"
+      ],
+      "published": "2026-04-15T10:50:29+00:00",
+      "link": "https://arxiv.org/pdf/2604.13714v1",
+      "tags": [
+        "keyword:LLM数据",
+        "keyword:TSF",
+        "query:TSF"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "End-to-end building load forecasting with temporal dependencies",
+      "llm_evidence_cn": "具有时间依赖性的端到端建筑负荷预测",
+      "llm_evidence": "具有时间依赖性的端到端建筑负荷预测",
+      "canonical_evidence": "具有时间依赖性的端到端建筑负荷预测",
+      "llm_tldr_en": "A building load forecasting framework using patch-based information fusion and anomaly detection.",
+      "llm_tldr_cn": "提出一种结合 Patch 信息融合网络与异常检测的端到端建筑负荷预测框架。",
+      "llm_tldr": "提出一种结合 Patch 信息融合网络与异常检测的端到端建筑负荷预测框架。",
+      "llm_tags": [
+        "query:tsf"
+      ],
+      "matched_query_tag": "query:tsf",
+      "matched_query_text": "deep learning models for time series forecasting",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.14394v1",
+      "source": "arxiv",
+      "title": "Generalized Autoregressive Multivariate Models: From Binary to Poisson",
+      "abstract": "This paper presents a framework for binary autoregressive time series in which each observation is a Bernoulli variable whose success probability evolves with past outcomes and probabilities, in the spirit of GARCH-type dynamics, accommodating nonlinearities, network interactions, and cross-sectional dependence in the multivariate case. Existence and uniqueness of a stationary solution is established via a coupling argument tailored to the discontinuities inherent in binary data. A key theoretical result, further supported by our empirical illustration on S&P 100 data, shows that, under a rare-events scaling, aggregates of such binary processes converge to a Poisson autoregression, providing a micro-foundation for this widely used count model. Maximum likelihood estimation is proposed and illustrated empirically.",
+      "authors": [
+        "Anna Bykhovskaya",
+        "Nour Meddahi"
+      ],
+      "primary_category": "econ.EM",
+      "categories": [
+        "econ.EM",
+        "math.ST"
+      ],
+      "published": "2026-04-15T20:14:47+00:00",
+      "link": "https://arxiv.org/pdf/2604.14394v1",
+      "tags": [
+        "keyword:TSF",
+        "query:TSF"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "multivariate time series framework for binary and Poisson data",
+      "llm_evidence_cn": "针对二元和泊松数据的多元时间序列框架",
+      "llm_evidence": "针对二元和泊松数据的多元时间序列框架",
+      "canonical_evidence": "针对二元和泊松数据的多元时间序列框架",
+      "llm_tldr_en": "This paper presents a framework for multivariate autoregressive time series accommodating cross-sectional dependence.",
+      "llm_tldr_cn": "本文提出了一个处理横截面依赖的多元自回归时间序列框架。",
+      "llm_tldr": "本文提出了一个处理横截面依赖的多元自回归时间序列框架。",
+      "llm_tags": [
+        "query:tsf"
+      ],
+      "matched_query_tag": "query:tsf",
+      "matched_query_text": "multivariate time series forecasting methods",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.15377v1",
+      "source": "arxiv",
+      "title": "M3R: Localized Rainfall Nowcasting with Meteorology-Informed MultiModal Attention",
+      "abstract": "Accurate and timely rainfall nowcasting is crucial for disaster mitigation and water resource management. Despite recent advances in deep learning, precipitation prediction remains challenging due to limitations in effectively leveraging diverse multimedia data sources. We introduce M3R, a Meteorology-informed MultiModal attention-based architecture for direct Rainfall prediction that synergistically combines visual NEXRAD radar imagery with numerical Personal Weather Station (PWS) measurements, using a comprehensive pipeline for temporal alignment of heterogeneous meteorological data. With specialized multimodal attention mechanisms, M3R novelly leverages weather station time series as queries to selectively attend to spatial radar features, enabling focused extraction of precipitation signatures. Experimental results for three spatial areas of 100 km * 100 km centered at NEXRAD radar stations demonstrate that M3R outperforms existing approaches, achieving substantial improvements in accuracy, efficiency, and precipitation detection capabilities. Our work establishes new benchmarks for multimedia-based precipitation nowcasting and provides practical tools for operational weather prediction systems. The source code is available at https://github.com/Sanjeev97/M3Rain",
+      "authors": [
+        "Sanjeev Panta",
+        "Rhett M Morvant",
+        "Xu Yuan",
+        "Li Chen",
+        "Nian-Feng Tzeng"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CV",
+        "cs.MM"
+      ],
+      "published": "2026-04-15T21:02:51+00:00",
+      "link": "https://arxiv.org/pdf/2604.15377v1",
+      "tags": [
+        "keyword:TSF",
+        "query:TSF"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "multimodal attention for spatio-temporal rainfall prediction using time series and radar imagery",
+      "llm_evidence_cn": "结合时间序列和雷达图像的多模态注意力机制用于时空降雨预测",
+      "llm_evidence": "结合时间序列和雷达图像的多模态注意力机制用于时空降雨预测",
+      "canonical_evidence": "结合时间序列和雷达图像的多模态注意力机制用于时空降雨预测",
+      "llm_tldr_en": "M3R uses multimodal attention to combine radar imagery and weather station time series for rainfall nowcasting.",
+      "llm_tldr_cn": "M3R利用多模态注意力机制结合雷达图像和气象站时间序列进行降雨临近预报。",
+      "llm_tldr": "M3R利用多模态注意力机制结合雷达图像和气象站时间序列进行降雨临近预报。",
+      "llm_tags": [
+        "query:tsf"
+      ],
+      "matched_query_tag": "query:tsf",
+      "matched_query_text": "deep learning models for spatio-temporal forecasting",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.15675v1",
+      "source": "arxiv",
+      "title": "C-Mining: Unsupervised Discovery of Seeds for Cultural Data Synthesis via Geometric Misalignment",
+      "abstract": "Achieving cultural alignment in Large Language Models (LLMs) increasingly depends on synthetic data generation. For such synthesis, the most vital initial step is seed curation; however, current methods lack quantifiable standards for selecting these seeds. Existing approaches rely on unscalable manual curation or bias-prone LLM extraction, treating cultural specificity as an abstract concept rather than a measurable signal. In this paper, we address this \"quantification gap\" by proposing C-Mining, an unsupervised framework that transforms the discovery of cultural seeds from a subjective selection process into a computable data mining formulation. Our approach exploits a novel geometric insight, leveraging the cross-lingual misalignment of cultural concepts within pre-trained embedding spaces as a quantifiable discovery signal. By systematically identifying these regions characterized by pronounced linguistic exclusivity and geometric isolation, while actively filtering out noise, C-Mining automatically extracts high-fidelity Culture Points (CPs) from raw multilingual corpora without reliance on human or LLM supervision, reducing preparation costs by more than 150-fold. We further leverage the mined knowledge to steer the synthesis of diverse instruction-tuning datasets. Extensive experiments demonstrate that this seed-centric approach significantly enhances cultural understanding and reasoning capabilities, achieving a +6.03 point improvement on CulturalBench-Hard and surpassing state-of-the-art baselines, providing a scalable, quantifiable solution for high-quality cultural data synthesis.",
+      "authors": [
+        "Pufan Zeng",
+        "Yilun Liu",
+        "Mingchen Dai",
+        "Mengyao Piao",
+        "Chunguang Zhao",
+        "Lingqi Miao",
+        "Shimin Tao",
+        "Weibin Meng",
+        "Minggui He",
+        "Chenxin Liu",
+        "Zhenzhen Qin",
+        "Li Zhang",
+        "Hongxia Ma",
+        "Boxing Chen",
+        "Daimeng Wei"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-04-17T03:54:12+00:00",
+      "link": "https://arxiv.org/pdf/2604.15675v1",
+      "tags": [
+        "keyword:LLM数据",
+        "query:LLM数据"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "unsupervised seed curation for cultural data synthesis in LLMs",
+      "llm_evidence_cn": "用于大语言模型文化数据合成的无监督种子筛选",
+      "llm_evidence": "用于大语言模型文化数据合成的无监督种子筛选",
+      "canonical_evidence": "用于大语言模型文化数据合成的无监督种子筛选",
+      "llm_tldr_en": "Proposes C-Mining, an unsupervised framework for selecting cultural seeds for LLM data synthesis.",
+      "llm_tldr_cn": "提出了C-Mining，一种用于LLM数据合成中文化种子筛选的无监督框架。",
+      "llm_tldr": "提出了C-Mining，一种用于LLM数据合成中文化种子筛选的无监督框架。",
+      "llm_tags": [
+        "query:llm"
+      ],
+      "matched_query_tag": "query:llm",
+      "matched_query_text": "data curation techniques for large language models",
+      "matched_requirement_id": "req-11",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.16038v1",
+      "source": "arxiv",
+      "title": "Modeling Sparse and Bursty Vulnerability Sightings: Forecasting Under Data Constraints",
+      "abstract": "Understanding and anticipating vulnerability-related activity is a major challenge in cyber threat intelligence. This work investigates whether vulnerability sightings, such as proof-of-concept releases, detection templates, or online discussions, can be forecast over time. Building on our earlier work on VLAI, a transformer-based model that predicts vulnerability severity from textual descriptions, we examine whether severity scores can improve time-series forecasting as exogenous variables. We evaluate several approaches for short-term forecasting of sightings per vulnerability. First, we test SARIMAX models with and without log(x+1) transformations and VLAI-derived severity inputs. Although these adjustments provide limited improvements, SARIMAX remains poorly suited to sparse, short, and bursty vulnerability data. In practice, forecasts often produce overly wide confidence intervals and sometimes unrealistic negative values. To better capture the discrete and event-driven nature of sightings, we then explore count-based methods such as Poisson regression. Early results show that these models produce more stable and interpretable forecasts, especially when sightings are aggregated weekly. We also discuss simpler operational alternatives, including exponential decay functions for short forecasting horizons, to estimate future activity without requiring long historical series. Overall, this study highlights both the potential and the limitations of forecasting rare and bursty cyber events, and provides practical guidance for integrating predictive analytics into vulnerability intelligence workflows.",
+      "authors": [
+        "Cedric Bonhomme",
+        "Alexandre Dulaunoy"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR"
+      ],
+      "published": "2026-04-17T13:06:46+00:00",
+      "link": "https://arxiv.org/pdf/2604.16038v1",
+      "tags": [
+        "keyword:TSF",
+        "query:TSF"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "forecasting vulnerability sightings using transformer-based models",
+      "llm_evidence_cn": "使用Transformer模型预测漏洞出现情况",
+      "llm_evidence": "使用Transformer模型预测漏洞出现情况",
+      "canonical_evidence": "使用Transformer模型预测漏洞出现情况",
+      "llm_tldr_en": "Evaluates time-series forecasting for cyber vulnerabilities using transformer-based severity inputs.",
+      "llm_tldr_cn": "评估了利用Transformer生成的严重程度输入进行网络漏洞时间序列预测的效果。",
+      "llm_tldr": "评估了利用Transformer生成的严重程度输入进行网络漏洞时间序列预测的效果。",
+      "llm_tags": [
+        "query:tsf"
+      ],
+      "matched_query_tag": "query:tsf",
+      "matched_query_text": "deep learning models for time series forecasting",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.16197v1",
+      "source": "arxiv",
+      "title": "Sketching the Readout of Large Language Models for Scalable Data Attribution and Valuation",
+      "abstract": "Data attribution and valuation are critical for understanding data-model synergy for Large Language Models (LLMs), yet existing gradient-based methods suffer from scalability challenges on LLMs. Inspired by human cognition, where decision making relies on a focused readout of relevant memories rather than replaying all pathways, we introduce RISE (Readout Influence Sketching Estimator). Instead of computing and indexing gradients across the entire LLM, RISE focuses on influence hotspots at the output layer, where influence signals concentrate, and the gradient admits a decomposed outer-product form. This enables a dual-channel representation combining a lexical residual channel (RH) and a semantic projected-error channel (GH). Applying CountSketch projections to these channels achieves strong compression while maintaining accurate attribution. Across the OLMo (1B-32B) and Pythia (14M-6.9B) families, RISE reduces index storage by up to 112$\\times$ compared to RapidIn and scales to 32B parameters LLM, where gradient-based baselines such as RapidIn and ZO-Inf become memory-infeasible. We evaluate RISE on two paradigms: (1) retrospective attribution, retrieving influential training examples for specific predictions, and (2) prospective valuation, scoring candidate data utility zero-shot. We validate RISE on three tasks: Howdy backdoor data detection, Finance-Medical domain separation, and Brain Rot high-quality data selection. In a closed-loop Brain Rot study, continued pretraining on RISE-selected data yields consistent downstream improvements. Overall, RISE provides a practical and scalable primitive for influence analysis and training-data selection in modern large language models.",
+      "authors": [
+        "Yide Ran",
+        "Jianwen Xie",
+        "Minghui Wang",
+        "Wenjin Zheng",
+        "Denghui Zhang",
+        "Chuan Li",
+        "Zhaozhuo Xu"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-04-17T16:07:11+00:00",
+      "link": "https://arxiv.org/pdf/2604.16197v1",
+      "tags": [
+        "keyword:LLM数据",
+        "keyword:TSF",
+        "query:LLM数据",
+        "query:TSF"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "scalable data attribution and valuation for understanding data-model synergy",
+      "llm_evidence_cn": "可扩展的数据归因与估值，用于理解数据与模型的协同作用",
+      "llm_evidence": "可扩展的数据归因与估值，用于理解数据与模型的协同作用",
+      "canonical_evidence": "可扩展的数据归因与估值，用于理解数据与模型的协同作用",
+      "llm_tldr_en": "Introduces RISE for scalable data attribution in LLMs, enabling efficient identification of influential training data.",
+      "llm_tldr_cn": "引入RISE用于LLM的可扩展数据归因，从而高效识别有影响力的训练数据。",
+      "llm_tldr": "引入RISE用于LLM的可扩展数据归因，从而高效识别有影响力的训练数据。",
+      "llm_tags": [
+        "query:llm"
+      ],
+      "matched_query_tag": "query:llm",
+      "matched_query_text": "state of the art techniques for LLM data selection and filtering",
+      "matched_requirement_id": "req-16",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.16240v1",
+      "source": "arxiv",
+      "title": "CollideNet: Hierarchical Multi-scale Video Representation Learning with Disentanglement for Time-To-Collision Forecasting",
+      "abstract": "Time-to-Collision (TTC) forecasting is a critical task in collision prevention, requiring precise temporal prediction and comprehending both local and global patterns encapsulated in a video, both spatially and temporally. To address the multi-scale nature of video, we introduce a novel spatiotemporal hierarchical transformer-based architecture called CollideNet, specifically catered for effective TTC forecasting. In the spatial stream, CollideNet aggregates information for each video frame simultaneously at multiple resolutions. In the temporal stream, along with multi-scale feature encoding, CollideNet also disentangles the non-stationarity, trend, and seasonality components. Our method achieves state-of-the-art performance in comparison to prior works on three commonly used public datasets, setting a new state-of-the-art by a considerable margin. We conduct cross-dataset evaluations to analyze the generalization capabilities of our method, and visualize the effects of disentanglement of the trend and seasonality components of the video data. We release our code at https://github.com/DeSinister/CollideNet/.",
+      "authors": [
+        "Nishq Poorav Desai",
+        "Ali Etemad",
+        "Michael Greenspan"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-04-17T17:00:03+00:00",
+      "link": "https://arxiv.org/pdf/2604.16240v1",
+      "tags": [
+        "keyword:TSF",
+        "query:TSF"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Spatiotemporal hierarchical transformer for time-to-collision forecasting",
+      "llm_evidence_cn": "用于碰撞时间预测的时空分层Transformer",
+      "llm_evidence": "用于碰撞时间预测的时空分层Transformer",
+      "canonical_evidence": "用于碰撞时间预测的时空分层Transformer",
+      "llm_tldr_en": "Presents CollideNet, a spatiotemporal transformer that disentangles trend and seasonality for collision forecasting.",
+      "llm_tldr_cn": "提出CollideNet，一种解耦趋势和季节性成分的时空Transformer碰撞预测模型。",
+      "llm_tldr": "提出CollideNet，一种解耦趋势和季节性成分的时空Transformer碰撞预测模型。",
+      "llm_tags": [
+        "query:tsf"
+      ],
+      "matched_query_tag": "query:tsf",
+      "matched_query_text": "deep learning models for spatio-temporal forecasting",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2604.10371v1",
+      "source": "arxiv",
+      "title": "Structural Gating and Effect-aligned Lag-resolved Temporal Causal Discovery Framework with Application to Heat-Pollution Extremes",
+      "abstract": "This study proposes Structural Gating and Effect-aligned Discovery for Temporal Causal Discovery (SGED-TCD), a novel and general framework for lag-resolved causal discovery in complex multivariate time series. SGED-TCD combines explicit structural gating, stability-oriented learning, perturbation-effect alignment, and unified graph extraction to improve the interpretability, robustness, and functional consistency of inferred causal graphs.   To evaluate its effectiveness in a representative real-world setting, we apply SGED-TCD to teleconnection-driven compound heatwave--air-pollution extremes in eastern and northern China. Using large-scale climate indices, regional circulation and boundary-layer variables, and compound extreme indicators, the framework reconstructs weighted causal networks with explicit dominant lags and relative causal importance. The inferred networks reveal clear regional and seasonal heterogeneity: warm-season extremes in Eastern China are mainly linked to low-latitude oceanic variability through circulation, radiation, and ventilation pathways, whereas cold-season extremes in Northern China are more strongly governed by high-latitude circulation variability associated with boundary-layer suppression and persistent stagnation.   These results show that SGED-TCD can recover physically interpretable, hierarchical, and lag-resolved causal pathways in a challenging climate--environment system. More broadly, the proposed framework is not restricted to the present application and provides a general basis for temporal causal discovery in other complex domains.",
+      "authors": [
+        "Rui Chen",
+        "Jinsong Wu"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-04-11T22:50:26+00:00",
+      "link": "https://arxiv.org/pdf/2604.10371v1",
+      "tags": [
+        "keyword:TSF",
+        "query:TSF"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Temporal causal discovery in complex multivariate time series",
+      "llm_evidence_cn": "复杂多变量时间序列中的时间因果发现",
+      "llm_evidence": "复杂多变量时间序列中的时间因果发现",
+      "canonical_evidence": "复杂多变量时间序列中的时间因果发现",
+      "llm_tldr_en": "Proposes a framework for lag-resolved causal discovery in multivariate time series applied to climate extremes.",
+      "llm_tldr_cn": "提出了一种用于多变量时间序列滞后因果发现的框架，并应用于极端气候分析。",
+      "llm_tldr": "提出了一种用于多变量时间序列滞后因果发现的框架，并应用于极端气候分析。",
+      "llm_tags": [
+        "query:tsf"
+      ],
+      "matched_query_tag": "query:tsf",
+      "matched_query_text": "multivariate time series forecasting methods",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2604.10553v1",
+      "source": "arxiv",
+      "title": "Topology-Aware PAC-Bayesian Generalization Analysis for Graph Neural Networks",
+      "abstract": "Graph neural networks have demonstrated excellent applicability to a wide range of domains, including social networks, biological systems, recommendation systems, and wireless communications. Yet a principled theoretical understanding of their generalization behavior remains limited, particularly for graph classification tasks where complex interactions between model parameters and graph structure play a crucial role. Among existing theoretical tools, PAC-Bayesian norm-based generalization bounds provide a flexible and data-dependent framework; however, current results for GNNs often restrict the exploitation of graph structures. In this work, we propose a topology-aware PAC-Bayesian norm-based generalization framework for graph convolutional networks (GCNs) that extends a previously developed framework to graph-structured models. Our approach reformulates the derivation of generalization bounds as a stochastic optimization problem and introduces sensitivity matrices that measure the response of classification outputs with respect to structured weight perturbations. By imposing different structures on sensitivity matrices from both spatial and spectral perspectives, we derive a family of generalization error bounds with graph structures explicitly embedded. Such bounds could recover existing results as special cases, while yielding bounds that are tighter than state-of-the-art PAC-Bayesian bounds for GNNs. Notably, the proposed framework explicitly integrates graph structural properties into the generalization analysis, enabling a unified inspection of GNN generalization behavior from both spatial aggregation and spectral filtering viewpoints.",
+      "authors": [
+        "Xinping Yi"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-04-12T09:52:27+00:00",
+      "link": "https://arxiv.org/pdf/2604.10553v1",
+      "tags": [
+        "keyword:LLM数据",
+        "keyword:TSF",
+        "query:TSF"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "generalization analysis for graph convolutional networks and graph neural networks",
+      "llm_evidence_cn": "图卷积网络和图神经网络的泛化性分析",
+      "llm_evidence": "图卷积网络和图神经网络的泛化性分析",
+      "canonical_evidence": "图卷积网络和图神经网络的泛化性分析",
+      "llm_tldr_en": "Proposes a topology-aware framework to analyze the generalization behavior of graph neural networks.",
+      "llm_tldr_cn": "提出了一个拓扑感知框架，用于分析图神经网络的泛化行为。",
+      "llm_tldr": "提出了一个拓扑感知框架，用于分析图神经网络的泛化行为。",
+      "llm_tags": [
+        "query:tsf"
+      ],
+      "matched_query_tag": "query:tsf",
+      "matched_query_text": "recent advances in spatial temporal graph neural networks",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2604.10385v1",
+      "source": "arxiv",
+      "title": "GTASA: Ground Truth Annotations for Spatiotemporal Analysis, Evaluation and Training of Video Models",
+      "abstract": "Generating complex multi-actor scenario videos remains difficult even for state-of-the-art neural generators, while evaluating them is hard due to the lack of ground truth for physical plausibility and semantic faithfulness. We introduce GTASA, a corpus of multi-actor videos with per-frame spatial relation graphs and event-level temporal mappings, and the system that produced it based on Graphs of Events in Space and Time (GEST): GEST-Engine. We compare our method with both open and closed source neural generators and prove both qualitatively (human evaluation of physical validity and semantic alignment) and quantitatively (via training video captioning models) the clear advantages of our method. Probing four frozen video encoders across 11 spatiotemporal reasoning tasks enabled by GTASA's exact 3D ground truth reveals that self-supervised encoders encode spatial structure significantly better than VLM visual encoders.",
+      "authors": [
+        "Nicolae Cudlenco",
+        "Mihai Masala",
+        "Marius Leordeanu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-04-12T00:01:51+00:00",
+      "link": "https://arxiv.org/pdf/2604.10385v1",
+      "tags": [
+        "keyword:TSF",
+        "query:TSF"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Ground truth annotations for spatiotemporal analysis and temporal mappings",
+      "llm_evidence_cn": "用于时空分析和时间映射的地面真值标注",
+      "llm_evidence": "用于时空分析和时间映射的地面真值标注",
+      "canonical_evidence": "用于时空分析和时间映射的地面真值标注",
+      "llm_tldr_en": "Introduces GTASA, a corpus for spatiotemporal analysis and evaluation of video models using spatial relation graphs.",
+      "llm_tldr_cn": "引入GTASA语料库，利用空间关系图对视频模型进行时空分析和评估。",
+      "llm_tldr": "引入GTASA语料库，利用空间关系图对视频模型进行时空分析和评估。",
+      "llm_tags": [
+        "query:tsf:composite"
+      ],
+      "matched_query_tag": "query:tsf:composite",
+      "matched_query_text": "Papers central to 时间序列预测/时空, especially work that connects or combines: deep learning models for time series forecasting; multivariate time series forecasting methods; long-term time series forecasting techniques; temporal fusion transformer for forecasting; deep learning models for spatio-temporal forecasting; spatial-temporal graph convolutional networks; latest research papers on time series forecasting; state of the art deep learning models for time series; state of the art deep learning models for spatio temporal forecasting; recent advances in spatial temporal graph neural networks.",
+      "matched_requirement_id": "req-composite-tsf",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2604.10480v1",
+      "source": "arxiv",
+      "title": "Tracing the Roots: A Multi-Agent Framework for Uncovering Data Lineage in Post-Training LLMs",
+      "abstract": "Post-training data plays a pivotal role in shaping the capabilities of Large Language Models (LLMs), yet datasets are often treated as isolated artifacts, overlooking the systemic connections that underlie their evolution. To disentangle these complex relationships, we introduce the concept of \\textbf{data lineage} to the LLM ecosystem and propose an automated multi-agent framework to reconstruct the evolutionary graph of dataset development. Through large-scale lineage analysis, we characterize domain-specific structural patterns, such as vertical refinement in math-oriented datasets and horizontal aggregation in general-domain corpora. Moreover, we uncover pervasive systemic issues, including \\textit{structural redundancy} induced by implicit dataset intersections and the \\textit{propagation of benchmark contamination} along lineage paths. To demonstrate the practical value of lineage analysis for data construction, we leverage the reconstructed lineage graph to create a \\textit{lineage-aware diversity-oriented dataset}. By anchoring instruction sampling at upstream root sources, this approach mitigates downstream homogenization and hidden redundancy, yielding a more diverse post-training corpus. We further highlight lineage-centric analysis as an efficient and robust topological alternative to sample-level dataset comparison for large-scale data ecosystems. By grounding data construction in explicit lineage structures, our work advances post-training data curation toward a more systematic and controllable paradigm.",
+      "authors": [
+        "Yu Li",
+        "Xiaoran Shang",
+        "Qizhi Pei",
+        "Yun Zhu",
+        "Xin Gao",
+        "Honglin Lin",
+        "Zhanping Zhong",
+        "Zhuoshi Pan",
+        "Zheng Liu",
+        "Xiaoyang Wang",
+        "Conghui He",
+        "Dahua Lin",
+        "Feng Zhao",
+        "Lijun Wu"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-04-12T06:24:07+00:00",
+      "link": "https://arxiv.org/pdf/2604.10480v1",
+      "tags": [
+        "keyword:LLM数据",
+        "query:LLM数据"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "uncovering data lineage and structural redundancy in LLM datasets",
+      "llm_evidence_cn": "揭示大语言模型数据集中的数据谱系和结构冗余",
+      "llm_evidence": "揭示大语言模型数据集中的数据谱系和结构冗余",
+      "canonical_evidence": "揭示大语言模型数据集中的数据谱系和结构冗余",
+      "llm_tldr_en": "Introduces a multi-agent framework to trace data lineage and identify redundancy in LLM post-training datasets.",
+      "llm_tldr_cn": "引入多智能体框架来追踪大模型训练数据的演化谱系并识别结构冗余。",
+      "llm_tldr": "引入多智能体框架来追踪大模型训练数据的演化谱系并识别结构冗余。",
+      "llm_tags": [
+        "query:llm:composite"
+      ],
+      "matched_query_tag": "query:llm:composite",
+      "matched_query_text": "Papers central to 大语言模型数据筛选（data curation）, especially work that connects or combines: data curation techniques for large language models; methods for filtering training data for LLMs; assessing data quality for language model pre-training; optimizing data mixture and proportions for LLMs; survey of data curation methods for large language models; state of the art techniques for LLM data selection and filtering; how to improve LLM performance through data curation; automated data quality assessment for training large language models.",
+      "matched_requirement_id": "req-composite-llm",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2604.10882v1",
+      "source": "arxiv",
+      "title": "DIB-OD: Preserving the Invariant Core for Robust Heterogeneous Graph Adaptation via Decoupled Information Bottleneck and Online Distillation",
+      "abstract": "Graph Neural Network pretraining is pivotal for leveraging unlabeled graph data. However, generalizing across heterogeneous domains remains a major challenge due to severe distribution shifts. Existing methods primarily focus on intra-domain patterns, failing to disentangle task-relevant invariant knowledge from domain-specific redundant noise, leading to negative transfer and catastrophic forgetting. To this end, we propose DIB-OD, a novel framework designed to preserve the invariant core for robust heterogeneous graph adaptation through a Decoupled Information Bottleneck and Online Distillation framework. Our core innovation is the explicit decomposition of representations into orthogonal invariant and redundant subspaces. By utilizing an Information Bottleneck teacher-student distillation mechanism and the Hilbert-Schmidt Independence Criterion, we isolate a stable invariant core that transcends domain boundaries. Furthermore, a self-adaptive semantic regularizer is introduced to protect this core from corruption during target-domain adaptation by dynamically gating label influence based on predictive confidence. Extensive experiments across chemical, biological, and social network domains demonstrate that DIB-OD significantly outperforms state-of-the-art methods, particularly in challenging inter-type domain transfers, showcasing superior generalization and anti-forgetting performance.",
+      "authors": [
+        "Yang Yan",
+        "Qiuyan Wang",
+        "Tianjin Huang",
+        "Qiudong Yu",
+        "Kexin Zhang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-04-13T01:03:44+00:00",
+      "link": "https://arxiv.org/pdf/2604.10882v1",
+      "tags": [
+        "keyword:TSF",
+        "query:TSF"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "robust heterogeneous graph adaptation for graph neural network pretraining",
+      "llm_evidence_cn": "用于图神经网络预训练的鲁棒异构图适配",
+      "llm_evidence": "用于图神经网络预训练的鲁棒异构图适配",
+      "canonical_evidence": "用于图神经网络预训练的鲁棒异构图适配",
+      "llm_tldr_en": "A framework for robust graph adaptation that disentangles invariant knowledge from domain noise.",
+      "llm_tldr_cn": "一种通过解耦信息瓶颈和在线蒸馏实现鲁棒异构图适配的框架。",
+      "llm_tldr": "一种通过解耦信息瓶颈和在线蒸馏实现鲁棒异构图适配的框架。",
+      "llm_tags": [
+        "query:tsf"
+      ],
+      "matched_query_tag": "query:tsf",
+      "matched_query_text": "recent advances in spatial temporal graph neural networks",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2604.10669v1",
+      "source": "arxiv",
+      "title": "A Linear Temporal Logic of Frequencies on Series of Events",
+      "abstract": "This paper introduces LTLF, a temporal logic designed to express the frequency properties of event series in a natural but rigorous manner. By introducing novel, measure-sensitive operators, LTLF allows for the evaluation of frequencies and the prediction of future occurrences, thus providing a formal framework to monitor and control quantitative systems, such as machine learning classifiers. The core novelty lies in the introduction of original modal quantifiers associated with a standard Kripke-style semantics. These quantifiers enable the explicit formalization of event series properties and the investigation of the relationship between actual observed frequencies and ideal distributions within a single logical structure. This framework bridges the gap between formal logical reasoning and empirical observation.",
+      "authors": [
+        "Melissa Antonelli",
+        "Leonardo Ceragioli",
+        "Alessandro Buda",
+        "Giuseppe Primiero"
+      ],
+      "primary_category": "cs.LO",
+      "categories": [
+        "cs.LO",
+        "math.LO"
+      ],
+      "published": "2026-04-12T14:52:24+00:00",
+      "link": "https://arxiv.org/pdf/2604.10669v1",
+      "tags": [
+        "keyword:TSF",
+        "query:LLM数据",
+        "query:TSF"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "temporal logic for frequency properties of event series and prediction",
+      "llm_evidence_cn": "用于事件序列频率属性和预测的时间逻辑",
+      "llm_evidence": "用于事件序列频率属性和预测的时间逻辑",
+      "canonical_evidence": "用于事件序列频率属性和预测的时间逻辑",
+      "llm_tldr_en": "Introduces a temporal logic framework for evaluating frequencies and predicting future occurrences in event series.",
+      "llm_tldr_cn": "引入一种时间逻辑框架，用于评估事件序列的频率并预测未来发生情况。",
+      "llm_tldr": "引入一种时间逻辑框架，用于评估事件序列的频率并预测未来发生情况。",
+      "llm_tags": [
+        "query:tsf:composite"
+      ],
+      "matched_query_tag": "query:tsf:composite",
+      "matched_query_text": "Papers central to 时间序列预测/时空, especially work that connects or combines: deep learning models for time series forecasting; multivariate time series forecasting methods; long-term time series forecasting techniques; temporal fusion transformer for forecasting; deep learning models for spatio-temporal forecasting; spatial-temporal graph convolutional networks; latest research papers on time series forecasting; state of the art deep learning models for time series; state of the art deep learning models for spatio temporal forecasting; recent advances in spatial temporal graph neural networks.",
+      "matched_requirement_id": "req-composite-tsf",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2604.11092v1",
+      "source": "arxiv",
+      "title": "ARHN: Answer-Centric Relabeling of Hard Negatives with Open-Source LLMs for Dense Retrieval",
+      "abstract": "Neural retrievers are often trained on large-scale triplet data comprising a query, a positive passage, and a set of hard negatives. In practice, hard-negative mining can introduce false negatives and other ambiguous negatives, including passages that are relevant or contain partial answers to the query. Such label noise yields inconsistent supervision and can degrade retrieval effectiveness.   We propose ARHN (Answer-centric Relabeling of Hard Negatives), a two-stage framework that leverages open-source LLMs to refine hard negative samples using answer-centric relevance signals. In the first stage, for each query-passage pair, ARHN prompts the LLM to generate a passage-grounded answer snippet or to indicate that the passage does not support an answer. In the second stage, ARHN applies an LLM-based listwise ranking over the candidate set to order passages by direct answerability to the query. Passages ranked above the original positive are relabeled to additional positives. Among passages ranked below the positive, ARHN excludes any that contain an answer snippet from the negative set to avoid ambiguous supervision.   We evaluated ARHN on the BEIR benchmark under three configurations: relabeling only, filtering only, and their combination. Across datasets, the combined strategy consistently improves over either step in isolation, indicating that jointly relabeling false negatives and filtering ambiguous negatives yields cleaner supervision for training neural retrieval models. By relying strictly on open-source models, ARHN establishes a cost-effective and scalable refinement pipeline suitable for large-scale training.",
+      "authors": [
+        "Hyewon Choi",
+        "Jooyoung Choi",
+        "Hansol Jang",
+        "Hyun Kim",
+        "Chulmin Yun",
+        "ChangWook Jun",
+        "Stanley Jungkyu Choi"
+      ],
+      "primary_category": "cs.IR",
+      "categories": [
+        "cs.IR"
+      ],
+      "published": "2026-04-13T07:11:30+00:00",
+      "link": "https://arxiv.org/pdf/2604.11092v1",
+      "tags": [
+        "keyword:LLM数据",
+        "keyword:TSF",
+        "query:LLM数据",
+        "query:TSF"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "relabeling hard negatives using LLMs to refine training data",
+      "llm_evidence_cn": "使用大语言模型重新标注困难负样本以优化训练数据",
+      "llm_evidence": "使用大语言模型重新标注困难负样本以优化训练数据",
+      "canonical_evidence": "使用大语言模型重新标注困难负样本以优化训练数据",
+      "llm_tldr_en": "Introduces ARHN to refine hard negative samples in retrieval training data using LLM-based relevance signals.",
+      "llm_tldr_cn": "提出 ARHN 框架，利用大语言模型对检索训练数据中的困难负样本进行重新标注和优化。",
+      "llm_tldr": "提出 ARHN 框架，利用大语言模型对检索训练数据中的困难负样本进行重新标注和优化。",
+      "llm_tags": [
+        "query:llm:composite"
+      ],
+      "matched_query_tag": "query:llm:composite",
+      "matched_query_text": "Papers central to 大语言模型数据筛选（data curation）, especially work that connects or combines: data curation techniques for large language models; methods for filtering training data for LLMs; assessing data quality for language model pre-training; optimizing data mixture and proportions for LLMs; survey of data curation methods for large language models; state of the art techniques for LLM data selection and filtering; how to improve LLM performance through data curation; automated data quality assessment for training large language models.",
+      "matched_requirement_id": "req-composite-llm",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2604.10955v1",
+      "source": "arxiv",
+      "title": "Hypergraph Neural Diffusion: A PDE-Inspired Framework for Hypergraph Message Passing",
+      "abstract": "Hypergraph neural networks (HGNNs) have shown remarkable potential in modeling high-order relationships that naturally arise in many real-world data domains. However, existing HGNNs often suffer from shallow propagation, oversmoothing, and limited adaptability to complex hypergraph structures. In this paper, we propose Hypergraph Neural Diffusion (HND), a novel framework that unifies nonlinear diffusion equations with neural message passing on hypergraphs. HND is grounded in a continuous-time hypergraph diffusion equation, formulated via hypergraph gradient and divergence operators, and modulated by a learnable, structure-aware coefficient matrix over hyperedge-node pairs. This partial differential equation (PDE) based formulation provides a physically interpretable view of hypergraph learning, where feature propagation is understood as an anisotropic diffusion process governed by local inconsistency and adaptive diffusion coefficient. From this perspective, neural message passing becomes a discretized gradient flow that progressively minimizes a diffusion energy functional. We derive rigorous theoretical guarantees, including energy dissipation, solution boundedness via a discrete maximum principle, and stability under explicit and implicit numerical schemes. The HND framework supports a variety of integration strategies such as non-adaptive-step (like Runge-Kutta) and adaptive-step solvers, enabling the construction of deep, stable, and interpretable architectures. Extensive experiments on benchmark datasets demonstrate that HND achieves competitive performance. Our results highlight the power of PDE-inspired design in enhancing the stability, expressivity, and interpretability of hypergraph learning.",
+      "authors": [
+        "Zhiheng Zhou",
+        "Mengyao Zhou",
+        "Xixun Lin",
+        "Xingqin Qi",
+        "Guiying Yan"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-04-13T03:52:01+00:00",
+      "link": "https://arxiv.org/pdf/2604.10955v1",
+      "tags": [
+        "keyword:TSF",
+        "query:TSF"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Hypergraph neural networks for modeling high-order relationships",
+      "llm_evidence_cn": "用于建模高阶关系的超图神经网络",
+      "llm_evidence": "用于建模高阶关系的超图神经网络",
+      "canonical_evidence": "用于建模高阶关系的超图神经网络",
+      "llm_tldr_en": "Proposes Hypergraph Neural Diffusion (HND) to improve message passing and adaptability in hypergraph structures.",
+      "llm_tldr_cn": "提出超图神经扩散（HND）框架，通过偏微分方程改进超图消息传递与结构适应性。",
+      "llm_tldr": "提出超图神经扩散（HND）框架，通过偏微分方程改进超图消息传递与结构适应性。",
+      "llm_tags": [
+        "query:tsf"
+      ],
+      "matched_query_tag": "query:tsf",
+      "matched_query_text": "recent advances in spatial temporal graph neural networks",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2604.10763v1",
+      "source": "arxiv",
+      "title": "BDIViz in Action: Interactive Curation and Benchmarking for Schema Matching Methods",
+      "abstract": "Schema matching remains fundamental to data integration, yet evaluating and comparing matching methods is hindered by limited benchmark diversity and lack of interactive validation frameworks. BDIViz, recently published at IEEE VIS 2025, is an interactive visualization system for schema matching with LLM-assisted validation. Given source and target datasets, BDIViz applies automatic matching methods and visualizes candidates in an interactive heatmap with hierarchical navigation, zoom, and filtering. Users validate matches directly in the heatmap and inspect ambiguous cases using coordinated views that show attribute descriptions, example values, and distributions. An LLM assistant generates structured explanations for selected candidates to support decision-making. This demonstration showcases a new extension to BDIViz that addresses a critical need in data integration research: human-in-the-loop benchmarking and iterative matcher development. New matchers can be integrated through a standardized interface, while user validations become evolving ground truth for real-time performance evaluation. This enables benchmarking new algorithms, constructing high-quality ground-truth datasets through expert validation, and comparing matcher behavior across diverse schemas and domains. We demonstrate two complementary scenarios: (i) data harmonization, where users map a large tabular dataset to a target schema with value-level inspection and LLM-generated explanations; and (ii) developer-in-the-loop benchmarking, where developers integrate custom matchers, observe performance metrics, and refine their algorithms.",
+      "authors": [
+        "Eden Wu",
+        "Christos Koutras",
+        "Cláudio T. Silva",
+        "Juliana Freire"
+      ],
+      "primary_category": "cs.IR",
+      "categories": [
+        "cs.IR",
+        "cs.HC"
+      ],
+      "published": "2026-04-12T18:16:30+00:00",
+      "link": "https://arxiv.org/pdf/2604.10763v1",
+      "tags": [
+        "keyword:LLM数据",
+        "query:LLM数据"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "interactive curation and LLM-assisted validation",
+      "llm_evidence_cn": "交互式数据清洗与大模型辅助验证",
+      "llm_evidence": "交互式数据清洗与大模型辅助验证",
+      "canonical_evidence": "交互式数据清洗与大模型辅助验证",
+      "llm_tldr_en": "Presents BDIViz, an interactive system for schema matching curation with LLM-assisted validation.",
+      "llm_tldr_cn": "展示了BDIViz，一个带有大模型辅助验证的交互式模式匹配数据清洗系统。",
+      "llm_tldr": "展示了BDIViz，一个带有大模型辅助验证的交互式模式匹配数据清洗系统。",
+      "llm_tags": [
+        "query:llm:composite"
+      ],
+      "matched_query_tag": "query:llm:composite",
+      "matched_query_text": "Papers central to 大语言模型数据筛选（data curation）, especially work that connects or combines: data curation techniques for large language models; methods for filtering training data for LLMs; assessing data quality for language model pre-training; optimizing data mixture and proportions for LLMs; survey of data curation methods for large language models; state of the art techniques for LLM data selection and filtering; how to improve LLM performance through data curation; automated data quality assessment for training large language models.",
+      "matched_requirement_id": "req-composite-llm",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2604.11178v1",
+      "source": "arxiv",
+      "title": "Probabilistic Prediction of Neural Dynamics via Autoregressive Flow Matching",
+      "abstract": "Forecasting neural activity in response to naturalistic stimuli remains a key challenge for understanding brain dynamics and enabling downstream neurotechnological applications. Here, we introduce a generative forecasting framework for modeling neural dynamics based on autoregressive flow matching (AFM). Building on recent advances in transport-based generative modeling, our approach probabilistically predicts neural responses at scale from multimodal sensory input. Specifically, we learn the conditional distribution of future neural activity given past neural dynamics and concurrent sensory input, explicitly modeling neural activity as a temporally evolving process in which future states depend on recent neural history. We evaluate our framework on the Algonauts project 2025 challenge functional magnetic resonance imaging dataset using subject-specific models. AFM significantly outperforms both a non-autoregressive flow-matching baseline and the official challenge general linear model baseline in predicting short-term parcel-wise blood oxygenation level-dependent (BOLD) activity, demonstrating improved generalization and widespread cortical prediction performance. Ablation analyses show that access to past BOLD dynamics is a dominant driver of performance, while autoregressive factorization yields consistent, modest gains under short-horizon, context-rich conditions. Together, these findings position autoregressive flow-based generative modeling as an effective approach for short-term probabilistic forecasting of neural dynamics with promising applications in closed-loop neurotechnology.",
+      "authors": [
+        "Nicole Rogalla",
+        "Yuzhen Qin",
+        "Mario Senden",
+        "Ahmed El-Gazzar",
+        "Marcel van Gerven"
+      ],
+      "primary_category": "q-bio.NC",
+      "categories": [
+        "q-bio.NC",
+        "cs.LG"
+      ],
+      "published": "2026-04-13T08:40:15+00:00",
+      "link": "https://arxiv.org/pdf/2604.11178v1",
+      "tags": [
+        "keyword:TSF",
+        "query:TSF"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "generative forecasting framework for modeling neural activity as a temporally evolving process",
+      "llm_evidence_cn": "将神经活动建模为随时间演变过程的生成式预测框架",
+      "llm_evidence": "将神经活动建模为随时间演变过程的生成式预测框架",
+      "canonical_evidence": "将神经活动建模为随时间演变过程的生成式预测框架",
+      "llm_tldr_en": "Introduces autoregressive flow matching for probabilistic forecasting of neural dynamics from sensory input.",
+      "llm_tldr_cn": "引入自回归流匹配框架，通过建模时间演化过程来概率性地预测神经动力学活动。",
+      "llm_tldr": "引入自回归流匹配框架，通过建模时间演化过程来概率性地预测神经动力学活动。",
+      "llm_tags": [
+        "query:tsf:composite"
+      ],
+      "matched_query_tag": "query:tsf:composite",
+      "matched_query_text": "Papers central to 时间序列预测/时空, especially work that connects or combines: deep learning models for time series forecasting; multivariate time series forecasting methods; long-term time series forecasting techniques; temporal fusion transformer for forecasting; deep learning models for spatio-temporal forecasting; spatial-temporal graph convolutional networks; latest research papers on time series forecasting; state of the art deep learning models for time series; state of the art deep learning models for spatio temporal forecasting; recent advances in spatial temporal graph neural networks.",
+      "matched_requirement_id": "req-composite-tsf",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2604.11188v1",
+      "source": "arxiv",
+      "title": "MathAgent: Adversarial Evolution of Constraint Graphs for Mathematical Reasoning Data Synthesis",
+      "abstract": "Synthesizing high-quality mathematical reasoning data without human priors remains a significant challenge. Current approaches typically rely on seed data mutation or simple prompt engineering, often suffering from mode collapse and limited logical complexity. This paper proposes a hierarchical synthesis framework that formulates data synthesis as an unsupervised optimization problem over a constraint graph followed by semantic instantiation, rather than treating it as a direct text generation task. We introduce a Legislator-Executor paradigm: The Legislator adversarially evolves structured generation blueprints encoding the constraints of the problem, while the Executor instantiates these specifications into diverse natural language scenarios. This decoupling of skeleton design from linguistic realization enables a prioritized focus on constructing complex and diverse logical structures, thereby guiding high-quality data synthesis. Experiments conducted on a total of 10 models across the Qwen, Llama, Mistral, and Gemma series demonstrate that our method achieves notable results: models fine-tuned on 1K synthesized samples outperform widely-used datasets of comparable scale (LIMO, s1K) across eight mathematical benchmarks, exhibiting superior out-of-distribution generalization.",
+      "authors": [
+        "Zixiong Yu",
+        "Jun Rao",
+        "Guhan Chen",
+        "Songtao Tian",
+        "Bohan Li",
+        "Jiansheng Wei",
+        "Min Zhang",
+        "Xiaojun Meng"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "published": "2026-04-13T08:48:12+00:00",
+      "link": "https://arxiv.org/pdf/2604.11188v1",
+      "tags": [
+        "keyword:LLM数据",
+        "keyword:TSF",
+        "query:LLM数据"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "synthesizing high-quality mathematical reasoning data for LLMs",
+      "llm_evidence_cn": "为大语言模型合成高质量数学推理数据",
+      "llm_evidence": "为大语言模型合成高质量数学推理数据",
+      "canonical_evidence": "为大语言模型合成高质量数学推理数据",
+      "llm_tldr_en": "Proposes a hierarchical framework for synthesizing complex mathematical reasoning data for LLM training.",
+      "llm_tldr_cn": "提出一种层次化框架，为大模型训练合成复杂的数学推理数据。",
+      "llm_tldr": "提出一种层次化框架，为大模型训练合成复杂的数学推理数据。",
+      "llm_tags": [
+        "query:llm:composite"
+      ],
+      "matched_query_tag": "query:llm:composite",
+      "matched_query_text": "Papers central to 大语言模型数据筛选（data curation）, especially work that connects or combines: data curation techniques for large language models; methods for filtering training data for LLMs; assessing data quality for language model pre-training; optimizing data mixture and proportions for LLMs; survey of data curation methods for large language models; state of the art techniques for LLM data selection and filtering; how to improve LLM performance through data curation; automated data quality assessment for training large language models.",
+      "matched_requirement_id": "req-composite-llm",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2604.10946v1",
+      "source": "arxiv",
+      "title": "Learning to Adapt: In-Context Learning Beyond Stationarity",
+      "abstract": "Transformer models have become foundational across a wide range of scientific and engineering domains due to their strong empirical performance. A key capability underlying their success is in-context learning (ICL): when presented with a short prompt from an unseen task, transformers can perform per-token and next-token predictions without any parameter updates. Recent theoretical efforts have begun to uncover the mechanisms behind this phenomenon, particularly in supervised regression settings. However, these analyses predominantly assume stationary task distributions, which overlook a broad class of real-world scenarios where the target function varies over time. In this work, we bridge this gap by providing a theoretical analysis of ICL under non-stationary regression problems. We study how the gated linear attention (GLA) mechanism adapts to evolving input-output relationships and rigorously characterize its advantages over standard linear attention in this dynamic setting. To model non-stationarity, we adopt a first-order autoregressive process and show that GLA achieves lower training and testing errors by adaptively modulating the influence of past inputs -- effectively implementing a learnable recency bias. Our theoretical findings are further supported by empirical results, which validate the benefits of gating mechanisms in non-stationary ICL tasks.",
+      "authors": [
+        "Zhen Qin",
+        "Jiachen Jiang",
+        "Zhihui Zhu"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "math.OC"
+      ],
+      "published": "2026-04-13T03:37:08+00:00",
+      "link": "https://arxiv.org/pdf/2604.10946v1",
+      "tags": [
+        "keyword:LLM数据",
+        "keyword:TSF",
+        "query:TSF"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "theoretical analysis of in-context learning for non-stationary time-varying functions",
+      "llm_evidence_cn": "非平稳随时间变化函数的上下文学习理论分析",
+      "llm_evidence": "非平稳随时间变化函数的上下文学习理论分析",
+      "canonical_evidence": "非平稳随时间变化函数的上下文学习理论分析",
+      "llm_tldr_en": "Analyzes transformer in-context learning performance when target functions vary over time.",
+      "llm_tldr_cn": "分析了当目标函数随时间变化时，Transformer上下文学习的表现。",
+      "llm_tldr": "分析了当目标函数随时间变化时，Transformer上下文学习的表现。",
+      "llm_tags": [
+        "query:tsf"
+      ],
+      "matched_query_tag": "query:tsf",
+      "matched_query_text": "deep learning models for time series forecasting",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

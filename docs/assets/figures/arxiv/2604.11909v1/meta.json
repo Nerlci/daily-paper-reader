@@ -1,0 +1,134 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.11909v1/fig-001.webp",
+      "caption": "Fig. 4. Structural Thermodynamic Alpha -Gate for Multiplicative Energy Bounding.",
+      "page": 6,
+      "index": 1,
+      "width": 981,
+      "height": 477
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11909v1/fig-002.webp",
+      "caption": "Fig. 5. Comprehensive Architectural Topology of the Thermodynamic Liquid Manifold Network (TLMN v3).",
+      "page": 6,
+      "index": 2,
+      "width": 976,
+      "height": 258
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11909v1/fig-003.webp",
+      "caption": "Table 4. Stratified RMSE Performance by Atmospheric Clearness Regimes.",
+      "page": 11,
+      "index": 3,
+      "width": 1050,
+      "height": 185
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11909v1/fig-004.webp",
+      "caption": "Fig. 12. Year-by-year RMSE stability tracking.",
+      "page": 11,
+      "index": 4,
+      "width": 894,
+      "height": 437
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11909v1/fig-005.webp",
+      "caption": "Fig. 6. Comparative Model Performance on the Independent 2020–2024 Stress-Test Partition, emphasizing Structural Stability.",
+      "page": 7,
+      "index": 5,
+      "width": 981,
+      "height": 396
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11909v1/fig-006.webp",
+      "caption": "Table 2. Layer-by-Layer Computational Configuration of TLMN v3.",
+      "page": 7,
+      "index": 6,
+      "width": 1004,
+      "height": 310
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11909v1/fig-007.webp",
+      "caption": "Fig. 11. Longitudinal Stability and Climate Stationarity, emphasizing Thermodynamic Consistency.",
+      "page": 10,
+      "index": 7,
+      "width": 962,
+      "height": 485
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11909v1/fig-008.webp",
+      "caption": "Fig. 10. Diurnal Integrity and Nocturnal Anomaly Suppression.",
+      "page": 10,
+      "index": 8,
+      "width": 931,
+      "height": 516
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11909v1/fig-009.webp",
+      "caption": "Table 1. Input Feature Matrix of TLMN v3: Physical Categorization and Computational Roles.",
+      "page": 3,
+      "index": 9,
+      "width": 1033,
+      "height": 432
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11909v1/fig-010.webp",
+      "caption": "Table 3. Comparative Model Performance on the Independent 2020–2024 Stress-Test Partition.",
+      "page": 8,
+      "index": 10,
+      "width": 1002,
+      "height": 213
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11909v1/fig-011.webp",
+      "caption": "Fig. 7. Regression linearity and bound enforcement, demonstrating Thermodynamic Consistency.",
+      "page": 8,
+      "index": 11,
+      "width": 814,
+      "height": 635
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11909v1/fig-012.webp",
+      "caption": "Fig. 1. Koopman-Linearized Riemannian Manifold Embedding for Topological State Space Expansion.",
+      "page": 4,
+      "index": 12,
+      "width": 868,
+      "height": 261
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11909v1/fig-013.webp",
+      "caption": "Fig. 8. Dynamic Phase Alignment and Transient Recovery, indicating Structural Stability.",
+      "page": 9,
+      "index": 13,
+      "width": 894,
+      "height": 277
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11909v1/fig-014.webp",
+      "caption": "Fig. 9. Statistical error distribution analysis.",
+      "page": 9,
+      "index": 14,
+      "width": 836,
+      "height": 441
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11909v1/fig-015.webp",
+      "caption": "Fig. 2. Multi-Resolution Dilated Convolutional Encoder for Zero-Phase-Lag Spectral Filtering.",
+      "page": 5,
+      "index": 15,
+      "width": 956,
+      "height": 270
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11909v1/fig-016.webp",
+      "caption": "Fig. 3. Asymmetric Spectral Calibration Module for Celestial-Meteorological Fusion.",
+      "page": 5,
+      "index": 16,
+      "width": 798,
+      "height": 419
+    }
+  ]
+}

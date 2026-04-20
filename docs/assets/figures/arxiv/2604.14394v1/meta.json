@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.14394v1/fig-001.webp",
+      "caption": "Figure 3. Abnormally low (below 5%) returns in S&P 100.",
+      "page": 21,
+      "index": 1,
+      "width": 712,
+      "height": 586
+    },
+    {
+      "url": "assets/figures/arxiv/2604.14394v1/fig-002.webp",
+      "caption": "Figure 1. Raster plots with probability trajectories. Black dots indicate success periods (yi,t = 1). Continuous lines represent the corresponding success probabilities pi,t.",
+      "page": 7,
+      "index": 2,
+      "width": 1033,
+      "height": 842
+    },
+    {
+      "url": "assets/figures/arxiv/2604.14394v1/fig-003.webp",
+      "caption": "Figure 4. Interactive GAB estimates for 87 stocks.∑",
+      "page": 22,
+      "index": 3,
+      "width": 511,
+      "height": 384
+    },
+    {
+      "url": "assets/figures/arxiv/2604.14394v1/fig-004.webp",
+      "caption": "Figure 5. Interactive GAB probabilities ∑ i pi,t and Poisson intensity λt.",
+      "page": 23,
+      "index": 4,
+      "width": 928,
+      "height": 409
+    },
+    {
+      "url": "assets/figures/arxiv/2604.14394v1/fig-005.webp",
+      "caption": "Figure 2. Individual and aggregate successes for N = 50 series generated from the interactive model (8). The top panel shows the raster of individual successes, while the bottom panel reports the total number of successes at each time period. Parameters are ωi = 0.005, αi = 0.01, βi = 0.6, γi = 0.2, and pi,0 = 1/38 for all i.",
+      "page": 12,
+      "index": 5,
+      "width": 682,
+      "height": 545
+    }
+  ]
+}

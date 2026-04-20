@@ -1,0 +1,110 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.10480v1/fig-001.webp",
+      "caption": "Table 4: Diversity comparison using Vendi Score and Centroid Distance.",
+      "page": 11,
+      "index": 1,
+      "width": 594,
+      "height": 298
+    },
+    {
+      "url": "assets/figures/arxiv/2604.10480v1/fig-002.webp",
+      "caption": "Table 11: Data lineage analysis (Continued).",
+      "page": 25,
+      "index": 2,
+      "width": 922,
+      "height": 381
+    },
+    {
+      "url": "assets/figures/arxiv/2604.10480v1/fig-003.webp",
+      "caption": "Figure 1: Lineage graph construction with depth 3, using the OpenHermes-2.5 dataset [51] as an example. Yellow and green nodes denote leaf and internal nodes, respectively.",
+      "page": 2,
+      "index": 3,
+      "width": 736,
+      "height": 488
+    },
+    {
+      "url": "assets/figures/arxiv/2604.10480v1/fig-004.webp",
+      "caption": "Figure 4: Temporal distribution of data lineages by domain. The plots illustrate the number of datasets released each year, categorized by node type.",
+      "page": 7,
+      "index": 4,
+      "width": 727,
+      "height": 477
+    },
+    {
+      "url": "assets/figures/arxiv/2604.10480v1/fig-005.webp",
+      "caption": "Figure 6: Benchmark contamination analysis across various datasets. Additional contamination results are provided in Sec. D.",
+      "page": 10,
+      "index": 5,
+      "width": 675,
+      "height": 439
+    },
+    {
+      "url": "assets/figures/arxiv/2604.10480v1/fig-006.webp",
+      "caption": "Figure 5: Schematic illustration of a small subgraph of the data lineage graph, showing the partial composition of three target datasets; downstream overlap nodes and benchmark contamination locations are highlighted in red.",
+      "page": 8,
+      "index": 6,
+      "width": 906,
+      "height": 410
+    },
+    {
+      "url": "assets/figures/arxiv/2604.10480v1/fig-007.webp",
+      "caption": "Figure 2: Overview of the multi-agent data lineage reconstruction framework. The system coordinates collaborative agents to extract provenance information from unstructured documentation, transforming isolated datasets into a comprehensive evolutionary graph.",
+      "page": 4,
+      "index": 7,
+      "width": 914,
+      "height": 337
+    },
+    {
+      "url": "assets/figures/arxiv/2604.10480v1/fig-008.webp",
+      "caption": "Table 5: Full list of the 83 seed datasets used for lineage analysis. The datasets are sourced from HuggingFace and cover math, code, general and science domains.",
+      "page": 19,
+      "index": 8,
+      "width": 937,
+      "height": 787
+    },
+    {
+      "url": "assets/figures/arxiv/2604.10480v1/fig-009.webp",
+      "caption": "Table 12: List of the 31 Root Nodes (din = 0) selected as upstream knowledge anchors. These datasets formed the initial pool for our provenance-based sampling strategy.",
+      "page": 27,
+      "index": 9,
+      "width": 922,
+      "height": 453
+    },
+    {
+      "url": "assets/figures/arxiv/2604.10480v1/fig-010.webp",
+      "caption": "Table 10: Data contamination analysis: leakage ratios of training datasets on various benchmarks.",
+      "page": 24,
+      "index": 10,
+      "width": 922,
+      "height": 744
+    },
+    {
+      "url": "assets/figures/arxiv/2604.10480v1/fig-011.webp",
+      "caption": "Table 3: Analysis of source intersections across the top-10 datasets, ranked in descending order. Further details are provided in Sec. C.",
+      "page": 9,
+      "index": 11,
+      "width": 456,
+      "height": 280
+    },
+    {
+      "url": "assets/figures/arxiv/2604.10480v1/fig-012.webp",
+      "caption": "Table 7: Top 10 datasets with highest global in-degree.",
+      "page": 20,
+      "index": 12,
+      "width": 940,
+      "height": 277
+    },
+    {
+      "url": "assets/figures/arxiv/2604.10480v1/fig-013.webp",
+      "caption": "Table 6: Top 5 most reused datasets by domain (ranked by out-degree).",
+      "page": 20,
+      "index": 13,
+      "width": 853,
+      "height": 536
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.10371v1/fig-001.webp",
+      "caption": "Figure 1: Monthly time series of heatwave indices and air pollution variables over Eastern China (EC) and Northern China (NC).",
+      "page": 11,
+      "index": 1,
+      "width": 814,
+      "height": 889
+    },
+    {
+      "url": "assets/figures/arxiv/2604.10371v1/fig-002.webp",
+      "caption": "Figure 5: Comparison of meteorological mediators during concurrent and non-concurrent months in EC.",
+      "page": 14,
+      "index": 2,
+      "width": 814,
+      "height": 329
+    },
+    {
+      "url": "assets/figures/arxiv/2604.10371v1/fig-003.webp",
+      "caption": "Figure 6: SGED-TCD-inferred weighted causal networks for (a) Eastern China during the warm season and (b) Northern China during the cold season. Nodes represent largescale climate indices, regional circulation and boundary-layer variables, and compound extreme indicators. Directed edges indicate robust causal influences retained after structural screening and robustness-guided graph extraction. Edge width is proportional to relative causal importance, edge color denotes the sign of the effect, and numerical labels indicate the dominant lag (months). Only edges that remain stable under lag-window sensitivity, block-bootstrap resampling, and ablation-based validation are retained.",
+      "page": 23,
+      "index": 3,
+      "width": 735,
+      "height": 830
+    },
+    {
+      "url": "assets/figures/arxiv/2604.10371v1/fig-004.webp",
+      "caption": "Figure 7: Early-warning ROC-AUC versus lead time (k = 1–4 months) for compound heat–pollution months. Teleconnection features identified by SGED-TCD provide consistently higher discrimination skill than climatology, persistence, correlation-based selection, and Granger/VAR-selected baselines, with clearer advantages at longer lead times.",
+      "page": 28,
+      "index": 4,
+      "width": 636,
+      "height": 1015
+    },
+    {
+      "url": "assets/figures/arxiv/2604.10371v1/fig-005.webp",
+      "caption": "Figure 4: Seasonal cycles of key meteorological mediators over EC and NC.",
+      "page": 13,
+      "index": 5,
+      "width": 814,
+      "height": 816
+    },
+    {
+      "url": "assets/figures/arxiv/2604.10371v1/fig-006.webp",
+      "caption": "Table 1: Definitions for Each Considered Variable",
+      "page": 8,
+      "index": 6,
+      "width": 814,
+      "height": 725
+    },
+    {
+      "url": "assets/figures/arxiv/2604.10371v1/fig-007.webp",
+      "caption": "Figure 2: Standardized time series of major large-scale teleconnection indices.",
+      "page": 12,
+      "index": 7,
+      "width": 814,
+      "height": 329
+    },
+    {
+      "url": "assets/figures/arxiv/2604.10371v1/fig-008.webp",
+      "caption": "Figure 3: Lagged correlations between teleconnection indices and EC near-surface temperature (T2m).",
+      "page": 12,
+      "index": 8,
+      "width": 814,
+      "height": 408
+    },
+    {
+      "url": "assets/figures/arxiv/2604.10371v1/fig-009.webp",
+      "caption": "Table 3: Top-K robust causal links retained after SGED-TCD robustness diagnostics for Eastern China (warm season) and Northern China (cold season), ranked by robustness.",
+      "page": 20,
+      "index": 9,
+      "width": 777,
+      "height": 254
+    },
+    {
+      "url": "assets/figures/arxiv/2604.10371v1/fig-010.webp",
+      "caption": "Table 2: Top-K candidate causal links extracted from SGED-TCD composite causal scores for Eastern China (warm season) and Northern China (cold season), ranked by pre-screening edge strength.",
+      "page": 20,
+      "index": 10,
+      "width": 760,
+      "height": 358
+    }
+  ]
+}

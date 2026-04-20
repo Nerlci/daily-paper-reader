@@ -1,0 +1,110 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.12927v1/fig-001.webp",
+      "caption": "Table 7: Major oil price events",
+      "page": 25,
+      "index": 1,
+      "width": 969,
+      "height": 409
+    },
+    {
+      "url": "assets/figures/arxiv/2604.12927v1/fig-002.webp",
+      "caption": "Table 8: QS10 ratios relative to RW during price declines",
+      "page": 26,
+      "index": 2,
+      "width": 962,
+      "height": 560
+    },
+    {
+      "url": "assets/figures/arxiv/2604.12927v1/fig-003.webp",
+      "caption": "Table 9: QS90 ratios relative to RW during price surges",
+      "page": 26,
+      "index": 3,
+      "width": 962,
+      "height": 682
+    },
+    {
+      "url": "assets/figures/arxiv/2604.12927v1/fig-004.webp",
+      "caption": "Table 2: Out-of-sample quantile score ratios relative to random walk",
+      "page": 15,
+      "index": 4,
+      "width": 962,
+      "height": 618
+    },
+    {
+      "url": "assets/figures/arxiv/2604.12927v1/fig-005.webp",
+      "caption": "Table 4: Forecast combination with fixed weights: QS ratios relative to BVAR-SV(12)",
+      "page": 21,
+      "index": 5,
+      "width": 928,
+      "height": 758
+    },
+    {
+      "url": "assets/figures/arxiv/2604.12927v1/fig-006.webp",
+      "caption": "Table 5: Forecast combination with performance-based weights: QS ratios relative to BVAR-SV(12)",
+      "page": 22,
+      "index": 6,
+      "width": 962,
+      "height": 504
+    },
+    {
+      "url": "assets/figures/arxiv/2604.12927v1/fig-007.webp",
+      "caption": "Table 1: Out-of-sample quantile score ratios relative to BVAR(12)",
+      "page": 14,
+      "index": 7,
+      "width": 962,
+      "height": 618
+    },
+    {
+      "url": "assets/figures/arxiv/2604.12927v1/fig-008.webp",
+      "caption": "Figure 1: Brent oil prices, financial uncertainty, and distributional asymmetry: The left panel shows the evolution of log Brent oil prices and financial uncertainty over time. The two series are effectively uncorrelated, with a correlation coefficient of 0.02. The right panel plots financial uncertainty against a time-varying measure of skewness in log Brent prices. Financial uncertainty is negatively correlated with the third moment of log Brent prices (= −0.281). Time-varying skewness is computed using sample skewness over 48-month rolling windows. Financial uncertainty data are from Jurado et al. (2015).",
+      "page": 3,
+      "index": 8,
+      "width": 867,
+      "height": 531
+    },
+    {
+      "url": "assets/figures/arxiv/2604.12927v1/fig-009.webp",
+      "caption": "Table 6: Forecast combination with optimal weights: QS ratios relative to BVAR-SV(12)",
+      "page": 23,
+      "index": 9,
+      "width": 937,
+      "height": 499
+    },
+    {
+      "url": "assets/figures/arxiv/2604.12927v1/fig-010.webp",
+      "caption": "Figure 2: QS90 of forecast combination relative to BVAR-SV(12), using JLNF12 as predictor. The combined forecast is q̂Comb",
+      "page": 19,
+      "index": 10,
+      "width": 892,
+      "height": 505
+    },
+    {
+      "url": "assets/figures/arxiv/2604.12927v1/fig-011.webp",
+      "caption": "Table 3: Out-of-sample quantile score ratios relative to BVAR-SV(12)",
+      "page": 17,
+      "index": 11,
+      "width": 962,
+      "height": 618
+    },
+    {
+      "url": "assets/figures/arxiv/2604.12927v1/fig-012.webp",
+      "caption": "Figure 4: Major oil price events",
+      "page": 24,
+      "index": 12,
+      "width": 958,
+      "height": 455
+    },
+    {
+      "url": "assets/figures/arxiv/2604.12927v1/fig-013.webp",
+      "caption": "Figure 3: QS10 of forecast combination relative to BVAR-SV(12), using JLNF12 as predictor. The combined forecast is q̂Comb",
+      "page": 20,
+      "index": 13,
+      "width": 892,
+      "height": 491
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.15675v1/fig-001.webp",
+      "caption": "Table 1: CB-H and CS denote CulturalBench-Hard and CultureScope, respectively. Our method significantly outperforms the backbone Qwen2.5-7B by 6.03 points on CultureBench-Hard and 3.13 points on BLEnD. This suggests that mining “CPs” from raw corpora serves as a highly efficient and authentic signal for achieving robust cultural alignment in LLMs.",
+      "page": 6,
+      "index": 1,
+      "width": 464,
+      "height": 404
+    },
+    {
+      "url": "assets/figures/arxiv/2604.15675v1/fig-002.webp",
+      "caption": "Table 7: The manual annotation prompt and scoring criteria used to validate CPs.",
+      "page": 11,
+      "index": 2,
+      "width": 486,
+      "height": 652
+    },
+    {
+      "url": "assets/figures/arxiv/2604.15675v1/fig-003.webp",
+      "caption": "Table 10: The system prompt used for synthesizing analytical short-answer questions.",
+      "page": 14,
+      "index": 3,
+      "width": 1022,
+      "height": 607
+    },
+    {
+      "url": "assets/figures/arxiv/2604.15675v1/fig-004.webp",
+      "caption": "Figure 1: Overview of the C-Mining pipeline. The algorithm leverages the geometric properties of frozen embeddings to identify CPs—knowledge characterized by high intra-lingual homogeneity and low cross-lingual alignment—serving as authentic seeds for instruction tuning.",
+      "page": 3,
+      "index": 4,
+      "width": 1056,
+      "height": 544
+    },
+    {
+      "url": "assets/figures/arxiv/2604.15675v1/fig-005.webp",
+      "caption": "Table 8: The system prompt used for synthesizing cross-cultural multiple-choice questions.",
+      "page": 13,
+      "index": 5,
+      "width": 1022,
+      "height": 538
+    },
+    {
+      "url": "assets/figures/arxiv/2604.15675v1/fig-006.webp",
+      "caption": "Table 9: The system prompt used for synthesizing cross-cultural true/false judgment questions.",
+      "page": 13,
+      "index": 6,
+      "width": 1022,
+      "height": 561
+    },
+    {
+      "url": "assets/figures/arxiv/2604.15675v1/fig-007.webp",
+      "caption": "Table 5: Qualitative comparison of cultural generation capabilities. We tasked both models with an open-ended comparison of New Year traditions. Blue text indicates shared, high-level cultural concepts found in both responses. Red text highlights unique, culturally specific details generated exclusively by the specific model.",
+      "page": 8,
+      "index": 7,
+      "width": 1022,
+      "height": 448
+    },
+    {
+      "url": "assets/figures/arxiv/2604.15675v1/fig-008.webp",
+      "caption": "Figure 6: Data distribution of the sampled Wikipedia corpus. To balance the dataset for unsupervised mining, we sampled 1M entries for each non-English language: Chinese (ZH), French (FR), Spanish (ES), German (DE), and Japanese (JA). For English (EN), we strategically sampled 3M entries to ensure sufficient coverage of global concepts and translated cultural nuances.",
+      "page": 12,
+      "index": 8,
+      "width": 506,
+      "height": 382
+    },
+    {
+      "url": "assets/figures/arxiv/2604.15675v1/fig-009.webp",
+      "caption": "Figure 7: Distribution of extracted Culture Points across the six evaluated languages. The abbreviations denote: EN (English), DE (German), JA (Japanese), ZH (Chinese), ES (Spanish), and FR (French). The numbers indicate the total count of unique cultural seeds identified for each language.",
+      "page": 12,
+      "index": 9,
+      "width": 506,
+      "height": 387
+    },
+    {
+      "url": "assets/figures/arxiv/2604.15675v1/fig-010.webp",
+      "caption": "Figure 4: Human evaluation of cultural specificity. Comparing average expert ratings (scale 0–4) across six domains, C-Mining consistently outperforms CultureAtlas, demonstrating superior capability in capturing deep native nuances.",
+      "page": 5,
+      "index": 10,
+      "width": 456,
+      "height": 265
+    },
+    {
+      "url": "assets/figures/arxiv/2604.15675v1/fig-011.webp",
+      "caption": "Figure 3: Analysis of Semantic Alignment Resistance. The radar chart visualizes the embedding distance between original terms and their English translations across five languages. Culture Points (Red) exhibit consistently larger semantic shifts compared to Culture-Irrelevant Points (Blue), demonstrating that authentic cultural concepts resist simple alignment with English-centric semantic spaces.",
+      "page": 5,
+      "index": 11,
+      "width": 406,
+      "height": 319
+    }
+  ]
+}
